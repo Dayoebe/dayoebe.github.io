@@ -4,6 +4,26 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Adedayo Ebenezer Oyetoke | Full-Stack Web Developer</title>
+  <meta name="description" content="Adedayo Ebenezer Oyetoke is a Full-Stack Web Developer and EdTech specialist building scalable Laravel, Vue, and React applications for schools, media, banking, and corporate teams." />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+  <meta name="author" content="Adedayo Ebenezer Oyetoke" />
+  <meta name="theme-color" content="#dc2626" />
+  <link rel="canonical" href="https://wirelesscs.ct.ws/dayo/" />
+  <link rel="sitemap" type="application/xml" href="https://wirelesscs.ct.ws/dayo/sitemap.xml" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Wireless Portfolio" />
+  <meta property="og:title" content="Adedayo Ebenezer Oyetoke | Full-Stack Web Developer" />
+  <meta property="og:description" content="Portfolio of Adedayo Ebenezer Oyetoke, Full-Stack Web Developer focused on Laravel, Vue.js, React, EdTech, and digital growth." />
+  <meta property="og:url" content="https://wirelesscs.ct.ws/dayo/" />
+  <meta property="og:locale" content="en_NG" />
+  <meta property="og:image" content="https://wirelesscs.ct.ws/dayo/social-preview.svg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Adedayo Ebenezer Oyetoke | Full-Stack Web Developer" />
+  <meta name="twitter:description" content="Portfolio of Adedayo Ebenezer Oyetoke, Full-Stack Web Developer focused on scalable web systems and digital product growth." />
+  <meta name="twitter:image" content="https://wirelesscs.ct.ws/dayo/social-preview.svg" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
@@ -77,6 +97,51 @@
       background-repeat: repeat;
     }
   </style>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Adedayo Ebenezer Oyetoke",
+      "jobTitle": "Full-Stack Web Developer",
+      "url": "https://wirelesscs.ct.ws/dayo/",
+      "email": "mailto:oyetoke.ebenezer@gmail.com",
+      "telephone": "+2349030036438",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Akure",
+        "addressCountry": "NG"
+      },
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Federal University of Technology, Akure"
+      },
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Wireless Computer Services"
+      },
+      "sameAs": [
+        "https://github.com/dayoebe",
+        "https://linkedin.com/in/dayoebe"
+      ],
+      "knowsAbout": [
+        "Laravel",
+        "Vue.js",
+        "React",
+        "Tailwind CSS",
+        "EdTech",
+        "Digital Growth"
+      ]
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Wireless Portfolio",
+      "url": "https://wirelesscs.ct.ws/dayo/",
+      "inLanguage": "en"
+    }
+  </script>
 </head>
 <body class="bg-stone-50 text-zinc-900 font-body">
   <div x-data="{ menuOpen: false }" class="min-h-screen">
@@ -178,8 +243,6 @@
           </div>
         </div>
       </section>
-    </main>
-
     <section id="about" class="mx-auto max-w-6xl px-4 py-12">
       <div class="grid gap-6 md:grid-cols-2">
         <article class="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
@@ -508,28 +571,36 @@
           </div>
         </article>
 
-        <form class="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
+        <form id="contact-form" action="contact.php" method="post" class="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
           <h3 class="font-display text-xl font-semibold text-zinc-900">Send a Message</h3>
+          <input type="text" name="company" id="company" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true">
           <div class="mt-4 space-y-4">
             <div>
               <label for="name" class="mb-1 block text-sm font-medium text-zinc-700">Name</label>
-              <input id="name" type="text" class="w-full rounded-xl border border-stone-300 px-3 py-2 text-sm focus:border-red-500 focus:outline-none">
+              <input id="name" name="name" type="text" required minlength="2" maxlength="80" autocomplete="name" class="w-full rounded-xl border border-stone-300 px-3 py-2 text-sm focus:border-red-500 focus:outline-none">
             </div>
             <div>
               <label for="email" class="mb-1 block text-sm font-medium text-zinc-700">Email</label>
-              <input id="email" type="email" class="w-full rounded-xl border border-stone-300 px-3 py-2 text-sm focus:border-blue-500 focus:outline-none">
+              <input id="email" name="email" type="email" required maxlength="120" autocomplete="email" class="w-full rounded-xl border border-stone-300 px-3 py-2 text-sm focus:border-blue-500 focus:outline-none">
+            </div>
+            <div>
+              <label for="subject" class="mb-1 block text-sm font-medium text-zinc-700">Subject</label>
+              <input id="subject" name="subject" type="text" required minlength="4" maxlength="120" class="w-full rounded-xl border border-stone-300 px-3 py-2 text-sm focus:border-violet-500 focus:outline-none">
             </div>
             <div>
               <label for="message" class="mb-1 block text-sm font-medium text-zinc-700">Message</label>
-              <textarea id="message" rows="4" class="w-full rounded-xl border border-stone-300 px-3 py-2 text-sm focus:border-emerald-500 focus:outline-none"></textarea>
+              <textarea id="message" name="message" rows="4" required minlength="20" maxlength="2500" class="w-full rounded-xl border border-stone-300 px-3 py-2 text-sm focus:border-emerald-500 focus:outline-none"></textarea>
             </div>
-            <button type="submit" class="w-full rounded-xl bg-red-600 px-4 py-2.5 text-sm font-semibold text-white hover:bg-red-700">
+            <p id="form-status" class="hidden rounded-lg border px-3 py-2 text-sm" aria-live="polite"></p>
+            <button type="submit" class="w-full rounded-xl bg-red-600 px-4 py-2.5 text-sm font-semibold text-white hover:bg-red-700 disabled:cursor-not-allowed disabled:opacity-60">
               Send Message
             </button>
           </div>
         </form>
       </div>
     </section>
+
+    </main>
 
     <footer class="border-t border-stone-200 bg-zinc-900">
       <div class="mx-auto max-w-6xl px-4 py-8 text-sm text-zinc-300">
@@ -542,6 +613,71 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    const contactForm = document.getElementById('contact-form');
+    const formStatus = document.getElementById('form-status');
+
+    function setFormStatus(type, message) {
+      if (!formStatus) return;
+      formStatus.classList.remove('hidden', 'border-red-200', 'bg-red-50', 'text-red-700', 'border-emerald-200', 'bg-emerald-50', 'text-emerald-700', 'border-blue-200', 'bg-blue-50', 'text-blue-700');
+      if (type === 'success') {
+        formStatus.classList.add('border-emerald-200', 'bg-emerald-50', 'text-emerald-700');
+      } else if (type === 'info') {
+        formStatus.classList.add('border-blue-200', 'bg-blue-50', 'text-blue-700');
+      } else {
+        formStatus.classList.add('border-red-200', 'bg-red-50', 'text-red-700');
+      }
+      formStatus.textContent = message;
+    }
+
+    if (contactForm) {
+      contactForm.addEventListener('submit', async function(event) {
+        event.preventDefault();
+
+        if (!contactForm.checkValidity()) {
+          contactForm.reportValidity();
+          setFormStatus('error', 'Please fill in all required fields correctly.');
+          return;
+        }
+
+        const submitButton = contactForm.querySelector('button[type="submit"]');
+        const originalButtonText = submitButton ? submitButton.textContent : 'Send Message';
+
+        if (submitButton) {
+          submitButton.disabled = true;
+          submitButton.textContent = 'Sending...';
+        }
+        setFormStatus('info', 'Sending your message...');
+
+        try {
+          const response = await fetch(contactForm.action, {
+            method: 'POST',
+            body: new FormData(contactForm),
+            headers: {
+              'Accept': 'application/json'
+            }
+          });
+
+          const result = await response.json().catch(function() {
+            return { ok: false, message: 'Unexpected server response.' };
+          });
+
+          if (response.ok && result.ok) {
+            contactForm.reset();
+            setFormStatus('success', result.message || 'Message sent successfully.');
+          } else {
+            setFormStatus('error', result.message || 'Message could not be sent. Try again.');
+          }
+        } catch (error) {
+          setFormStatus('error', 'Network error. Please try again.');
+        } finally {
+          if (submitButton) {
+            submitButton.disabled = false;
+            submitButton.textContent = originalButtonText;
+          }
+        }
+      });
+    }
   </script>
 </body>
 </html>

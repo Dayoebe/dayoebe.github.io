@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Wireless Portfolio social preview">
+  <rect width="1200" height="630" fill="#fafaf9" />
+  <rect x="40" y="40" width="1120" height="550" rx="28" fill="#ffffff" stroke="#e7e5e4" stroke-width="4" />
+  <rect x="80" y="90" width="220" height="44" rx="22" fill="#fee2e2" stroke="#fecaca" />
+  <text x="190" y="118" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#b91c1c">Wireless Portfolio</text>
+
+  <text x="80" y="220" font-family="Arial, sans-serif" font-size="64" font-weight="800" fill="#18181b">Adedayo Ebenezer</text>
+  <text x="80" y="292" font-family="Arial, sans-serif" font-size="64" font-weight="800" fill="#dc2626">Oyetoke</text>
+
+  <text x="80" y="360" font-family="Arial, sans-serif" font-size="34" font-weight="600" fill="#334155">Full-Stack Web Developer</text>
+  <text x="80" y="410" font-family="Arial, sans-serif" font-size="28" font-weight="500" fill="#3f3f46">Laravel • Vue.js • React • EdTech • Digital Growth</text>
+
+  <rect x="80" y="470" width="260" height="56" rx="14" fill="#dc2626" />
+  <text x="210" y="505" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#ffffff">wirelesscs.ct.ws/dayo</text>
+
+  <rect x="860" y="120" width="250" height="390" rx="20" fill="#f5f5f4" stroke="#d6d3d1" />
+  <text x="985" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="84" font-weight="800" fill="#27272a">AEO</text>
+  <rect x="900" y="260" width="170" height="34" rx="9" fill="#dbeafe" />
+  <text x="985" y="283" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#1d4ed8">WEB</text>
+  <rect x="900" y="310" width="170" height="34" rx="9" fill="#d1fae5" />
+  <text x="985" y="333" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#047857">API</text>
+  <rect x="900" y="360" width="170" height="34" rx="9" fill="#ffe4e6" />
+  <text x="985" y="383" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#be123c">GROWTH</text>
+</svg>
