@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://wirelesscs.ct.ws/dayo/sitemap.xml
+Sitemap: https://dayoebe.github.io/sitemap.xml
