@@ -614,61 +614,33 @@
       </div>
     </section>
 
-    <section id="testimonials" class="border-y border-stone-200 bg-stone-100">
+    <section id="testimonials" class="border-y border-stone-200 bg-stone-100" x-data="testimonialState()">
       <div class="mx-auto max-w-6xl px-4 py-12">
         <h2 class="font-display text-2xl font-bold text-zinc-900">What Clients Say</h2>
         <p class="mt-2 max-w-2xl text-sm text-zinc-600">
           Trusted by schools, media brands, and businesses for reliable delivery and clear communication.
         </p>
 
+        <div class="mt-5 flex flex-wrap gap-2">
+          <button @click="active = 'all'" :class="active === 'all' ? 'bg-red-600 text-white border-red-600' : 'bg-white text-zinc-700 border-stone-300'" class="rounded-full border px-3 py-1.5 text-xs font-semibold transition">All</button>
+          <button @click="active = 'media'" :class="active === 'media' ? 'bg-red-600 text-white border-red-600' : 'bg-white text-zinc-700 border-stone-300'" class="rounded-full border px-3 py-1.5 text-xs font-semibold transition">Media</button>
+          <button @click="active = 'education'" :class="active === 'education' ? 'bg-red-600 text-white border-red-600' : 'bg-white text-zinc-700 border-stone-300'" class="rounded-full border px-3 py-1.5 text-xs font-semibold transition">Education</button>
+          <button @click="active = 'finance'" :class="active === 'finance' ? 'bg-red-600 text-white border-red-600' : 'bg-white text-zinc-700 border-stone-300'" class="rounded-full border px-3 py-1.5 text-xs font-semibold transition">Finance</button>
+          <button @click="active = 'corporate'" :class="active === 'corporate' ? 'bg-red-600 text-white border-red-600' : 'bg-white text-zinc-700 border-stone-300'" class="rounded-full border px-3 py-1.5 text-xs font-semibold transition">Corporate</button>
+        </div>
+
         <div class="mt-6 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-          <article class="rounded-2xl border border-red-200 bg-white p-5 shadow-sm animate__animated animate__fadeInUp">
-            <p class="text-sm leading-relaxed text-zinc-700">
-              "Adedayo rebuilt our station website and helped us run a stronger digital strategy. Our online engagement and brand visibility improved noticeably."
-            </p>
-            <p class="mt-4 text-sm font-semibold text-zinc-900">Management Team</p>
-            <p class="text-xs text-zinc-600">Glow 99.1 FM</p>
-          </article>
-
-          <article class="rounded-2xl border border-emerald-200 bg-white p-5 shadow-sm animate__animated animate__fadeInUp">
-            <p class="text-sm leading-relaxed text-zinc-700">
-              "He delivered both our school website and management system with features that made administration easier for staff and parents."
-            </p>
-            <p class="mt-4 text-sm font-semibold text-zinc-900">Admin Lead</p>
-            <p class="text-xs text-zinc-600">Elites International College</p>
-          </article>
-
-          <article class="rounded-2xl border border-blue-200 bg-white p-5 shadow-sm animate__animated animate__fadeInUp">
-            <p class="text-sm leading-relaxed text-zinc-700">
-              "From planning to deployment, the process was professional. The final website reflects our institution and works smoothly across devices."
-            </p>
-            <p class="mt-4 text-sm font-semibold text-zinc-900">Operations Team</p>
-            <p class="text-xs text-zinc-600">Ikere Microfinance Bank</p>
-          </article>
-
-          <article class="rounded-2xl border border-violet-200 bg-white p-5 shadow-sm animate__animated animate__fadeInUp">
-            <p class="text-sm leading-relaxed text-zinc-700">
-              "Communication was clear, timelines were respected, and every revision was handled quickly."
-            </p>
-            <p class="mt-4 text-sm font-semibold text-zinc-900">Founder</p>
-            <p class="text-xs text-zinc-600">Client Project</p>
-          </article>
-
-          <article class="rounded-2xl border border-purple-200 bg-white p-5 shadow-sm animate__animated animate__fadeInUp">
-            <p class="text-sm leading-relaxed text-zinc-700">
-              "Our new platform feels modern, fast, and easy to manage. We have seen better user response since launch."
-            </p>
-            <p class="mt-4 text-sm font-semibold text-zinc-900">Product Lead</p>
-            <p class="text-xs text-zinc-600">Client Project</p>
-          </article>
-
-          <article class="rounded-2xl border border-rose-200 bg-white p-5 shadow-sm animate__animated animate__fadeInUp">
-            <p class="text-sm leading-relaxed text-zinc-700">
-              "Adedayo combines technical depth with business understanding. He does not just build pages, he solves real workflow problems."
-            </p>
-            <p class="mt-4 text-sm font-semibold text-zinc-900">Director</p>
-            <p class="text-xs text-zinc-600">Client Project</p>
-          </article>
+          <template x-for="(item, idx) in filteredTestimonials" :key="item.company + idx">
+            <article x-show="true" x-transition.opacity.duration.300ms class="rounded-2xl border bg-white p-5 shadow-sm animate__animated animate__fadeInUp" :class="item.border">
+              <p class="text-sm leading-relaxed text-zinc-700" x-text="item.quote"></p>
+              <p class="mt-4 text-sm font-semibold text-zinc-900" x-text="item.name"></p>
+              <p class="text-xs text-zinc-600">
+                <span x-text="item.role"></span>
+                <span> · </span>
+                <span x-text="item.company"></span>
+              </p>
+            </article>
+          </template>
         </div>
       </div>
     </section>
@@ -681,7 +653,7 @@
           Book a 20-minute discovery call to review your goals, timeline, and best technical approach for your website or platform.
         </p>
         <div class="mt-5 flex flex-wrap gap-3">
-          <a href="https://calendly.com/dayoebe/20min" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-xl bg-red-600 px-4 py-2.5 text-sm font-semibold text-white hover:bg-red-700">
+          <a href="https://calendly.com/dayoebe/30min" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-xl bg-red-600 px-4 py-2.5 text-sm font-semibold text-white hover:bg-red-700">
             <i class="fa-regular fa-calendar-check"></i>
             <span>Book a Call on Calendly</span>
           </a>
@@ -694,72 +666,38 @@
     </section>
 
     <section id="faq" class="border-y border-stone-200 bg-white">
-      <div class="mx-auto max-w-6xl px-4 py-12" x-data="{ openItem: 1 }">
+      <div class="mx-auto max-w-6xl px-4 py-12" x-data="faqState()">
         <h2 class="font-display text-2xl font-bold text-zinc-900">Frequently Asked Questions</h2>
         <p class="mt-2 max-w-2xl text-sm text-zinc-600">
           Quick answers to common questions about process, delivery, and collaboration.
         </p>
 
+        <div class="mt-5 grid gap-3 md:grid-cols-2">
+          <div class="flex flex-wrap gap-2">
+            <button @click="category = 'all'" :class="category === 'all' ? 'bg-red-600 text-white border-red-600' : 'bg-white text-zinc-700 border-stone-300'" class="rounded-full border px-3 py-1.5 text-xs font-semibold transition">All</button>
+            <button @click="category = 'process'" :class="category === 'process' ? 'bg-red-600 text-white border-red-600' : 'bg-white text-zinc-700 border-stone-300'" class="rounded-full border px-3 py-1.5 text-xs font-semibold transition">Process</button>
+            <button @click="category = 'technical'" :class="category === 'technical' ? 'bg-red-600 text-white border-red-600' : 'bg-white text-zinc-700 border-stone-300'" class="rounded-full border px-3 py-1.5 text-xs font-semibold transition">Technical</button>
+            <button @click="category = 'support'" :class="category === 'support' ? 'bg-red-600 text-white border-red-600' : 'bg-white text-zinc-700 border-stone-300'" class="rounded-full border px-3 py-1.5 text-xs font-semibold transition">Support</button>
+          </div>
+          <div>
+            <input x-model="query" type="search" placeholder="Search question..." class="w-full rounded-full border border-stone-300 bg-white px-4 py-2 text-sm focus:border-red-500 focus:outline-none">
+          </div>
+        </div>
+
         <div class="mt-6 space-y-3">
-          <article class="rounded-2xl border border-stone-200 bg-stone-50 p-4">
-            <button @click="openItem = openItem === 1 ? 0 : 1" class="flex w-full items-center justify-between gap-3 text-left">
-              <span class="text-sm font-semibold text-zinc-900">What kind of projects do you handle?</span>
-              <span class="text-zinc-600" x-text="openItem === 1 ? '-' : '+'"></span>
-            </button>
-            <p x-show="openItem === 1" x-transition class="mt-3 text-sm text-zinc-700">
-              I build and maintain websites, web applications, school systems, and digital platforms for media, education, banking, and business clients.
-            </p>
-          </article>
+          <template x-for="item in filteredFaqs" :key="item.id">
+            <article class="rounded-2xl border border-stone-200 bg-stone-50 p-4">
+              <button @click="toggle(item.id)" class="flex w-full items-center justify-between gap-3 text-left">
+                <span class="text-sm font-semibold text-zinc-900" x-text="item.question"></span>
+                <span class="inline-flex h-6 w-6 items-center justify-center rounded-full border border-stone-300 text-zinc-600 transition-transform" :class="open.includes(item.id) ? 'rotate-45 bg-red-50 text-red-700 border-red-200' : ''">+</span>
+              </button>
+              <p x-show="open.includes(item.id)" x-transition.opacity.duration.250ms class="mt-3 text-sm text-zinc-700" x-text="item.answer"></p>
+            </article>
+          </template>
 
-          <article class="rounded-2xl border border-stone-200 bg-stone-50 p-4">
-            <button @click="openItem = openItem === 2 ? 0 : 2" class="flex w-full items-center justify-between gap-3 text-left">
-              <span class="text-sm font-semibold text-zinc-900">How long does a typical project take?</span>
-              <span class="text-zinc-600" x-text="openItem === 2 ? '-' : '+'"></span>
-            </button>
-            <p x-show="openItem === 2" x-transition class="mt-3 text-sm text-zinc-700">
-              Small websites usually take 1 to 3 weeks. Larger platforms can take 4 to 12 weeks depending on features, content readiness, and approvals.
-            </p>
-          </article>
-
-          <article class="rounded-2xl border border-stone-200 bg-stone-50 p-4">
-            <button @click="openItem = openItem === 3 ? 0 : 3" class="flex w-full items-center justify-between gap-3 text-left">
-              <span class="text-sm font-semibold text-zinc-900">Do you work on existing websites?</span>
-              <span class="text-zinc-600" x-text="openItem === 3 ? '-' : '+'"></span>
-            </button>
-            <p x-show="openItem === 3" x-transition class="mt-3 text-sm text-zinc-700">
-              Yes. I redesign, optimize performance, fix bugs, add features, and improve SEO for existing websites and applications.
-            </p>
-          </article>
-
-          <article class="rounded-2xl border border-stone-200 bg-stone-50 p-4">
-            <button @click="openItem = openItem === 4 ? 0 : 4" class="flex w-full items-center justify-between gap-3 text-left">
-              <span class="text-sm font-semibold text-zinc-900">What technologies do you use?</span>
-              <span class="text-zinc-600" x-text="openItem === 4 ? '-' : '+'"></span>
-            </button>
-            <p x-show="openItem === 4" x-transition class="mt-3 text-sm text-zinc-700">
-              My core stack includes Laravel, Vue.js, React, Tailwind CSS, Livewire, MySQL, and Alpine.js.
-            </p>
-          </article>
-
-          <article class="rounded-2xl border border-stone-200 bg-stone-50 p-4">
-            <button @click="openItem = openItem === 5 ? 0 : 5" class="flex w-full items-center justify-between gap-3 text-left">
-              <span class="text-sm font-semibold text-zinc-900">Do you provide maintenance after launch?</span>
-              <span class="text-zinc-600" x-text="openItem === 5 ? '-' : '+'"></span>
-            </button>
-            <p x-show="openItem === 5" x-transition class="mt-3 text-sm text-zinc-700">
-              Yes. I provide post-launch support, updates, backups, and technical maintenance packages.
-            </p>
-          </article>
-
-          <article class="rounded-2xl border border-stone-200 bg-stone-50 p-4">
-            <button @click="openItem = openItem === 6 ? 0 : 6" class="flex w-full items-center justify-between gap-3 text-left">
-              <span class="text-sm font-semibold text-zinc-900">How do we start working together?</span>
-              <span class="text-zinc-600" x-text="openItem === 6 ? '-' : '+'"></span>
-            </button>
-            <p x-show="openItem === 6" x-transition class="mt-3 text-sm text-zinc-700">
-              Book a discovery call on Calendly or send a message through the contact form. I will review your needs and share scope, timeline, and cost.
-            </p>
-          </article>
+          <p x-show="filteredFaqs.length === 0" class="rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-800">
+            No FAQ matched your search. Try another keyword.
+          </p>
         </div>
       </div>
     </section>
@@ -855,6 +793,127 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    function testimonialState() {
+      return {
+        active: 'all',
+        items: [
+          {
+            sector: 'media',
+            border: 'border-red-200',
+            quote: '"Adedayo rebuilt our station website and helped us run a stronger digital strategy. Our online engagement and brand visibility improved noticeably."',
+            name: 'Digital Team',
+            role: 'Management',
+            company: 'Glow 99.1 FM'
+          },
+          {
+            sector: 'education',
+            border: 'border-emerald-200',
+            quote: '"He delivered both our school website and management system with features that made administration easier for staff and parents."',
+            name: 'Academic Office',
+            role: 'Admin Lead',
+            company: 'Elites International College'
+          },
+          {
+            sector: 'finance',
+            border: 'border-blue-200',
+            quote: '"From planning to deployment, the process was professional. The final website reflects our institution and works smoothly across devices."',
+            name: 'Operations Unit',
+            role: 'Operations Team',
+            company: 'Ikere Microfinance Bank'
+          },
+          {
+            sector: 'corporate',
+            border: 'border-violet-200',
+            quote: '"Communication was clear, timelines were respected, and every revision was handled quickly."',
+            name: 'Client (NDA)',
+            role: 'Founder',
+            company: 'SME Corporate Website'
+          },
+          {
+            sector: 'corporate',
+            border: 'border-purple-200',
+            quote: '"Our new platform feels modern, fast, and easy to manage. We have seen better user response since launch."',
+            name: 'Client (NDA)',
+            role: 'Product Lead',
+            company: 'Business Platform Project'
+          },
+          {
+            sector: 'corporate',
+            border: 'border-rose-200',
+            quote: '"Adedayo combines technical depth with business understanding. He does not just build pages, he solves real workflow problems."',
+            name: 'Client (NDA)',
+            role: 'Director',
+            company: 'Enterprise Web Project'
+          }
+        ],
+        get filteredTestimonials() {
+          if (this.active === 'all') return this.items;
+          return this.items.filter((item) => item.sector === this.active);
+        }
+      };
+    }
+
+    function faqState() {
+      return {
+        category: 'all',
+        query: '',
+        open: [1],
+        items: [
+          {
+            id: 1,
+            category: 'process',
+            question: 'What kind of projects do you handle?',
+            answer: 'I build and maintain websites, web applications, school systems, and digital platforms for media, education, banking, and business clients.'
+          },
+          {
+            id: 2,
+            category: 'process',
+            question: 'How long does a typical project take?',
+            answer: 'Small websites usually take 1 to 3 weeks. Larger platforms can take 4 to 12 weeks depending on features, content readiness, and approvals.'
+          },
+          {
+            id: 3,
+            category: 'technical',
+            question: 'Do you work on existing websites?',
+            answer: 'Yes. I redesign, optimize performance, fix bugs, add features, and improve SEO for existing websites and applications.'
+          },
+          {
+            id: 4,
+            category: 'technical',
+            question: 'What technologies do you use?',
+            answer: 'My core stack includes Laravel, Vue.js, React, Tailwind CSS, Livewire, MySQL, and Alpine.js.'
+          },
+          {
+            id: 5,
+            category: 'support',
+            question: 'Do you provide maintenance after launch?',
+            answer: 'Yes. I provide post-launch support, updates, backups, and technical maintenance packages.'
+          },
+          {
+            id: 6,
+            category: 'process',
+            question: 'How do we start working together?',
+            answer: 'Book a discovery call on Calendly or send a message through the contact form. I will review your needs and share scope, timeline, and cost.'
+          }
+        ],
+        toggle(id) {
+          if (this.open.includes(id)) {
+            this.open = this.open.filter((x) => x !== id);
+          } else {
+            this.open.push(id);
+          }
+        },
+        get filteredFaqs() {
+          const q = this.query.toLowerCase().trim();
+          return this.items.filter((item) => {
+            const categoryOk = this.category === 'all' || item.category === this.category;
+            if (!q) return categoryOk;
+            return categoryOk && (item.question.toLowerCase().includes(q) || item.answer.toLowerCase().includes(q));
+          });
+        }
+      };
+    }
 
     const formStatus = document.getElementById('form-status');
 
