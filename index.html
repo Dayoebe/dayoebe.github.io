@@ -1,40 +1,62 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Oyetoke Adedayo Ebenezer | Full-Stack Developer Portfolio</title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+  <title>Wireless | Full-Stack Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <script>
     tailwind.config = {
-      darkMode: 'class',
       theme: {
         extend: {
+          fontFamily: {
+            body: ['DM Sans', 'sans-serif'],
+            display: ['Sora', 'sans-serif']
+          },
           colors: {
-            primary: {
-              100: '#d1e0ff',
-              200: '#a3c1ff',
-              300: '#75a2ff',
-              400: '#4783ff',
-              500: '#1964ff',
-              600: '#1450cc',
-              700: '#0f3c99',
-              800: '#0a2866',
-              900: '#051433',
+            taupe: {
+              50: '#f8f5f2',
+              100: '#efe6de',
+              200: '#ddc9b9',
+              300: '#c9ab94',
+              400: '#b78f72',
+              500: '#a17351',
+              600: '#7f5a40',
+              700: '#5f4330'
             },
-            secondary: {
-              100: '#fce7d3',
-              200: '#f9cfa7',
-              300: '#f6b77c',
-              400: '#f39f50',
-              500: '#f08724',
-              600: '#c06c1d',
-              700: '#905116',
-              800: '#60360f',
-              900: '#301b07',
+            mauve: {
+              50: '#f8f2f9',
+              100: '#efddf3',
+              200: '#dbb8e3',
+              300: '#c793d3',
+              400: '#b36ec3',
+              500: '#9b54ab',
+              600: '#784180',
+              700: '#562e5d'
+            },
+            mist: {
+              50: '#f2f7fa',
+              100: '#ddeaf2',
+              200: '#bdd6e5',
+              300: '#9ec2d7',
+              400: '#79aac5',
+              500: '#5e8fa9',
+              600: '#4a7084',
+              700: '#35515f'
+            },
+            olive: {
+              50: '#f6f8ef',
+              100: '#e8ecd7',
+              200: '#d2d9ae',
+              300: '#bcc685',
+              400: '#a5b35c',
+              500: '#8a9742',
+              600: '#6d7734',
+              700: '#515826'
             }
           }
         }
@@ -42,734 +64,353 @@
     }
   </script>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@700;800&display=swap');
-    
-    body {
-      font-family: 'Poppins', sans-serif;
+    html {
       scroll-behavior: smooth;
     }
-    
-    h1, h2, h3, h4 {
-      font-family: 'Raleway', sans-serif;
+
+    [x-cloak] {
+      display: none !important;
     }
-    
-    .glass {
-      backdrop-filter: blur(16px) saturate(180%);
-      -webkit-backdrop-filter: blur(16px) saturate(180%);
-      background-color: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-    
-    .gradient-bg {
-      background: linear-gradient(135deg, #1964ff 0%, #f08724 100%);
-    }
-    
-    .skill-bar {
-      height: 8px;
-      border-radius: 4px;
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .skill-progress {
-      position: absolute;
-      height: 100%;
-      border-radius: 4px;
-      background: linear-gradient(90deg, #1964ff, #f08724);
-      animation: progressBar 1.5s ease-in-out;
-    }
-    
-    @keyframes progressBar {
-      0% { width: 0; }
-      100% { width: var(--skill-level); }
-    }
-    
-    .timeline::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      width: 2px;
-      background: linear-gradient(to bottom, #1964ff, #f08724);
-      left: 20px;
-    }
-    
-    .card-hover {
-      transition: all 0.3s ease;
-      transform: translateY(0);
-    }
-    
-    .card-hover:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-    }
-    
-    .floating {
-      animation: float 6s ease-in-out infinite;
-    }
-    
-    @keyframes float {
-      0% { transform: translateY(0px); }
-      50% { transform: translateY(-20px); }
-      100% { transform: translateY(0px); }
-    }
-    
-    .pulse {
-      animation: pulse 2s infinite;
-    }
-    
-    @keyframes pulse {
-      0% { transform: scale(0.95); }
-      50% { transform: scale(1.05); }
-      100% { transform: scale(0.95); }
+
+    .dot-pattern {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20'%3E%3Ccircle cx='2' cy='2' r='1.5' fill='%23d6d3d1'/%3E%3C/svg%3E");
+      background-repeat: repeat;
     }
   </style>
 </head>
-<body x-data="{ dark: true, mobileMenuOpen: false }" :class="{ 'dark': dark }" class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100 transition-colors duration-300 overflow-x-hidden">
-  <!-- Navigation -->
-  <nav class="fixed w-full z-50 backdrop-blur-md glass py-4 px-6 shadow-md">
-    <div class="max-w-7xl mx-auto flex justify-between items-center">
-      <div class="flex items-center">
-        <a href="#" class="text-2xl font-bold text-primary-500">Wireless</a>
-      </div>
-      
-      <div class="hidden md:flex space-x-8 items-center">
-        <a href="#home" class="hover:text-primary-400 transition">Home</a>
-        <a href="#about" class="hover:text-primary-400 transition">About</a>
-        <a href="#skills" class="hover:text-primary-400 transition">Skills</a>
-        <a href="#experience" class="hover:text-primary-400 transition">Experience</a>
-        <a href="#projects" class="hover:text-primary-400 transition">Projects</a>
-        <a href="#contact" class="hover:text-primary-400 transition">Contact</a>
-        <button @click="dark = !dark" class="px-4 py-2 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center">
-          <i x-show="dark" class="fas fa-sun mr-2"></i>
-          <i x-show="!dark" class="fas fa-moon mr-2"></i>
-          <span x-text="dark ? 'Light Mode' : 'Dark Mode'"></span>
+<body class="bg-stone-50 text-zinc-900 font-body">
+  <div x-data="{ menuOpen: false }" class="min-h-screen">
+    <header class="sticky top-0 z-50 border-b border-stone-200 bg-stone-50/95 backdrop-blur">
+      <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
+        <a href="#home" class="font-display text-lg font-bold tracking-tight text-red-600">Wireless</a>
+
+        <button
+          @click="menuOpen = !menuOpen"
+          class="inline-flex items-center rounded-lg border border-stone-300 px-3 py-2 text-sm font-semibold text-zinc-800 md:hidden"
+          aria-label="Toggle menu"
+        >
+          Menu
         </button>
-      </div>
-      
-      <button @click="mobileMenuOpen = !mobileMenuOpen" class="md:hidden text-xl">
-        <i class="fas fa-bars"></i>
-      </button>
-    </div>
-    
-    <!-- Mobile menu -->
-    <div x-show="mobileMenuOpen" x-cloak class="md:hidden absolute top-full left-0 w-full glass py-4 px-6 shadow-lg">
-      <div class="flex flex-col space-y-4">
-        <a href="#home" class="hover:text-primary-400 transition" @click="mobileMenuOpen = false">Home</a>
-        <a href="#about" class="hover:text-primary-400 transition" @click="mobileMenuOpen = false">About</a>
-        <a href="#skills" class="hover:text-primary-400 transition" @click="mobileMenuOpen = false">Skills</a>
-        <a href="#experience" class="hover:text-primary-400 transition" @click="mobileMenuOpen = false">Experience</a>
-        <a href="#projects" class="hover:text-primary-400 transition" @click="mobileMenuOpen = false">Projects</a>
-        <a href="#contact" class="hover:text-primary-400 transition" @click="mobileMenuOpen = false">Contact</a>
-        <button @click="dark = !dark" class="px-4 py-2 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center w-full">
-          <i x-show="dark" class="fas fa-sun mr-2"></i>
-          <i x-show="!dark" class="fas fa-moon mr-2"></i>
-          <span x-text="dark ? 'Light Mode' : 'Dark Mode'"></span>
-        </button>
-      </div>
-    </div>
-  </nav>
 
-  <!-- Hero Section -->
-  <section id="home" class="min-h-screen flex items-center pt-16 pb-20 relative overflow-hidden">
-    <div class="absolute inset-0 z-0">
-      <div class="absolute top-0 left-0 w-64 h-64 bg-primary-500 rounded-full filter blur-3xl opacity-20 animate-pulse"></div>
-      <div class="absolute bottom-0 right-0 w-64 h-64 bg-secondary-500 rounded-full filter blur-3xl opacity-20 animate-pulse"></div>
-    </div>
-    
-    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between relative z-10">
-      <div class="md:w-1/2 mb-12 md:mb-0 animate__animated animate__fadeInLeft">
-        <h1 class="text-4xl md:text-6xl font-bold mb-4">
-          <span class="block">Oyetoke Adedayo</span>
-          <span class="block text-primary-500">Ebenezer</span>
-        </h1>
-        <div class="flex items-center mb-6">
-          <div class="w-24 h-1 bg-primary-500 mr-4"></div>
-          <p class="text-xl font-medium">Full-Stack Developer</p>
+        <nav class="hidden items-center gap-6 text-sm font-medium md:flex">
+          <a href="#home" class="text-zinc-700 hover:text-red-600">Home</a>
+          <a href="#about" class="text-zinc-700 hover:text-orange-600">About</a>
+          <a href="#skills" class="text-zinc-700 hover:text-emerald-600">Skills</a>
+          <a href="#projects" class="text-zinc-700 hover:text-indigo-600">Projects</a>
+          <a href="#contact" class="text-zinc-700 hover:text-rose-600">Contact</a>
+        </nav>
+      </div>
+
+      <nav x-show="menuOpen" x-cloak class="border-t border-stone-200 bg-white md:hidden">
+        <div class="mx-auto flex max-w-6xl flex-col px-4 py-3 text-sm font-medium">
+          <a @click="menuOpen = false" href="#home" class="rounded-md px-3 py-2 hover:bg-red-50 hover:text-red-700">Home</a>
+          <a @click="menuOpen = false" href="#about" class="rounded-md px-3 py-2 hover:bg-orange-50 hover:text-orange-700">About</a>
+          <a @click="menuOpen = false" href="#skills" class="rounded-md px-3 py-2 hover:bg-emerald-50 hover:text-emerald-700">Skills</a>
+          <a @click="menuOpen = false" href="#projects" class="rounded-md px-3 py-2 hover:bg-indigo-50 hover:text-indigo-700">Projects</a>
+          <a @click="menuOpen = false" href="#contact" class="rounded-md px-3 py-2 hover:bg-rose-50 hover:text-rose-700">Contact</a>
         </div>
-        <p class="text-lg mb-8 max-w-xl">
-          I build <span class="text-primary-400">scalable solutions</span> across web and mobile platforms with strong mathematical foundations. 
-          Passionate about creating <span class="text-secondary-400">user-centric applications</span> and mentoring the next generation of developers.
-        </p>
-        <div class="flex flex-wrap gap-4">
-          <a href="#contact" class="px-6 py-3 bg-primary-500 hover:bg-primary-600 text-white rounded-full font-medium transition-all shadow-lg hover:shadow-xl">
-            <i class="fas fa-paper-plane mr-2"></i>Get In Touch
-          </a>
-          <a href="#projects" class="px-6 py-3 bg-gray-800 hover:bg-gray-700 dark:bg-gray-200 dark:hover:bg-gray-300 dark:text-gray-900 text-white rounded-full font-medium transition-all">
-            <i class="fas fa-code mr-2"></i>View Projects
-          </a>
-        </div>
-      </div>
-    
-      <div class="md:w-1/2 flex justify-center animate__animated animate__fadeInRight">
-        <div class="relative">
-            <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary-500 shadow-xl floating">
-                <img 
-                  src="https://wireless.ct.ws/img/dayo.png" 
-                  alt="Profile Image" 
-                  class="w-full h-full object-cover"
-                />
-              </div>              
-          <div class="absolute -bottom-4 -right-4 bg-secondary-500 text-white px-6 py-2 rounded-full font-bold shadow-lg">
-            <i class="fas fa-code mr-2"></i>Developer
-          </div>
-          <div class="absolute -top-4 -left-4 bg-primary-500 text-white px-6 py-2 rounded-full font-bold shadow-lg">
-            <i class="fas fa-graduation-cap mr-2"></i>Industrial Mathematics
-          </div>
-        </div>
-      </div>
-    </div>
+      </nav>
+    </header>
 
-
-    
-    
-    <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-      <a href="#about">
-        <i class="fas fa-chevron-down text-2xl text-primary-500"></i>
-      </a>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section id="about" class="py-20 bg-gray-100 dark:bg-gray-800">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4 animate__animated">About Me</h2>
-        <div class="w-20 h-1 bg-primary-500 mx-auto mb-6"></div>
-        <p class="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-          Adaptable full-stack web developer with a strong foundation in mathematics and hands-on experience creating responsive, 
-          high-quality websites for banking, corporate, and government clients.
-        </p>
-      </div>
-      
-      <div class="grid md:grid-cols-2 gap-12 items-center">
-        <div class="glass p-8 rounded-2xl shadow-xl animate__animated animate__fadeInLeft">
-          <h3 class="text-2xl font-bold mb-4">Professional Summary</h3>
-          <p class="mb-4">
-            With expertise in both front-end and back-end technologies including Laravel, Vue.js, and React, 
-            I focus on creating user-centric, scalable solutions. I'm currently advancing into mobile app 
-            development with React Native and driven by continuous learning and a problem-solving approach.
+    <main id="home" class="dot-pattern">
+      <section class="mx-auto grid max-w-6xl gap-8 px-4 pb-12 pt-10 md:grid-cols-2 md:items-center md:pt-14">
+        <div>
+          <p class="mb-4 inline-flex rounded-full border border-red-200 bg-red-100 px-3 py-1 text-xs font-bold uppercase tracking-wide text-red-700">
+            Full-Stack Developer
           </p>
-          <p>
-            Open to collaborative roles that emphasize innovation and efficiency, I bring a unique perspective 
-            from my background in Industrial Mathematics to tackle complex technical challenges.
+          <h1 class="font-display text-3xl font-extrabold leading-tight text-zinc-900 sm:text-4xl">
+            Oyetoke Adedayo <span class="text-red-600">Ebenezer</span>
+          </h1>
+          <p class="mt-4 max-w-xl text-base leading-relaxed text-zinc-700">
+            I build fast, maintainable websites and applications for corporate, public, and startup teams.
+            My work combines practical engineering with a strong product mindset.
           </p>
-          
-          <div class="mt-8 grid grid-cols-2 gap-4">
-            <div class="flex items-center">
-              <div class="w-12 h-12 rounded-full bg-primary-500 flex items-center justify-center text-white mr-4">
-                <i class="fas fa-map-marker-alt"></i>
-              </div>
-              <div>
-                <h4 class="font-bold">Location</h4>
-                <p>Awka, Anambra State, Nigeria</p>
-              </div>
-            </div>
-            
-            <div class="flex items-center">
-              <div class="w-12 h-12 rounded-full bg-secondary-500 flex items-center justify-center text-white mr-4">
-                <i class="fas fa-envelope"></i>
-              </div>
-              <div>
-                <h4 class="font-bold">Email</h4>
-                <p>mail@wirelesscs.com</p>
-              </div>
-            </div>
-            
-            <div class="flex items-center">
-              <div class="w-12 h-12 rounded-full bg-primary-600 flex items-center justify-center text-white mr-4">
-                <i class="fas fa-phone"></i>
-              </div>
-              <div>
-                <h4 class="font-bold">Phone</h4>
-                <p>+234 903 003 6438</p>
-              </div>
-            </div>
-            
-            <div class="flex items-center">
-              <div class="w-12 h-12 rounded-full bg-secondary-600 flex items-center justify-center text-white mr-4">
-                <i class="fab fa-github"></i>
-              </div>
-              <div>
-                <h4 class="font-bold">GitHub</h4>
-                <p>@Dayoebe</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <div class="animate__animated animate__fadeInRight">
-          <h3 class="text-2xl font-bold mb-6">My Skills Overview</h3>
-          
-          <div class="space-y-6">
-            <div>
-              <div class="flex justify-between mb-2">
-                <span class="font-medium">Front-End Development</span>
-                <span>90%</span>
-              </div>
-              <div class="skill-bar bg-gray-300 dark:bg-gray-700 rounded">
-                <div class="skill-progress" style="--skill-level: 90%"></div>
-              </div>
-            </div>
-            
-            <div>
-              <div class="flex justify-between mb-2">
-                <span class="font-medium">Back-End Development</span>
-                <span>85%</span>
-              </div>
-              <div class="skill-bar bg-gray-300 dark:bg-gray-700 rounded">
-                <div class="skill-progress" style="--skill-level: 85%"></div>
-              </div>
-            </div>
-            
-            <div>
-              <div class="flex justify-between mb-2">
-                <span class="font-medium">UI/UX Design</span>
-                <span>80%</span>
-              </div>
-              <div class="skill-bar bg-gray-300 dark:bg-gray-700 rounded">
-                <div class="skill-progress" style="--skill-level: 80%"></div>
-              </div>
-            </div>
-            
-            <div>
-              <div class="flex justify-between mb-2">
-                <span class="font-medium">Problem Solving</span>
-                <span>95%</span>
-              </div>
-              <div class="skill-bar bg-gray-300 dark:bg-gray-700 rounded">
-                <div class="skill-progress" style="--skill-level: 95%"></div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="mt-10 glass p-6 rounded-xl">
-            <h4 class="text-xl font-bold mb-4">Current Learning Focus</h4>
-            <div class="flex flex-wrap gap-2">
-              <span class="px-3 py-1 bg-primary-500/10 text-primary-500 rounded-full">React Native</span>
-              <span class="px-3 py-1 bg-primary-500/10 text-primary-500 rounded-full">AI Integration</span>
-              <span class="px-3 py-1 bg-primary-500/10 text-primary-500 rounded-full">Cybersecurity</span>
-              <span class="px-3 py-1 bg-primary-500/10 text-primary-500 rounded-full">Cloud Computing</span>
-              <span class="px-3 py-1 bg-primary-500/10 text-primary-500 rounded-full">Progressive Web Apps</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Skills Section -->
-  <section id="skills" class="py-20">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">Technical Skills</h2>
-        <div class="w-20 h-1 bg-primary-500 mx-auto mb-6"></div>
-        <p class="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-          My technical toolkit includes a wide range of technologies and frameworks that enable me to build 
-          comprehensive and efficient solutions.
-        </p>
-      </div>
-      
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Front-End Card -->
-        <div class="card-hover glass p-8 rounded-2xl shadow-lg">
-          <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center text-white mb-6">
-            <i class="fas fa-laptop-code text-2xl"></i>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="#contact" class="rounded-xl bg-red-600 px-5 py-3 text-sm font-semibold text-white hover:bg-red-700">Hire Me</a>
+            <a href="#projects" class="rounded-xl border border-zinc-300 bg-white px-5 py-3 text-sm font-semibold text-zinc-800 hover:border-zinc-400">View Projects</a>
           </div>
-          <h3 class="text-xl font-bold mb-4">Front-End Development</h3>
-          <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1 bg-primary-500/10 text-primary-500 rounded-full">HTML5</span>
-            <span class="px-3 py-1 bg-primary-500/10 text-primary-500 rounded-full">CSS3</span>
-            <span class="px-3 py-1 bg-primary-500/10 text-primary-500 rounded-full">JavaScript</span>
-            <span class="px-3 py-1 bg-primary-500/10 text-primary-500 rounded-full">Bootstrap</span>
-            <span class="px-3 py-1 bg-primary-500/10 text-primary-500 rounded-full">Tailwind CSS</span>
-            <span class="px-3 py-1 bg-primary-500/10 text-primary-500 rounded-full">Vue.js</span>
-            <span class="px-3 py-1 bg-primary-500/10 text-primary-500 rounded-full">Alpine.js</span>
-            <span class="px-3 py-1 bg-primary-500/10 text-primary-500 rounded-full">React.js</span>
-          </div>
-        </div>
-        
-        <!-- Back-End Card -->
-        <div class="card-hover glass p-8 rounded-2xl shadow-lg">
-          <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center text-white mb-6">
-            <i class="fas fa-server text-2xl"></i>
-          </div>
-          <h3 class="text-xl font-bold mb-4">Back-End Development</h3>
-          <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1 bg-secondary-500/10 text-secondary-500 rounded-full">PHP</span>
-            <span class="px-3 py-1 bg-secondary-500/10 text-secondary-500 rounded-full">Laravel</span>
-            <span class="px-3 py-1 bg-secondary-500/10 text-secondary-500 rounded-full">LAMP Stack</span>
-            <span class="px-3 py-1 bg-secondary-500/10 text-secondary-500 rounded-full">MySQL</span>
-            <span class="px-3 py-1 bg-secondary-500/10 text-secondary-500 rounded-full">API Development</span>
-          </div>
-        </div>
-        
-        <!-- Tools & Other -->
-        <div class="card-hover glass p-8 rounded-2xl shadow-lg">
-          <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center text-white mb-6">
-            <i class="fas fa-tools text-2xl"></i>
-          </div>
-          <h3 class="text-xl font-bold mb-4">Tools & Other</h3>
-          <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1 bg-primary-500/10 text-primary-500 rounded-full">Git</span>
-            <span class="px-3 py-1 bg-primary-500/10 text-primary-500 rounded-full">GitHub</span>
-            <span class="px-3 py-1 bg-primary-500/10 text-primary-500 rounded-full">Docker</span>
-            <span class="px-3 py-1 bg-primary-500/10 text-primary-500 rounded-full">Linux</span>
-            <span class="px-3 py-1 bg-primary-500/10 text-primary-500 rounded-full">CorelDraw</span>
-            <span class="px-3 py-1 bg-primary-500/10 text-primary-500 rounded-full">Photoshop</span>
-            <span class="px-3 py-1 bg-primary-500/10 text-primary-500 rounded-full">Illustrator</span>
-            <span class="px-3 py-1 bg-primary-500/10 text-primary-500 rounded-full">Aurora 3D</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Experience Section -->
-  <section id="experience" class="py-20 bg-gray-100 dark:bg-gray-800">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">Professional Experience</h2>
-        <div class="w-20 h-1 bg-primary-500 mx-auto mb-6"></div>
-        <p class="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-          My journey through various roles has equipped me with diverse skills and a comprehensive understanding 
-          of the tech industry.
-        </p>
-      </div>
-      
-      <div class="relative pl-12 timeline">
-        <!-- Experience 1 -->
-        <div class="relative mb-12 animate__animated">
-          <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-primary-500 flex items-center justify-center text-white">
-            <i class="fas fa-briefcase"></i>
-          </div>
-          <div class="ml-16 glass p-6 rounded-2xl shadow-lg">
-            <span class="bg-primary-500 text-white text-sm px-3 py-1 rounded-full">2022 - Present</span>
-            <h3 class="text-xl font-bold mt-3 mb-2">Founder & Lead Developer</h3>
-            <h4 class="text-lg text-primary-400 mb-3">Wireless Computer Services</h4>
-            <ul class="list-disc pl-5 space-y-2">
-              <li>Developed and deployed custom websites for banking, corporate, government, and individual clients</li>
-              <li>Spearheaded full-scale projects from requirement gathering to launch</li>
-              <li>Leveraged Laravel for back-end and Vue, Tailwind CSS for front-end</li>
-              <li>Achieved 100% client satisfaction and project deadlines</li>
-              <li>Reduced project development time by 30% through efficient integration</li>
-            </ul>
+          <div class="mt-7 grid grid-cols-2 gap-3 text-sm sm:max-w-md">
+            <div class="rounded-xl border border-amber-200 bg-amber-100 p-3">
+              <p class="font-bold text-amber-900">5+ Years</p>
+              <p class="text-amber-800">Hands-on delivery</p>
+            </div>
+            <div class="rounded-xl border border-emerald-200 bg-emerald-100 p-3">
+              <p class="font-bold text-emerald-900">30% Faster</p>
+              <p class="text-emerald-800">Average dev cycle gains</p>
+            </div>
+            <div class="rounded-xl border border-sky-200 bg-sky-100 p-3">
+              <p class="font-bold text-sky-900">Client-Ready</p>
+              <p class="text-sky-800">Responsive by default</p>
+            </div>
+            <div class="rounded-xl border border-violet-200 bg-violet-100 p-3">
+              <p class="font-bold text-violet-900">End-to-End</p>
+              <p class="text-violet-800">Frontend and backend</p>
+            </div>
           </div>
         </div>
-        
-        <!-- Experience 2 -->
-        <div class="relative mb-12 animate__animated">
-          <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-secondary-500 flex items-center justify-center text-white">
-            <i class="fas fa-church"></i>
-          </div>
-          <div class="ml-16 glass p-6 rounded-2xl shadow-lg">
-            <span class="bg-secondary-500 text-white text-sm px-3 py-1 rounded-full">2015 - 2018</span>
-            <h3 class="text-xl font-bold mt-3 mb-2">Media Coordinator</h3>
-            <h4 class="text-lg text-secondary-400 mb-3">First Baptist Church, Igede Ekiti</h4>
-            <ul class="list-disc pl-5 space-y-2">
-              <li>Led the Media Department overseeing audio-visual setups and live broadcasts</li>
-              <li>Provided strategic advice on equipment upgrades and digital outreach</li>
-              <li>Taught computer fundamentals and Microsoft Office to students</li>
-            </ul>
-          </div>
-        </div>
-        
-        <!-- Experience 3 -->
-        <div class="relative mb-12 animate__animated">
-          <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-primary-600 flex items-center justify-center text-white">
-            <i class="fas fa-laptop"></i>
-          </div>
-          <div class="ml-16 glass p-6 rounded-2xl shadow-lg">
-            <span class="bg-primary-600 text-white text-sm px-3 py-1 rounded-full">2014 - 2015</span>
-            <h3 class="text-xl font-bold mt-3 mb-2">Intern & Computer Apprentice</h3>
-            <h4 class="text-lg text-primary-400 mb-3">Computer Center, Igede Ekiti</h4>
-            <ul class="list-disc pl-5 space-y-2">
-              <li>Completed 9-month apprenticeship in computer operations</li>
-              <li>Learned Microsoft Office, graphic design, and animation with Aurora 3D</li>
-              <li>Gained foundational experience in productivity software</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Projects Section -->
-  <section id="projects" class="py-20">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">Projects & Portfolio</h2>
-        <div class="w-20 h-1 bg-primary-500 mx-auto mb-6"></div>
-        <p class="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-          A selection of projects I've developed for various sectors, showcasing my technical skills 
-          and problem-solving abilities.
-        </p>
-      </div>
-      
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Project 1 -->
-        <div class="card-hover glass rounded-2xl overflow-hidden shadow-lg animate__animated">
-          <div class="h-48 bg-gray-200 border-2 border-dashed flex items-center justify-center">
-            <span class="text-gray-500">Banking Platform Preview</span>
-          </div>
-          <div class="p-6">
-            <span class="bg-primary-500 text-white text-sm px-3 py-1 rounded-full mb-3 inline-block">Laravel & Vue.js</span>
-            <h3 class="text-xl font-bold mb-2">Banking Sector Web Platform</h3>
-            <p class="text-gray-600 dark:text-gray-300 mb-4">
-              Secure, user-friendly banking website focusing on security and optimal customer experience.
-            </p>
-            <ul class="mb-4">
-              <li class="flex items-center mb-2">
-                <i class="fas fa-check-circle text-primary-500 mr-2"></i>
-                <span>Advanced security protocols</span>
-              </li>
-              <li class="flex items-center mb-2">
-                <i class="fas fa-check-circle text-primary-500 mr-2"></i>
-                <span>Intuitive user experience</span>
-              </li>
-              <li class="flex items-center">
-                <i class="fas fa-check-circle text-primary-500 mr-2"></i>
-                <span>Real-time transaction processing</span>
-              </li>
-            </ul>
-            <a href="#" class="text-primary-500 font-medium hover:underline">View Project</a>
+        <div class="mx-auto w-full max-w-sm rounded-3xl border border-stone-300 bg-white p-4 shadow-sm">
+          <img
+            src="https://wireless.ct.ws/img/dayo.png"
+            alt="Portrait of Oyetoke Adedayo Ebenezer"
+            class="h-72 w-full rounded-2xl object-cover"
+          />
+          <div class="mt-4 grid grid-cols-2 gap-3 text-sm">
+            <div class="rounded-lg bg-mist-100 p-3 text-mist-700">
+              <p class="font-semibold">Location</p>
+              <p>Awka, Nigeria</p>
+            </div>
+            <div class="rounded-lg bg-olive-100 p-3 text-olive-700">
+              <p class="font-semibold">Role</p>
+              <p>Founder, Wireless</p>
+            </div>
           </div>
         </div>
-        
-        <!-- Project 2 -->
-        <div class="card-hover glass rounded-2xl overflow-hidden shadow-lg animate__animated">
-          <div class="h-48 bg-gray-200 border-2 border-dashed flex items-center justify-center">
-            <span class="text-gray-500">Government Portal Preview</span>
-          </div>
-          <div class="p-6">
-            <span class="bg-secondary-500 text-white text-sm px-3 py-1 rounded-full mb-3 inline-block">React & Tailwind CSS</span>
-            <h3 class="text-xl font-bold mb-2">Government Agency Portal</h3>
-            <p class="text-gray-600 dark:text-gray-300 mb-4">
-              Fully responsive platform for government agency with interactive features and CMS.
-            </p>
-            <ul class="mb-4">
-              <li class="flex items-center mb-2">
-                <i class="fas fa-check-circle text-secondary-500 mr-2"></i>
-                <span>Accessibility compliant</span>
-              </li>
-              <li class="flex items-center mb-2">
-                <i class="fas fa-check-circle text-secondary-500 mr-2"></i>
-                <span>Information management system</span>
-              </li>
-              <li class="flex items-center">
-                <i class="fas fa-check-circle text-secondary-500 mr-2"></i>
-                <span>Multi-language support</span>
-              </li>
-            </ul>
-            <a href="#" class="text-secondary-500 font-medium hover:underline">View Project</a>
-          </div>
-        </div>
-        
-        <!-- Project 3 -->
-        <div class="card-hover glass rounded-2xl overflow-hidden shadow-lg animate__animated">
-          <div class="h-48 bg-gray-200 border-2 border-dashed flex items-center justify-center">
-            <span class="text-gray-500">Corporate Website Preview</span>
-          </div>
-          <div class="p-6">
-            <span class="bg-primary-500 text-white text-sm px-3 py-1 rounded-full mb-3 inline-block">Vue.js & Laravel</span>
-            <h3 class="text-xl font-bold mb-2">Corporate Portfolio Platform</h3>
-            <p class="text-gray-600 dark:text-gray-300 mb-4">
-              Custom corporate websites tailored to clients' brand identity with SEO optimization.
-            </p>
-            <ul class="mb-4">
-              <li class="flex items-center mb-2">
-                <i class="fas fa-check-circle text-primary-500 mr-2"></i>
-                <span>Brand-focused design</span>
-              </li>
-              <li class="flex items-center mb-2">
-                <i class="fas fa-check-circle text-primary-500 mr-2"></i>
-                <span>SEO optimized content</span>
-              </li>
-              <li class="flex items-center">
-                <i class="fas fa-check-circle text-primary-500 mr-2"></i>
-                <span>Performance analytics</span>
-              </li>
-            </ul>
-            <a href="#" class="text-primary-500 font-medium hover:underline">View Project</a>
-          </div>
-        </div>
-      </div>
-      
-      <div class="text-center mt-12">
-        <a href="https://www.wirelesscs.com" target="_blank" class="px-6 py-3 bg-primary-500 hover:bg-primary-600 text-white rounded-full font-medium transition-all shadow-lg hover:shadow-xl inline-flex items-center">
-          <i class="fas fa-external-link-alt mr-2"></i>View Full Portfolio
-        </a>
-      </div>
-    </div>
-  </section>
+      </section>
+    </main>
 
-  <!-- Contact Section -->
-  <section id="contact" class="py-20 bg-gray-100 dark:bg-gray-800">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
-        <div class="w-20 h-1 bg-primary-500 mx-auto mb-6"></div>
-        <p class="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-          Have a project in mind or want to discuss potential opportunities? Feel free to reach out!
+    <section id="palette" class="border-y border-stone-200 bg-white">
+      <div class="mx-auto max-w-6xl px-4 py-10">
+        <h2 class="font-display text-2xl font-bold text-zinc-900">Color System</h2>
+        <p class="mt-2 max-w-2xl text-sm text-zinc-600">
+          Built with your requested palette. No gradient colors are used.
         </p>
+
+        <div class="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
+          <div class="rounded-xl border border-red-200 bg-red-100 px-3 py-2 text-sm font-semibold text-red-700">Red</div>
+          <div class="rounded-xl border border-orange-200 bg-orange-100 px-3 py-2 text-sm font-semibold text-orange-700">Orange</div>
+          <div class="rounded-xl border border-amber-200 bg-amber-100 px-3 py-2 text-sm font-semibold text-amber-700">Amber</div>
+          <div class="rounded-xl border border-yellow-200 bg-yellow-100 px-3 py-2 text-sm font-semibold text-yellow-700">Yellow</div>
+          <div class="rounded-xl border border-lime-200 bg-lime-100 px-3 py-2 text-sm font-semibold text-lime-700">Lime</div>
+          <div class="rounded-xl border border-green-200 bg-green-100 px-3 py-2 text-sm font-semibold text-green-700">Green</div>
+          <div class="rounded-xl border border-emerald-200 bg-emerald-100 px-3 py-2 text-sm font-semibold text-emerald-700">Emerald</div>
+          <div class="rounded-xl border border-teal-200 bg-teal-100 px-3 py-2 text-sm font-semibold text-teal-700">Teal</div>
+          <div class="rounded-xl border border-cyan-200 bg-cyan-100 px-3 py-2 text-sm font-semibold text-cyan-700">Cyan</div>
+          <div class="rounded-xl border border-sky-200 bg-sky-100 px-3 py-2 text-sm font-semibold text-sky-700">Sky</div>
+          <div class="rounded-xl border border-blue-200 bg-blue-100 px-3 py-2 text-sm font-semibold text-blue-700">Blue</div>
+          <div class="rounded-xl border border-indigo-200 bg-indigo-100 px-3 py-2 text-sm font-semibold text-indigo-700">Indigo</div>
+          <div class="rounded-xl border border-violet-200 bg-violet-100 px-3 py-2 text-sm font-semibold text-violet-700">Violet</div>
+          <div class="rounded-xl border border-purple-200 bg-purple-100 px-3 py-2 text-sm font-semibold text-purple-700">Purple</div>
+          <div class="rounded-xl border border-fuchsia-200 bg-fuchsia-100 px-3 py-2 text-sm font-semibold text-fuchsia-700">Fuchsia</div>
+          <div class="rounded-xl border border-pink-200 bg-pink-100 px-3 py-2 text-sm font-semibold text-pink-700">Pink</div>
+          <div class="rounded-xl border border-rose-200 bg-rose-100 px-3 py-2 text-sm font-semibold text-rose-700">Rose</div>
+          <div class="rounded-xl border border-slate-200 bg-slate-100 px-3 py-2 text-sm font-semibold text-slate-700">Slate</div>
+          <div class="rounded-xl border border-gray-200 bg-gray-100 px-3 py-2 text-sm font-semibold text-gray-700">Gray</div>
+          <div class="rounded-xl border border-zinc-200 bg-zinc-100 px-3 py-2 text-sm font-semibold text-zinc-700">Zinc</div>
+          <div class="rounded-xl border border-neutral-200 bg-neutral-100 px-3 py-2 text-sm font-semibold text-neutral-700">Neutral</div>
+          <div class="rounded-xl border border-stone-200 bg-stone-100 px-3 py-2 text-sm font-semibold text-stone-700">Stone</div>
+          <div class="rounded-xl border border-taupe-200 bg-taupe-100 px-3 py-2 text-sm font-semibold text-taupe-700">Taupe</div>
+          <div class="rounded-xl border border-mauve-200 bg-mauve-100 px-3 py-2 text-sm font-semibold text-mauve-700">Mauve</div>
+          <div class="rounded-xl border border-mist-200 bg-mist-100 px-3 py-2 text-sm font-semibold text-mist-700">Mist</div>
+          <div class="rounded-xl border border-olive-200 bg-olive-100 px-3 py-2 text-sm font-semibold text-olive-700">Olive</div>
+        </div>
       </div>
-      
-      <div class="grid md:grid-cols-2 gap-12">
-        <div class="glass p-8 rounded-2xl shadow-lg">
-          <h3 class="text-2xl font-bold mb-6">Contact Information</h3>
-          
-          <div class="space-y-6">
-            <div class="flex items-start">
-              <div class="w-12 h-12 rounded-full bg-primary-500 flex items-center justify-center text-white mr-4">
-                <i class="fas fa-map-marker-alt"></i>
-              </div>
-              <div>
-                <h4 class="font-bold text-lg">Location</h4>
-                <p>Awka, Anambra State, Nigeria</p>
-              </div>
+    </section>
+
+    <section id="about" class="mx-auto max-w-6xl px-4 py-12">
+      <div class="grid gap-6 md:grid-cols-2">
+        <article class="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
+          <h2 class="font-display text-2xl font-bold text-zinc-900">About Me</h2>
+          <p class="mt-4 text-sm leading-relaxed text-zinc-700">
+            Adaptable full-stack developer with practical experience delivering websites and platforms for banking,
+            corporate, and government use cases. I focus on maintainability, speed, and clear user journeys.
+          </p>
+          <p class="mt-3 text-sm leading-relaxed text-zinc-700">
+            My background in Industrial Mathematics supports how I break down complex problems and ship stable solutions.
+          </p>
+        </article>
+
+        <article class="rounded-2xl border border-stone-200 bg-mist-50 p-6 shadow-sm">
+          <h3 class="font-display text-xl font-bold text-mist-700">Contact Snapshot</h3>
+          <dl class="mt-4 space-y-3 text-sm">
+            <div class="rounded-lg bg-white p-3">
+              <dt class="font-semibold text-zinc-800">Email</dt>
+              <dd class="text-zinc-700">mail@wirelesscs.com</dd>
             </div>
-            
-            <div class="flex items-start">
-              <div class="w-12 h-12 rounded-full bg-secondary-500 flex items-center justify-center text-white mr-4">
-                <i class="fas fa-envelope"></i>
-              </div>
-              <div>
-                <h4 class="font-bold text-lg">Email</h4>
-                <p>mail@wirelesscs.com</p>
-                <a href="mailto:mail@wirelesscs.com" class="text-primary-500 hover:underline">Send a message</a>
-              </div>
+            <div class="rounded-lg bg-white p-3">
+              <dt class="font-semibold text-zinc-800">Phone</dt>
+              <dd class="text-zinc-700">+234 903 003 6438</dd>
             </div>
-            
-            <div class="flex items-start">
-              <div class="w-12 h-12 rounded-full bg-primary-600 flex items-center justify-center text-white mr-4">
-                <i class="fas fa-phone"></i>
-              </div>
-              <div>
-                <h4 class="font-bold text-lg">Phone</h4>
-                <p>+234 903 003 6438</p>
-                <a href="tel:+2349030036438" class="text-primary-500 hover:underline">Call now</a>
-              </div>
+            <div class="rounded-lg bg-white p-3">
+              <dt class="font-semibold text-zinc-800">GitHub</dt>
+              <dd class="text-zinc-700">@Dayoebe</dd>
             </div>
-            
-            <div class="flex items-start">
-              <div class="w-12 h-12 rounded-full bg-secondary-600 flex items-center justify-center text-white mr-4">
-                <i class="fab fa-github"></i>
-              </div>
-              <div>
-                <h4 class="font-bold text-lg">GitHub</h4>
-                <p>@Dayoebe</p>
-                <a href="https://github.com/Dayoebe" target="_blank" class="text-primary-500 hover:underline">View profile</a>
-              </div>
+          </dl>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" class="border-y border-stone-200 bg-stone-100">
+      <div class="mx-auto max-w-6xl px-4 py-12">
+        <h2 class="font-display text-2xl font-bold text-zinc-900">Technical Skills</h2>
+        <p class="mt-2 max-w-2xl text-sm text-zinc-600">
+          Mobile-first stack choices for reliable, scalable product development.
+        </p>
+
+        <div class="mt-6 grid gap-5 md:grid-cols-3">
+          <article class="rounded-2xl border border-red-200 bg-white p-5">
+            <h3 class="font-display text-lg font-semibold text-red-700">Frontend</h3>
+            <ul class="mt-3 flex flex-wrap gap-2 text-xs font-medium">
+              <li class="rounded-full bg-red-100 px-3 py-1 text-red-700">HTML</li>
+              <li class="rounded-full bg-orange-100 px-3 py-1 text-orange-700">CSS</li>
+              <li class="rounded-full bg-amber-100 px-3 py-1 text-amber-700">JavaScript</li>
+              <li class="rounded-full bg-yellow-100 px-3 py-1 text-yellow-700">Tailwind CSS</li>
+              <li class="rounded-full bg-lime-100 px-3 py-1 text-lime-700">Vue</li>
+              <li class="rounded-full bg-green-100 px-3 py-1 text-green-700">React</li>
+            </ul>
+          </article>
+
+          <article class="rounded-2xl border border-emerald-200 bg-white p-5">
+            <h3 class="font-display text-lg font-semibold text-emerald-700">Backend</h3>
+            <ul class="mt-3 flex flex-wrap gap-2 text-xs font-medium">
+              <li class="rounded-full bg-emerald-100 px-3 py-1 text-emerald-700">PHP</li>
+              <li class="rounded-full bg-teal-100 px-3 py-1 text-teal-700">Laravel</li>
+              <li class="rounded-full bg-cyan-100 px-3 py-1 text-cyan-700">MySQL</li>
+              <li class="rounded-full bg-sky-100 px-3 py-1 text-sky-700">REST API</li>
+              <li class="rounded-full bg-blue-100 px-3 py-1 text-blue-700">LAMP</li>
+            </ul>
+          </article>
+
+          <article class="rounded-2xl border border-indigo-200 bg-white p-5">
+            <h3 class="font-display text-lg font-semibold text-indigo-700">Ops & Tools</h3>
+            <ul class="mt-3 flex flex-wrap gap-2 text-xs font-medium">
+              <li class="rounded-full bg-indigo-100 px-3 py-1 text-indigo-700">Git</li>
+              <li class="rounded-full bg-violet-100 px-3 py-1 text-violet-700">GitHub</li>
+              <li class="rounded-full bg-purple-100 px-3 py-1 text-purple-700">Docker</li>
+              <li class="rounded-full bg-fuchsia-100 px-3 py-1 text-fuchsia-700">Linux</li>
+              <li class="rounded-full bg-pink-100 px-3 py-1 text-pink-700">CorelDraw</li>
+              <li class="rounded-full bg-rose-100 px-3 py-1 text-rose-700">Photoshop</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="mt-8 grid gap-4 sm:grid-cols-2">
+          <div class="rounded-xl border border-slate-200 bg-white p-4">
+            <div class="flex items-center justify-between text-sm font-semibold">
+              <span class="text-slate-700">Frontend Delivery</span>
+              <span class="text-slate-600">90%</span>
+            </div>
+            <div class="mt-2 h-2 rounded-full bg-slate-200">
+              <div class="h-2 w-[90%] rounded-full bg-slate-600"></div>
             </div>
           </div>
-          
-          <div class="mt-8">
-            <h4 class="font-bold text-lg mb-4">Connect with me</h4>
-            <div class="flex space-x-4">
-              <a href="#" class="w-10 h-10 rounded-full bg-primary-500 flex items-center justify-center text-white hover:bg-primary-600 transition">
-                <i class="fab fa-linkedin-in"></i>
-              </a>
-              <a href="#" class="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center text-white hover:bg-blue-600 transition">
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-gray-900 transition">
-                <i class="fab fa-github"></i>
-              </a>
-              <a href="#" class="w-10 h-10 rounded-full bg-red-500 flex items-center justify-center text-white hover:bg-red-600 transition">
-                <i class="fab fa-youtube"></i>
-              </a>
+          <div class="rounded-xl border border-mauve-200 bg-white p-4">
+            <div class="flex items-center justify-between text-sm font-semibold">
+              <span class="text-mauve-700">Backend Delivery</span>
+              <span class="text-mauve-600">85%</span>
+            </div>
+            <div class="mt-2 h-2 rounded-full bg-mauve-200">
+              <div class="h-2 w-[85%] rounded-full bg-mauve-600"></div>
+            </div>
+          </div>
+          <div class="rounded-xl border border-neutral-200 bg-white p-4">
+            <div class="flex items-center justify-between text-sm font-semibold">
+              <span class="text-neutral-700">UX Awareness</span>
+              <span class="text-neutral-600">80%</span>
+            </div>
+            <div class="mt-2 h-2 rounded-full bg-neutral-200">
+              <div class="h-2 w-[80%] rounded-full bg-neutral-600"></div>
+            </div>
+          </div>
+          <div class="rounded-xl border border-olive-200 bg-white p-4">
+            <div class="flex items-center justify-between text-sm font-semibold">
+              <span class="text-olive-700">Problem Solving</span>
+              <span class="text-olive-600">95%</span>
+            </div>
+            <div class="mt-2 h-2 rounded-full bg-olive-200">
+              <div class="h-2 w-[95%] rounded-full bg-olive-600"></div>
             </div>
           </div>
         </div>
-        
-        <div class="glass p-8 rounded-2xl shadow-lg">
-          <h3 class="text-2xl font-bold mb-6">Send Me a Message</h3>
-          
-          <form>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
-              <div>
-                <label for="name" class="block mb-2">Your Name</label>
-                <input type="text" id="name" class="w-full px-4 py-3 bg-transparent border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500">
-              </div>
-              <div>
-                <label for="email" class="block mb-2">Email Address</label>
-                <input type="email" id="email" class="w-full px-4 py-3 bg-transparent border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500">
-              </div>
+      </div>
+    </section>
+
+    <section id="projects" class="mx-auto max-w-6xl px-4 py-12">
+      <h2 class="font-display text-2xl font-bold text-zinc-900">Featured Projects</h2>
+      <p class="mt-2 max-w-2xl text-sm text-zinc-600">
+        Recent work focused on usability, reliability, and delivery speed.
+      </p>
+
+      <div class="mt-6 grid gap-5 md:grid-cols-3">
+        <article class="overflow-hidden rounded-2xl border border-stone-200 bg-white shadow-sm">
+          <div class="h-2 bg-blue-500"></div>
+          <div class="p-5">
+            <span class="rounded-full bg-blue-100 px-3 py-1 text-xs font-semibold text-blue-700">Laravel + Vue</span>
+            <h3 class="mt-3 font-display text-lg font-semibold text-zinc-900">Banking Web Platform</h3>
+            <p class="mt-2 text-sm text-zinc-700">Secure and responsive banking experience with clean information flow.</p>
+          </div>
+        </article>
+
+        <article class="overflow-hidden rounded-2xl border border-stone-200 bg-white shadow-sm">
+          <div class="h-2 bg-teal-500"></div>
+          <div class="p-5">
+            <span class="rounded-full bg-teal-100 px-3 py-1 text-xs font-semibold text-teal-700">React + Tailwind</span>
+            <h3 class="mt-3 font-display text-lg font-semibold text-zinc-900">Government Portal</h3>
+            <p class="mt-2 text-sm text-zinc-700">Responsive portal with strong accessibility structure and CMS workflow.</p>
+          </div>
+        </article>
+
+        <article class="overflow-hidden rounded-2xl border border-stone-200 bg-white shadow-sm">
+          <div class="h-2 bg-rose-500"></div>
+          <div class="p-5">
+            <span class="rounded-full bg-rose-100 px-3 py-1 text-xs font-semibold text-rose-700">Vue + Laravel</span>
+            <h3 class="mt-3 font-display text-lg font-semibold text-zinc-900">Corporate Website Suite</h3>
+            <p class="mt-2 text-sm text-zinc-700">Brand-focused websites built for performance, SEO, and growth.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="border-t border-stone-200 bg-white">
+      <div class="mx-auto grid max-w-6xl gap-6 px-4 py-12 md:grid-cols-2">
+        <article class="rounded-2xl border border-stone-200 bg-stone-50 p-6">
+          <h2 class="font-display text-2xl font-bold text-zinc-900">Let&apos;s Build Something</h2>
+          <p class="mt-3 text-sm leading-relaxed text-zinc-700">
+            I am available for collaboration, freelance projects, and product development partnerships.
+          </p>
+          <div class="mt-5 space-y-2 text-sm">
+            <p><span class="font-semibold text-zinc-900">Email:</span> mail@wirelesscs.com</p>
+            <p><span class="font-semibold text-zinc-900">Phone:</span> +234 903 003 6438</p>
+            <p><span class="font-semibold text-zinc-900">Website:</span> www.wirelesscs.com</p>
+          </div>
+        </article>
+
+        <form class="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
+          <h3 class="font-display text-xl font-semibold text-zinc-900">Send a Message</h3>
+          <div class="mt-4 space-y-4">
+            <div>
+              <label for="name" class="mb-1 block text-sm font-medium text-zinc-700">Name</label>
+              <input id="name" type="text" class="w-full rounded-xl border border-stone-300 px-3 py-2 text-sm focus:border-red-500 focus:outline-none">
             </div>
-            
-            <div class="mb-6">
-              <label for="subject" class="block mb-2">Subject</label>
-              <input type="text" id="subject" class="w-full px-4 py-3 bg-transparent border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500">
+            <div>
+              <label for="email" class="mb-1 block text-sm font-medium text-zinc-700">Email</label>
+              <input id="email" type="email" class="w-full rounded-xl border border-stone-300 px-3 py-2 text-sm focus:border-blue-500 focus:outline-none">
             </div>
-            
-            <div class="mb-6">
-              <label for="message" class="block mb-2">Message</label>
-              <textarea id="message" rows="5" class="w-full px-4 py-3 bg-transparent border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500"></textarea>
+            <div>
+              <label for="message" class="mb-1 block text-sm font-medium text-zinc-700">Message</label>
+              <textarea id="message" rows="4" class="w-full rounded-xl border border-stone-300 px-3 py-2 text-sm focus:border-emerald-500 focus:outline-none"></textarea>
             </div>
-            
-            <button type="submit" class="w-full px-6 py-3 bg-primary-500 hover:bg-primary-600 text-white rounded-lg font-medium transition-all shadow-lg hover:shadow-xl">
+            <button type="submit" class="w-full rounded-xl bg-red-600 px-4 py-2.5 text-sm font-semibold text-white hover:bg-red-700">
               Send Message
             </button>
-          </form>
-        </div>
+          </div>
+        </form>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Footer -->
-  <footer class="py-10 bg-gray-900 text-gray-400">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="flex flex-col md:flex-row justify-between items-center">
-        <div class="mb-6 md:mb-0">
-          <h3 class="text-2xl font-bold text-white mb-2">Oyetoke Adedayo Ebenezer</h3>
-          <p>Full-Stack Developer & Tech Educator</p>
-        </div>
-        
-        <div class="flex space-x-6">
-          <a href="#" class="hover:text-white transition">
-            <i class="fab fa-linkedin-in text-xl"></i>
-          </a>
-          <a href="#" class="hover:text-white transition">
-            <i class="fab fa-github text-xl"></i>
-          </a>
-          <a href="#" class="hover:text-white transition">
-            <i class="fab fa-twitter text-xl"></i>
-          </a>
-          <a href="#" class="hover:text-white transition">
-            <i class="fab fa-instagram text-xl"></i>
-          </a>
-        </div>
+    <footer class="border-t border-stone-200 bg-zinc-900">
+      <div class="mx-auto max-w-6xl px-4 py-8 text-sm text-zinc-300">
+        <p class="font-display text-base font-semibold text-white">Oyetoke Adedayo Ebenezer</p>
+        <p class="mt-1">Full-Stack Developer</p>
+        <p class="mt-3">Copyright <span id="year"></span> Wireless.</p>
       </div>
-      
-      <div class="border-t border-gray-800 mt-10 pt-6 text-center">
-        <p>Built with ❤️ by Oyetoke Adedayo Ebenezer (Wireless) · &copy; 2025</p>
-        <p class="mt-2">Powered by Tailwind CSS + Alpine.js · <a href="https://github.com/Dayoebe" target="_blank" class="text-primary-400 hover:underline">GitHub</a></p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Back to top button -->
-  <a href="#home" class="fixed bottom-6 right-6 w-12 h-12 rounded-full bg-primary-500 flex items-center justify-center text-white shadow-lg hover:bg-primary-600 transition-all animate-bounce">
-    <i class="fas fa-arrow-up"></i>
-  </a>
+    </footer>
+  </div>
 
   <script>
-    // Animation on scroll functionality
-    document.addEventListener('DOMContentLoaded', function() {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('animate__fadeInUp');
-          }
-        });
-      }, {
-        threshold: 0.1
-      });
-      
-      document.querySelectorAll('.animate__animated').forEach(el => {
-        observer.observe(el);
-      });
-    });
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
