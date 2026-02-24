@@ -44,6 +44,10 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL) || str_length($email) > 120) {
     respond(422, false, 'Please provide a valid email address.');
 }
 
+if (preg_match('/[\r\n]/', $email) === 1) {
+    respond(422, false, 'Invalid email format.');
+}
+
 if ($subject === '' || str_length($subject) < 4 || str_length($subject) > 120) {
     respond(422, false, 'Please provide a valid subject.');
 }
@@ -70,7 +74,7 @@ if (is_file($rateLimitFile)) {
 $recipient = 'oyetoke.ebenezer@gmail.com';
 $fromAddress = 'no-reply@wirelesscs.ct.ws';
 
-$safeName = preg_replace('/[^a-zA-Z0-9\s\.\-\']/u', '', $name) ?: 'Portfolio Visitor';
+$safeName = preg_replace('/[^a-zA-Z0-9 \.\-\']/u', '', $name) ?: 'Portfolio Visitor';
 $safeSubject = preg_replace('/[\r\n]+/', ' ', $subject);
 $safeMessage = preg_replace("/\r\n?|\n/", "\n", $message);
 
