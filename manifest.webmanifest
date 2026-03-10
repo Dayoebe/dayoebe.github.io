@@ -1,8 +1,8 @@
 {
   "id": "./",
-  "name": "Wireless Portfolio",
-  "short_name": "Wireless",
-  "description": "Adedayo Ebenezer Oyetoke's installable portfolio with offline access, project highlights, and contact details.",
+  "name": "Wireless Terminal",
+  "short_name": "Wireless Terminal",
+  "description": "Wireless Terminal is Adedayo Ebenezer Oyetoke's installable portfolio with offline access, project highlights, and contact details.",
   "lang": "en-NG",
   "start_url": "./",
   "scope": "./",
