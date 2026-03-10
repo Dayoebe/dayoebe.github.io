@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Wireless Portfolio icon">
+  <rect width="512" height="512" rx="120" fill="#dc2626" />
+  <circle cx="390" cy="122" r="84" fill="#fb923c" opacity="0.9" />
+  <rect x="72" y="72" width="368" height="368" rx="92" fill="#18181b" opacity="0.14" />
+  <rect x="98" y="146" width="316" height="220" rx="44" fill="#fff7ed" />
+  <path d="M168 216h176c14.359 0 26 11.641 26 26v28c0 14.359-11.641 26-26 26H168c-14.359 0-26-11.641-26-26v-28c0-14.359 11.641-26 26-26Z" fill="#fee2e2" />
+  <text x="256" y="286" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="94" font-weight="800" fill="#b91c1c">AEO</text>
+  <rect x="156" y="340" width="200" height="18" rx="9" fill="#18181b" opacity="0.14" />
+  <rect x="182" y="104" width="148" height="24" rx="12" fill="#ffffff" opacity="0.72" />
+</svg>
