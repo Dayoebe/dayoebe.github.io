@@ -4,48 +4,57 @@ Full-Stack Web Developer building Laravel, Livewire & Vue products for EdTech, m
 
 ## About Me
 
-I build practical web applications that solve real problems for schools, media brands, and businesses.  
-My work focuses on clean interfaces, scalable backend systems, and products that deliver real value to users.
+I build practical digital products that solve real problems for schools, media brands, and businesses.  
+My focus is on clean user experiences, reliable backend systems, and scalable web applications that deliver measurable value.
 
-- Building digital products with **Laravel, Livewire, Vue, Tailwind CSS, PHP, JavaScript, MySQL, and SQLite**
-- Interested in **EdTech, media platforms, business automation, and product-driven development**
 - Founder of **Wireless Computer Services**
-- Currently building solutions that support **education, broadcasting, and business growth**
+- Strongly focused on **Laravel ecosystem development**
+- Interested in **EdTech, media technology, business automation, and product-driven systems**
+- Building solutions that support **education, broadcasting, and digital transformation**
 
-## What I'm Working On
+## What I Build
 
-- **Bootkode** — a digital learning platform for coding education and skill development
-- **Glow** / **Glow FM projects** — media and radio-focused digital platforms
-- **School Management System** — tools for schools, students, and administration
-- **Laravel-based business applications** with modern UI and practical workflows
+- **EdTech platforms** for learning, student growth, and digital training
+- **Media and broadcasting platforms** for radio and content-driven brands
+- **School and administrative systems** that simplify operations
+- **Custom business applications** with modern workflows and clean UI
 
 ## Featured Projects
 
 ### [Bootkode](https://github.com/Dayoebe/bootkode)
-A digital education platform designed to bridge skill gaps through structured and accessible learning.
+A digital education platform focused on accessible, structured, and locally relevant coding education.
 
 ### [School](https://github.com/Dayoebe/school)
-A school web application built to support academic and administrative workflows.
+A school management web application built to support academic and administrative workflows.
 
 ### [Glow](https://github.com/Dayoebe/Glow)
-A Laravel-based project reflecting my work on media and broadcasting platforms.
+A Laravel-based platform reflecting my work around media, content, and broadcasting solutions.
 
 ### [Bincom Election Task](https://github.com/Dayoebe/bincom-election-task)
-An election result management app built with Laravel and Livewire.
+An election result management application built with Laravel and Livewire.
 
 ## Tech Stack
 
 **Backend:** Laravel, PHP, Livewire  
-**Frontend:** Vue.js, Tailwind CSS, Alpine.js, Blade  
+**Frontend:** Vue.js, Blade, Alpine.js, Tailwind CSS  
 **Database:** MySQL, SQLite  
 **Tools:** Git, GitHub, VS Code, Vite
 
+## Current Focus
+
+Right now, I’m focused on building software that is useful, scalable, and impactful — especially in:
+
+- Education
+- Media
+- Business growth
+- Digital systems for Africa-focused solutions
+
 ## Connect With Me
 
-- Portfolio: [dayoebe.github.io](https://github.com/Dayoebe/dayoebe.github.io)
-- LinkedIn: [linkedin.com/in/dayoebe](https://www.linkedin.com/in/dayoebe)
-- X: [@dayoebe](https://www.twitter.com/dayoebe)
+- **GitHub Portfolio Repo:** [dayoebe.github.io](https://github.com/Dayoebe/dayoebe.github.io)
+- **LinkedIn:** [linkedin.com/in/dayoebe](https://www.linkedin.com/in/dayoebe)
+- **X:** [@dayoebe](https://www.twitter.com/dayoebe)
 
-## Goal
+## Open To
 
-I’m focused on building software that is useful, scalable, and impactful — especially in education, media, and business.
+I’m open to collaborating on meaningful web products, Laravel-based platforms, and problem-solving digital tools.
