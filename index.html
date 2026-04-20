@@ -142,6 +142,11 @@
       left: auto;
       right: 1.25rem;
     }
+
+    html[dir="rtl"] .language-switcher {
+      left: 1.25rem;
+      right: auto;
+    }
   </style>
   <script type="application/ld+json">
     {
@@ -865,6 +870,24 @@
     </section>
 
     </main>
+
+    <div class="language-switcher fixed bottom-5 right-5 z-50 flex items-center gap-2 rounded-lg border border-stone-300 bg-white/95 px-3 py-2 text-sm font-semibold text-zinc-800 shadow-lg backdrop-blur">
+      <label for="floating-language-select" class="text-xs font-bold uppercase tracking-wide text-zinc-600">Language</label>
+      <select
+        id="floating-language-select"
+        data-language-select
+        aria-label="Language"
+        class="rounded-lg border border-stone-300 bg-white px-2 py-1.5 text-sm font-semibold text-zinc-800 focus:border-red-500 focus:outline-none"
+      >
+        <option value="en">English</option>
+        <option value="es">Español</option>
+        <option value="fr">Français</option>
+        <option value="ar">العربية</option>
+        <option value="sw">Kiswahili</option>
+        <option value="hi">हिन्दी</option>
+        <option value="pt">Português</option>
+      </select>
+    </div>
 
     <a href="https://wa.me/2349030036438?text=Hi%20Adedayo%2C%20I%20want%20to%20discuss%20a%20project." target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" class="fixed bottom-5 left-5 z-50 inline-flex items-center gap-2 rounded-full border border-emerald-300 bg-emerald-500 px-4 py-3 text-sm font-bold text-white shadow-lg hover:bg-emerald-600 animate__animated animate__fadeInUp">
       <i class="fa-brands fa-whatsapp text-lg"></i>
