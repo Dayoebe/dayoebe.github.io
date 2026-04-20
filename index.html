@@ -20,6 +20,14 @@
   <link rel="icon" type="image/png" sizes="16x16" href="./icons/favicon-16.png" />
   <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
   <link rel="canonical" href="https://dayoebe.github.io/" />
+  <link rel="alternate" hreflang="en" href="https://dayoebe.github.io/" />
+  <link rel="alternate" hreflang="es" href="https://dayoebe.github.io/?lang=es" />
+  <link rel="alternate" hreflang="fr" href="https://dayoebe.github.io/?lang=fr" />
+  <link rel="alternate" hreflang="ar" href="https://dayoebe.github.io/?lang=ar" />
+  <link rel="alternate" hreflang="sw" href="https://dayoebe.github.io/?lang=sw" />
+  <link rel="alternate" hreflang="hi" href="https://dayoebe.github.io/?lang=hi" />
+  <link rel="alternate" hreflang="pt" href="https://dayoebe.github.io/?lang=pt" />
+  <link rel="alternate" hreflang="x-default" href="https://dayoebe.github.io/" />
   <link rel="sitemap" type="application/xml" href="https://dayoebe.github.io/sitemap.xml" />
 
   <meta property="og:type" content="website" />
@@ -47,6 +55,7 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="./assets/i18n.js"></script>
   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <script>
     tailwind.config = {
@@ -114,6 +123,24 @@
     .dot-pattern {
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20'%3E%3Ccircle cx='2' cy='2' r='1.5' fill='%23d6d3d1'/%3E%3C/svg%3E");
       background-repeat: repeat;
+    }
+
+    html[dir="rtl"] body {
+      text-align: right;
+    }
+
+    html[dir="rtl"] .text-left {
+      text-align: right;
+    }
+
+    html[dir="rtl"] .list-disc {
+      padding-left: 0;
+      padding-right: 1.25rem;
+    }
+
+    html[dir="rtl"] .fixed.left-5 {
+      left: auto;
+      right: 1.25rem;
     }
   </style>
   <script type="application/ld+json">
@@ -236,14 +263,31 @@
           Menu
         </button>
 
-        <nav class="hidden items-center gap-5 text-sm font-medium md:flex">
-          <a href="#home" class="text-zinc-700 hover:text-red-600">Home</a>
-          <a href="#about" class="text-zinc-700 hover:text-orange-600">About</a>
-          <a href="#skills" class="text-zinc-700 hover:text-emerald-600">Skills</a>
-          <a href="#experience" class="text-zinc-700 hover:text-blue-600">Experience</a>
-          <a href="#projects" class="text-zinc-700 hover:text-indigo-600">Projects</a>
-          <a href="#contact" class="text-zinc-700 hover:text-rose-600">Contact</a>
-        </nav>
+        <div class="hidden items-center gap-4 md:flex">
+          <nav class="flex items-center gap-5 text-sm font-medium">
+            <a href="#home" class="text-zinc-700 hover:text-red-600">Home</a>
+            <a href="#about" class="text-zinc-700 hover:text-orange-600">About</a>
+            <a href="#skills" class="text-zinc-700 hover:text-emerald-600">Skills</a>
+            <a href="#experience" class="text-zinc-700 hover:text-blue-600">Experience</a>
+            <a href="#projects" class="text-zinc-700 hover:text-indigo-600">Projects</a>
+            <a href="#contact" class="text-zinc-700 hover:text-rose-600">Contact</a>
+          </nav>
+          <label for="language-select" class="sr-only">Language</label>
+          <select
+            id="language-select"
+            data-language-select
+            aria-label="Language"
+            class="rounded-lg border border-stone-300 bg-white px-3 py-2 text-sm font-semibold text-zinc-800 focus:border-red-500 focus:outline-none"
+          >
+            <option value="en">English</option>
+            <option value="es">Español</option>
+            <option value="fr">Français</option>
+            <option value="ar">العربية</option>
+            <option value="sw">Kiswahili</option>
+            <option value="hi">हिन्दी</option>
+            <option value="pt">Português</option>
+          </select>
+        </div>
       </div>
 
       <nav x-show="menuOpen" x-cloak class="border-t border-stone-200 bg-white md:hidden">
@@ -254,6 +298,21 @@
           <a @click="menuOpen = false" href="#experience" class="rounded-md px-3 py-2 hover:bg-blue-50 hover:text-blue-700">Experience</a>
           <a @click="menuOpen = false" href="#projects" class="rounded-md px-3 py-2 hover:bg-indigo-50 hover:text-indigo-700">Projects</a>
           <a @click="menuOpen = false" href="#contact" class="rounded-md px-3 py-2 hover:bg-rose-50 hover:text-rose-700">Contact</a>
+          <label for="mobile-language-select" class="mt-2 px-3 text-xs font-semibold uppercase tracking-wide text-zinc-500">Language</label>
+          <select
+            id="mobile-language-select"
+            data-language-select
+            aria-label="Language"
+            class="mt-1 rounded-lg border border-stone-300 bg-white px-3 py-2 text-sm font-semibold text-zinc-800 focus:border-red-500 focus:outline-none"
+          >
+            <option value="en">English</option>
+            <option value="es">Español</option>
+            <option value="fr">Français</option>
+            <option value="ar">العربية</option>
+            <option value="sw">Kiswahili</option>
+            <option value="hi">हिन्दी</option>
+            <option value="pt">Português</option>
+          </select>
         </div>
       </nav>
     </header>
@@ -940,59 +999,80 @@
       }
     }
 
+    function localizeText(value) {
+      return window.WirelessI18n ? window.WirelessI18n.translate(value) : value;
+    }
+
+    function localizeItems(items, fields) {
+      return items.map((item) => {
+        const localized = { ...item };
+        fields.forEach((field) => {
+          localized[field] = localizeText(item[field]);
+        });
+        return localized;
+      });
+    }
+
     function testimonialState() {
+      const baseItems = [
+        {
+          sector: 'media',
+          border: 'border-red-200',
+          quote: '"Adedayo rebuilt our station website and helped us run a stronger digital strategy. Our online engagement and brand visibility improved noticeably."',
+          name: 'Digital Team',
+          role: 'Management',
+          company: 'Glow 99.1 FM'
+        },
+        {
+          sector: 'education',
+          border: 'border-emerald-200',
+          quote: '"He delivered both our school website and management system with features that made administration easier for staff and parents."',
+          name: 'Academic Office',
+          role: 'Admin Lead',
+          company: 'Elites International College'
+        },
+        {
+          sector: 'finance',
+          border: 'border-blue-200',
+          quote: '"From planning to deployment, the process was professional. The final website reflects our institution and works smoothly across devices."',
+          name: 'Operations Unit',
+          role: 'Operations Team',
+          company: 'Ikere Microfinance Bank'
+        },
+        {
+          sector: 'corporate',
+          border: 'border-violet-200',
+          quote: '"Communication was clear, timelines were respected, and every revision was handled quickly."',
+          name: 'Client (NDA)',
+          role: 'Founder',
+          company: 'SME Corporate Website'
+        },
+        {
+          sector: 'corporate',
+          border: 'border-purple-200',
+          quote: '"Our new platform feels modern, fast, and easy to manage. We have seen better user response since launch."',
+          name: 'Client (NDA)',
+          role: 'Product Lead',
+          company: 'Business Platform Project'
+        },
+        {
+          sector: 'corporate',
+          border: 'border-rose-200',
+          quote: '"Adedayo combines technical depth with business understanding. He does not just build pages, he solves real workflow problems."',
+          name: 'Client (NDA)',
+          role: 'Director',
+          company: 'Enterprise Web Project'
+        }
+      ];
+
       return {
         active: 'all',
-        items: [
-          {
-            sector: 'media',
-            border: 'border-red-200',
-            quote: '"Adedayo rebuilt our station website and helped us run a stronger digital strategy. Our online engagement and brand visibility improved noticeably."',
-            name: 'Digital Team',
-            role: 'Management',
-            company: 'Glow 99.1 FM'
-          },
-          {
-            sector: 'education',
-            border: 'border-emerald-200',
-            quote: '"He delivered both our school website and management system with features that made administration easier for staff and parents."',
-            name: 'Academic Office',
-            role: 'Admin Lead',
-            company: 'Elites International College'
-          },
-          {
-            sector: 'finance',
-            border: 'border-blue-200',
-            quote: '"From planning to deployment, the process was professional. The final website reflects our institution and works smoothly across devices."',
-            name: 'Operations Unit',
-            role: 'Operations Team',
-            company: 'Ikere Microfinance Bank'
-          },
-          {
-            sector: 'corporate',
-            border: 'border-violet-200',
-            quote: '"Communication was clear, timelines were respected, and every revision was handled quickly."',
-            name: 'Client (NDA)',
-            role: 'Founder',
-            company: 'SME Corporate Website'
-          },
-          {
-            sector: 'corporate',
-            border: 'border-purple-200',
-            quote: '"Our new platform feels modern, fast, and easy to manage. We have seen better user response since launch."',
-            name: 'Client (NDA)',
-            role: 'Product Lead',
-            company: 'Business Platform Project'
-          },
-          {
-            sector: 'corporate',
-            border: 'border-rose-200',
-            quote: '"Adedayo combines technical depth with business understanding. He does not just build pages, he solves real workflow problems."',
-            name: 'Client (NDA)',
-            role: 'Director',
-            company: 'Enterprise Web Project'
-          }
-        ],
+        items: localizeItems(baseItems, ['quote', 'name', 'role', 'company']),
+        init() {
+          window.addEventListener('wireless-language-change', () => {
+            this.items = localizeItems(baseItems, ['quote', 'name', 'role', 'company']);
+          });
+        },
         get filteredTestimonials() {
           if (this.active === 'all') return this.items;
           return this.items.filter((item) => item.sector === this.active);
@@ -1001,48 +1081,55 @@
     }
 
     function faqState() {
+      const baseItems = [
+        {
+          id: 1,
+          category: 'process',
+          question: 'What kind of projects do you handle?',
+          answer: 'I build and maintain websites, web applications, school systems, and digital platforms for media, education, banking, and business clients.'
+        },
+        {
+          id: 2,
+          category: 'process',
+          question: 'How long does a typical project take?',
+          answer: 'Small websites usually take 1 to 3 weeks. Larger platforms can take 4 to 12 weeks depending on features, content readiness, and approvals.'
+        },
+        {
+          id: 3,
+          category: 'technical',
+          question: 'Do you work on existing websites?',
+          answer: 'Yes. I redesign, optimize performance, fix bugs, add features, and improve SEO for existing websites and applications.'
+        },
+        {
+          id: 4,
+          category: 'technical',
+          question: 'What technologies do you use?',
+          answer: 'My core stack includes Laravel, Vue.js, React, Tailwind CSS, Livewire, MySQL, and Alpine.js.'
+        },
+        {
+          id: 5,
+          category: 'support',
+          question: 'Do you provide maintenance after launch?',
+          answer: 'Yes. I provide post-launch support, updates, backups, and technical maintenance packages.'
+        },
+        {
+          id: 6,
+          category: 'process',
+          question: 'How do we start working together?',
+          answer: 'Book a discovery call on Calendly or send a message through the contact form. I will review your needs and share scope, timeline, and cost.'
+        }
+      ];
+
       return {
         category: 'all',
         query: '',
         open: [1],
-        items: [
-          {
-            id: 1,
-            category: 'process',
-            question: 'What kind of projects do you handle?',
-            answer: 'I build and maintain websites, web applications, school systems, and digital platforms for media, education, banking, and business clients.'
-          },
-          {
-            id: 2,
-            category: 'process',
-            question: 'How long does a typical project take?',
-            answer: 'Small websites usually take 1 to 3 weeks. Larger platforms can take 4 to 12 weeks depending on features, content readiness, and approvals.'
-          },
-          {
-            id: 3,
-            category: 'technical',
-            question: 'Do you work on existing websites?',
-            answer: 'Yes. I redesign, optimize performance, fix bugs, add features, and improve SEO for existing websites and applications.'
-          },
-          {
-            id: 4,
-            category: 'technical',
-            question: 'What technologies do you use?',
-            answer: 'My core stack includes Laravel, Vue.js, React, Tailwind CSS, Livewire, MySQL, and Alpine.js.'
-          },
-          {
-            id: 5,
-            category: 'support',
-            question: 'Do you provide maintenance after launch?',
-            answer: 'Yes. I provide post-launch support, updates, backups, and technical maintenance packages.'
-          },
-          {
-            id: 6,
-            category: 'process',
-            question: 'How do we start working together?',
-            answer: 'Book a discovery call on Calendly or send a message through the contact form. I will review your needs and share scope, timeline, and cost.'
-          }
-        ],
+        items: localizeItems(baseItems, ['question', 'answer']),
+        init() {
+          window.addEventListener('wireless-language-change', () => {
+            this.items = localizeItems(baseItems, ['question', 'answer']);
+          });
+        },
         toggle(id) {
           if (this.open.includes(id)) {
             this.open = this.open.filter((x) => x !== id);

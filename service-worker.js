@@ -1,6 +1,6 @@
-const APP_CACHE = 'wireless-terminal-app-v3';
-const STATIC_CACHE = 'wireless-terminal-static-v3';
-const THIRD_PARTY_CACHE = 'wireless-terminal-third-party-v3';
+const APP_CACHE = 'wireless-terminal-app-v4';
+const STATIC_CACHE = 'wireless-terminal-static-v4';
+const THIRD_PARTY_CACHE = 'wireless-terminal-third-party-v4';
 const KNOWN_CACHES = [APP_CACHE, STATIC_CACHE, THIRD_PARTY_CACHE];
 
 const APP_SHELL = [
@@ -10,6 +10,7 @@ const APP_SHELL = [
   './manifest.webmanifest',
   './robots.txt',
   './sitemap.xml',
+  './assets/i18n.js',
   './social-preview.jpg',
   './icons/icon-192.png',
   './icons/icon-512.png',
