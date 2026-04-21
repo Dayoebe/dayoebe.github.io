@@ -116,13 +116,512 @@
       scroll-behavior: smooth;
     }
 
+    body {
+      overflow-x: hidden;
+    }
+
     [x-cloak] {
       display: none !important;
     }
 
     .dot-pattern {
+      position: relative;
+      isolation: isolate;
+      background-color: #fafaf9;
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20'%3E%3Ccircle cx='2' cy='2' r='1.5' fill='%23d6d3d1'/%3E%3C/svg%3E");
       background-repeat: repeat;
+    }
+
+    .dot-pattern::before,
+    .dot-pattern::after {
+      content: "";
+      pointer-events: none;
+      position: absolute;
+      inset: 0;
+    }
+
+    .dot-pattern::before {
+      inset: 0 0 auto 0;
+      height: 36rem;
+      background-image:
+        linear-gradient(rgba(161, 161, 170, 0.18) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(161, 161, 170, 0.18) 1px, transparent 1px);
+      background-size: 56px 56px;
+      mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), transparent 92%);
+      opacity: 0.45;
+      z-index: -2;
+      animation: gridDrift 26s linear infinite;
+    }
+
+    .dot-pattern::after {
+      inset: -4rem -10% auto;
+      height: 38rem;
+      background:
+        radial-gradient(circle at 14% 18%, rgba(239, 68, 68, 0.12), transparent 32%),
+        radial-gradient(circle at 82% 14%, rgba(16, 185, 129, 0.1), transparent 28%),
+        radial-gradient(circle at 54% 54%, rgba(59, 130, 246, 0.08), transparent 34%);
+      filter: blur(22px);
+      opacity: 0.9;
+      z-index: -1;
+      animation: meshFloat 18s ease-in-out infinite alternate;
+    }
+
+    .hero-section {
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    .hero-grid {
+      pointer-events: none;
+      position: absolute;
+      inset: 0 -6% auto 44%;
+      height: 30rem;
+      border-radius: 9999px;
+      background-image:
+        linear-gradient(rgba(120, 113, 108, 0.16) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(120, 113, 108, 0.16) 1px, transparent 1px);
+      background-size: 34px 34px;
+      mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.96), transparent 92%);
+      opacity: 0.55;
+      transform: perspective(1200px) rotateX(72deg) rotateZ(-10deg);
+      transform-origin: center top;
+      z-index: 0;
+      animation: heroGridDrift 22s linear infinite;
+    }
+
+    .hero-copy,
+    .hero-visual {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-visual {
+      min-height: 34rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.25rem 0.25rem 0.75rem;
+    }
+
+    .hero-card {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      box-shadow: 0 22px 44px rgba(24, 24, 27, 0.08);
+      animation: floatPanel 9s ease-in-out infinite;
+      transition: transform 260ms ease, box-shadow 260ms ease;
+    }
+
+    .hero-card:hover {
+      animation-play-state: paused;
+      transform: translateY(-4px);
+      box-shadow: 0 28px 56px rgba(24, 24, 27, 0.12);
+    }
+
+    .hero-orb {
+      position: absolute;
+      border-radius: 9999px;
+      filter: blur(24px);
+      opacity: 0.7;
+      z-index: 0;
+      animation: orbDrift 14s ease-in-out infinite alternate;
+    }
+
+    .hero-orb-one {
+      top: 3rem;
+      right: 1rem;
+      height: 9rem;
+      width: 9rem;
+      background: rgba(239, 68, 68, 0.16);
+    }
+
+    .hero-orb-two {
+      bottom: 1.5rem;
+      left: 0;
+      height: 8rem;
+      width: 8rem;
+      background: rgba(59, 130, 246, 0.12);
+      animation-delay: -4s;
+    }
+
+    .hero-code-card {
+      pointer-events: none;
+      position: absolute;
+      top: 2.5rem;
+      left: -0.75rem;
+      z-index: 3;
+      width: min(16rem, 44vw);
+      border-radius: 1rem;
+      border: 1px solid rgba(255, 255, 255, 0.68);
+      background: rgba(255, 255, 255, 0.8);
+      padding: 1rem 1rem 0.9rem;
+      box-shadow: 0 20px 40px rgba(24, 24, 27, 0.1);
+      backdrop-filter: blur(10px);
+      animation: floatCard 11s ease-in-out infinite;
+    }
+
+    .hero-code-card p {
+      margin: 0 0 0.55rem;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #dc2626;
+    }
+
+    .hero-code-card pre {
+      margin: 0;
+      overflow: hidden;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: 0.76rem;
+      line-height: 1.55;
+      color: #27272a;
+      white-space: pre-wrap;
+    }
+
+    .hero-code-card .token-key {
+      color: #2563eb;
+    }
+
+    .hero-code-card .token-string {
+      color: #047857;
+    }
+
+    .hero-code-card .token-operator {
+      color: #71717a;
+    }
+
+    .hero-tech-pill {
+      pointer-events: none;
+      position: absolute;
+      z-index: 3;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      border-radius: 9999px;
+      border: 1px solid rgba(255, 255, 255, 0.78);
+      background: rgba(255, 255, 255, 0.88);
+      padding: 0.65rem 0.9rem;
+      box-shadow: 0 14px 28px rgba(24, 24, 27, 0.08);
+      backdrop-filter: blur(10px);
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #27272a;
+      animation: floatPill 10s ease-in-out infinite;
+      opacity: 0.98;
+    }
+
+    .hero-tech-pill i {
+      font-size: 1.05rem;
+    }
+
+    .hero-tech-pill-laravel {
+      top: 5rem;
+      right: -0.25rem;
+      animation-delay: -1s;
+    }
+
+    .hero-tech-pill-vue {
+      bottom: 7.5rem;
+      left: -1rem;
+      animation-delay: -4s;
+    }
+
+    .hero-tech-pill-react {
+      top: 15.5rem;
+      right: -0.75rem;
+      animation-delay: -2.5s;
+    }
+
+    .hero-tech-pill-tailwind {
+      bottom: 1.25rem;
+      right: 3rem;
+      animation-delay: -6s;
+    }
+
+    .hero-tech-pill-tailwind span:first-child {
+      box-shadow: inset 0 0 0 1px rgba(14, 165, 233, 0.14);
+    }
+
+    [data-reveal] {
+      opacity: 0;
+      transform: translate3d(0, 28px, 0);
+      transition:
+        opacity 720ms cubic-bezier(0.22, 1, 0.36, 1),
+        transform 720ms cubic-bezier(0.22, 1, 0.36, 1);
+      transition-delay: var(--reveal-delay, 0ms);
+      will-change: opacity, transform;
+    }
+
+    [data-reveal="left"] {
+      transform: translate3d(-34px, 22px, 0);
+    }
+
+    [data-reveal="right"] {
+      transform: translate3d(34px, 22px, 0);
+    }
+
+    [data-reveal].is-visible {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+
+    .motion-button {
+      transition:
+        transform 220ms ease,
+        box-shadow 220ms ease,
+        border-color 220ms ease,
+        background-color 220ms ease,
+        color 220ms ease;
+    }
+
+    .motion-button:hover,
+    .motion-button:focus-visible {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 26px rgba(24, 24, 27, 0.1);
+    }
+
+    .proof-card {
+      position: relative;
+      overflow: hidden;
+      transition: transform 240ms ease, box-shadow 240ms ease;
+    }
+
+    .proof-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 30px rgba(24, 24, 27, 0.08);
+    }
+
+    .proof-chip {
+      display: inline-flex;
+      min-width: 3rem;
+      align-items: center;
+      justify-content: center;
+      border-radius: 9999px;
+      padding: 0.35rem 0.7rem;
+      font-size: 0.82rem;
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: 0.02em;
+      background: rgba(255, 255, 255, 0.8);
+      box-shadow: inset 0 0 0 1px currentColor;
+    }
+
+    .skill-card {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .skill-badge {
+      opacity: 0;
+      transform: translateY(10px);
+      transition:
+        opacity 520ms ease,
+        transform 520ms ease;
+      transition-delay: var(--badge-delay, 0ms);
+    }
+
+    .skill-card.is-visible .skill-badge {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .project-card {
+      position: relative;
+      overflow: hidden;
+      transition:
+        transform 300ms ease,
+        box-shadow 300ms ease,
+        border-color 300ms ease;
+    }
+
+    .project-card::before,
+    .project-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 1rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 300ms ease;
+    }
+
+    .project-card::before {
+      background: linear-gradient(145deg, rgba(var(--project-rgb), 0.18), transparent 45%);
+    }
+
+    .project-card::after {
+      inset: 1px;
+      border: 1px solid rgba(var(--project-rgb), 0.24);
+      box-shadow: 0 0 0 1px rgba(var(--project-rgb), 0.08), 0 22px 40px rgba(var(--project-rgb), 0.12);
+    }
+
+    .project-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 22px 48px rgba(24, 24, 27, 0.1);
+    }
+
+    .project-card:hover::before,
+    .project-card:hover::after {
+      opacity: 1;
+    }
+
+    .project-preview {
+      position: relative;
+      height: 12.5rem;
+      overflow: hidden;
+      border-radius: 1rem;
+      border: 1px solid rgba(var(--project-rgb), 0.18);
+      background: linear-gradient(135deg, rgba(var(--project-rgb), 0.16), rgba(255, 255, 255, 0.92) 72%);
+    }
+
+    .project-preview-art {
+      position: absolute;
+      inset: 0;
+      transition: transform 500ms ease;
+    }
+
+    .project-preview-image {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+    }
+
+    .project-preview::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      height: 42%;
+      background: linear-gradient(to top, rgba(24, 24, 27, 0.16), transparent);
+      pointer-events: none;
+    }
+
+    .project-card:hover .project-preview-art {
+      transform: scale(1.05);
+    }
+
+    .project-preview-grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.48) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.48) 1px, transparent 1px);
+      background-size: 34px 34px;
+      opacity: 0.34;
+    }
+
+    .project-preview-shell {
+      position: absolute;
+      inset: 1rem;
+      overflow: hidden;
+      border-radius: 1rem;
+      border: 1px solid rgba(255, 255, 255, 0.78);
+      background: rgba(255, 255, 255, 0.82);
+      box-shadow: 0 18px 34px rgba(24, 24, 27, 0.08);
+    }
+
+    .project-preview-shell::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto;
+      height: 2.4rem;
+      background: linear-gradient(90deg, rgba(var(--project-rgb), 0.14), rgba(var(--project-rgb), 0.05));
+      border-bottom: 1px solid rgba(var(--project-rgb), 0.14);
+    }
+
+    .project-preview-dots {
+      position: absolute;
+      top: 0.95rem;
+      left: 1rem;
+      z-index: 1;
+      display: flex;
+      gap: 0.35rem;
+    }
+
+    .project-preview-dots span {
+      display: block;
+      height: 0.48rem;
+      width: 0.48rem;
+      border-radius: 9999px;
+      background: rgba(var(--project-rgb), 0.32);
+    }
+
+    .project-preview-panel {
+      position: absolute;
+      left: 1rem;
+      right: 1rem;
+      border-radius: 0.95rem;
+      background: rgba(var(--project-rgb), 0.12);
+    }
+
+    .project-preview-panel-one {
+      top: 4rem;
+      height: 3rem;
+    }
+
+    .project-preview-panel-two {
+      top: 7.7rem;
+      right: 40%;
+      height: 1rem;
+      border-radius: 9999px;
+    }
+
+    .project-preview-panel-three {
+      top: 9.4rem;
+      left: 55%;
+      right: 1rem;
+      height: 1.6rem;
+    }
+
+    .project-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+    }
+
+    .project-link-arrow {
+      display: inline-block;
+      transition: transform 220ms ease;
+    }
+
+    .project-link:hover .project-link-arrow,
+    .project-link:focus-visible .project-link-arrow {
+      transform: translateX(4px);
+    }
+
+    html[dir="rtl"] .project-link:hover .project-link-arrow,
+    html[dir="rtl"] .project-link:focus-visible .project-link-arrow {
+      transform: translateX(-4px);
+    }
+
+    .project-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .project-stack-tag {
+      opacity: 0;
+      transform: translateY(10px);
+      transition:
+        opacity 420ms ease,
+        transform 420ms ease;
+      transition-delay: var(--tag-delay, 0ms);
+      border-radius: 9999px;
+      border: 1px solid rgba(var(--project-rgb), 0.22);
+      background: rgba(var(--project-rgb), 0.08);
+      padding: 0.38rem 0.75rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: rgb(var(--project-rgb));
+    }
+
+    .project-card.is-visible .project-stack-tag {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     html[dir="rtl"] body {
@@ -143,6 +642,162 @@
       right: 1.25rem;
     }
 
+    @keyframes gridDrift {
+      from {
+        background-position: 0 0, 0 0;
+      }
+      to {
+        background-position: 56px 24px, 28px 56px;
+      }
+    }
+
+    @keyframes meshFloat {
+      from {
+        transform: translate3d(0, 0, 0) scale(1);
+      }
+      to {
+        transform: translate3d(0, 18px, 0) scale(1.04);
+      }
+    }
+
+    @keyframes heroGridDrift {
+      from {
+        background-position: 0 0, 0 0;
+      }
+      to {
+        background-position: 34px 18px, 18px 34px;
+      }
+    }
+
+    @keyframes orbDrift {
+      from {
+        transform: translate3d(0, 0, 0) scale(1);
+      }
+      to {
+        transform: translate3d(8px, -10px, 0) scale(1.06);
+      }
+    }
+
+    @keyframes floatPanel {
+      0%,
+      100% {
+        transform: translate3d(0, 0, 0);
+      }
+      50% {
+        transform: translate3d(0, -8px, 0);
+      }
+    }
+
+    @keyframes floatCard {
+      0%,
+      100% {
+        transform: translate3d(0, 0, 0);
+      }
+      50% {
+        transform: translate3d(0, -10px, 0);
+      }
+    }
+
+    @keyframes floatPill {
+      0%,
+      100% {
+        transform: translate3d(0, 0, 0);
+      }
+      50% {
+        transform: translate3d(0, -8px, 0);
+      }
+    }
+
+    @media (max-width: 767px) {
+      .hero-grid {
+        inset: 3rem -15% auto 15%;
+        height: 18rem;
+        opacity: 0.34;
+        transform: perspective(900px) rotateX(70deg) rotateZ(-8deg);
+      }
+
+      .hero-visual {
+        min-height: 29rem;
+      }
+
+      .hero-tech-pill {
+        gap: 0.42rem;
+        padding: 0.5rem 0.75rem;
+        font-size: 0.72rem;
+      }
+
+      .hero-tech-pill i {
+        font-size: 0.9rem;
+      }
+
+      .hero-orb-one {
+        top: 2rem;
+        right: 0;
+      }
+
+      .hero-orb-two {
+        bottom: 0.5rem;
+        left: -1rem;
+      }
+
+      .hero-tech-pill-laravel {
+        top: 1.35rem;
+        right: 0.2rem;
+      }
+
+      .hero-tech-pill-react {
+        top: auto;
+        bottom: 8.9rem;
+        right: -0.15rem;
+      }
+
+      .hero-tech-pill-vue {
+        bottom: 7rem;
+        left: -0.35rem;
+      }
+
+      .hero-tech-pill-tailwind {
+        bottom: 1rem;
+        right: 0.35rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .dot-pattern::before,
+      .dot-pattern::after,
+      .hero-grid,
+      .hero-card,
+      .hero-code-card,
+      .hero-tech-pill,
+      .hero-orb {
+        animation: none !important;
+      }
+
+      [data-reveal] {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+      }
+
+      .motion-button,
+      .project-card,
+      .project-preview-art,
+      .project-link-arrow,
+      .skill-badge,
+      .project-stack-tag {
+        transition: none !important;
+      }
+
+      .skill-badge,
+      .project-stack-tag {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    }
   </style>
   <script type="application/ld+json">
     {
@@ -322,8 +977,10 @@
     </header>
 
     <main id="home" class="dot-pattern">
-      <section class="mx-auto grid max-w-6xl gap-8 px-4 pb-12 pt-10 md:grid-cols-[1.15fr,0.85fr] md:items-center md:pt-14 animate__animated animate__fadeIn">
-        <div>
+      <section class="hero-section mx-auto grid max-w-6xl gap-8 px-4 pb-12 pt-10 md:grid-cols-[1.15fr,0.85fr] md:items-center md:pt-14">
+        <div class="hero-grid" aria-hidden="true"></div>
+
+        <div class="hero-copy" data-reveal="left">
           <p class="mb-4 inline-flex rounded-full border border-red-200 bg-red-100 px-3 py-1 text-xs font-bold uppercase tracking-wide text-red-700">
             Full-Stack Laravel Developer
           </p>
@@ -335,9 +992,9 @@
           </p>
 
           <div class="mt-7 flex flex-wrap gap-3">
-            <a href="#contact" class="rounded-lg bg-red-600 px-5 py-3 text-sm font-semibold text-white hover:bg-red-700">Hire Me for a Role</a>
-            <a href="#contact" class="rounded-lg border border-emerald-300 bg-emerald-100 px-5 py-3 text-sm font-semibold text-emerald-800 hover:bg-emerald-200">Work With Me on a Project</a>
-            <a href="#projects" class="rounded-lg border border-zinc-300 bg-white px-5 py-3 text-sm font-semibold text-zinc-800 hover:border-zinc-400">View Case Studies</a>
+            <a href="#contact" class="motion-button rounded-lg bg-red-600 px-5 py-3 text-sm font-semibold text-white hover:bg-red-700">Hire Me for a Role</a>
+            <a href="#contact" class="motion-button rounded-lg border border-emerald-300 bg-emerald-100 px-5 py-3 text-sm font-semibold text-emerald-800 hover:bg-emerald-200">Work With Me on a Project</a>
+            <a href="#projects" class="motion-button rounded-lg border border-zinc-300 bg-white px-5 py-3 text-sm font-semibold text-zinc-800 hover:border-zinc-400">View Case Studies</a>
           </div>
 
           <p class="mt-4 text-sm font-medium text-zinc-600">
@@ -345,34 +1002,60 @@
           </p>
         </div>
 
-        <div class="mx-auto w-full max-w-sm rounded-2xl border border-stone-300 bg-white p-4 shadow-sm">
-          <div class="rounded-2xl border border-stone-200 bg-gradient-to-br from-stone-100 via-white to-red-50 p-5">
-            <div class="inline-flex rounded-full border border-red-200 bg-red-100 px-3 py-1 text-xs font-semibold text-red-700">
-              Available for full-time roles and client work
-            </div>
-            <div class="mt-4 space-y-4">
-              <div class="overflow-hidden rounded-2xl border border-stone-200 bg-white shadow-inner">
-                <div class="aspect-square bg-stone-50">
-                  <img
-                    src="./passport.png"
-                    alt="Portrait of Adedayo Ebenezer Oyetoke"
-                    class="h-full w-full object-contain object-center"
-                    loading="eager"
-                    decoding="async"
-                  />
-                </div>
+        <div class="hero-visual" data-reveal="right" style="--reveal-delay: 120ms;">
+          <div class="hero-orb hero-orb-one" aria-hidden="true"></div>
+          <div class="hero-orb hero-orb-two" aria-hidden="true"></div>
+          <div class="hero-code-card hidden sm:block" data-no-i18n aria-hidden="true">
+            <p>launch.config</p>
+            <pre><span class="token-key">stack</span><span class="token-operator">:</span> [<span class="token-string">'Laravel'</span>, <span class="token-string">'Vue'</span>, <span class="token-string">'React'</span>]
+<span class="token-key">focus</span><span class="token-operator">:</span> <span class="token-string">'Scalable platforms'</span>
+<span class="token-key">status</span><span class="token-operator">:</span> <span class="token-string">'Shipping for teams'</span></pre>
+          </div>
+          <div class="hero-tech-pill hero-tech-pill-laravel" data-no-i18n aria-hidden="true">
+            <i class="fa-brands fa-laravel text-red-600"></i>
+            <span>Laravel</span>
+          </div>
+          <div class="hero-tech-pill hero-tech-pill-vue flex" data-no-i18n aria-hidden="true">
+            <i class="fa-brands fa-vuejs text-emerald-600"></i>
+            <span>Vue</span>
+          </div>
+          <div class="hero-tech-pill hero-tech-pill-react" data-no-i18n aria-hidden="true">
+            <i class="fa-brands fa-react text-blue-600"></i>
+            <span>React</span>
+          </div>
+          <div class="hero-tech-pill hero-tech-pill-tailwind" data-no-i18n aria-hidden="true">
+            <span class="inline-flex h-5 w-5 items-center justify-center rounded-full bg-sky-100 text-[10px] font-black text-sky-700">T</span>
+            <span>Tailwind</span>
+          </div>
+          <div class="hero-card mx-auto w-full max-w-sm rounded-2xl border border-stone-300 bg-white p-4 shadow-sm">
+            <div class="rounded-2xl border border-stone-200 bg-gradient-to-br from-stone-100 via-white to-red-50 p-5">
+              <div class="inline-flex rounded-full border border-red-200 bg-red-100 px-3 py-1 text-xs font-semibold text-red-700">
+                Available for full-time roles and client work
               </div>
-              <div class="space-y-3">
-                <p class="text-sm font-semibold text-zinc-800">Adedayo Ebenezer Oyetoke</p>
-                <p class="text-sm text-zinc-600">Laravel, Livewire, Vue, React, Tailwind, APIs, MySQL</p>
-                <div class="grid grid-cols-2 gap-3 text-sm">
-                  <div class="rounded-lg bg-mist-100 p-3 text-mist-700">
-                    <p class="font-semibold">Location</p>
-                    <p>Akure, Nigeria</p>
+              <div class="mt-4 space-y-4">
+                <div class="overflow-hidden rounded-2xl border border-stone-200 bg-white shadow-inner">
+                  <div class="aspect-square bg-stone-50">
+                    <img
+                      src="./passport.png"
+                      alt="Portrait of Adedayo Ebenezer Oyetoke"
+                      class="h-full w-full object-contain object-center"
+                      loading="eager"
+                      decoding="async"
+                    />
                   </div>
-                  <div class="rounded-lg bg-olive-100 p-3 text-olive-700">
-                    <p class="font-semibold">Current Role</p>
-                    <p>Founder, Wireless</p>
+                </div>
+                <div class="space-y-3">
+                  <p class="text-sm font-semibold text-zinc-800">Adedayo Ebenezer Oyetoke</p>
+                  <p class="text-sm text-zinc-600">Laravel, Livewire, Vue, React, Tailwind, APIs, MySQL</p>
+                  <div class="grid grid-cols-2 gap-3 text-sm">
+                    <div class="rounded-lg bg-mist-100 p-3 text-mist-700">
+                      <p class="font-semibold">Location</p>
+                      <p>Akure, Nigeria</p>
+                    </div>
+                    <div class="rounded-lg bg-olive-100 p-3 text-olive-700">
+                      <p class="font-semibold">Current Role</p>
+                      <p>Founder, Wireless</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -383,20 +1066,32 @@
 
       <section class="mx-auto max-w-6xl px-4 pb-12">
         <div class="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-          <article class="rounded-2xl border border-amber-200 bg-amber-50 p-5">
-            <p class="font-display text-lg font-bold text-amber-900">20+ Projects Delivered</p>
+          <article class="proof-card rounded-2xl border border-amber-200 bg-amber-50 p-5" data-reveal style="--reveal-delay: 40ms;">
+            <div class="flex items-start justify-between gap-4">
+              <p class="font-display text-lg font-bold text-amber-900">20+ Projects Delivered</p>
+              <span class="proof-chip text-amber-800" data-no-i18n aria-hidden="true"><span data-count-target="20" data-count-suffix="+">0+</span></span>
+            </div>
             <p class="mt-2 text-sm leading-relaxed text-amber-800">Across education, media, finance, and business systems</p>
           </article>
-          <article class="rounded-2xl border border-emerald-200 bg-emerald-50 p-5">
-            <p class="font-display text-lg font-bold text-emerald-900">End-to-End Product Delivery</p>
+          <article class="proof-card rounded-2xl border border-emerald-200 bg-emerald-50 p-5" data-reveal style="--reveal-delay: 120ms;">
+            <div class="flex items-start justify-between gap-4">
+              <p class="font-display text-lg font-bold text-emerald-900">End-to-End Product Delivery</p>
+              <span class="proof-chip text-emerald-800" data-no-i18n aria-hidden="true"><span data-count-target="4">0</span></span>
+            </div>
             <p class="mt-2 text-sm leading-relaxed text-emerald-800">From planning and development to deployment and support</p>
           </article>
-          <article class="rounded-2xl border border-blue-200 bg-blue-50 p-5">
-            <p class="font-display text-lg font-bold text-blue-900">Strong Laravel Ecosystem Expertise</p>
+          <article class="proof-card rounded-2xl border border-blue-200 bg-blue-50 p-5" data-reveal style="--reveal-delay: 200ms;">
+            <div class="flex items-start justify-between gap-4">
+              <p class="font-display text-lg font-bold text-blue-900">Strong Laravel Ecosystem Expertise</p>
+              <span class="proof-chip text-blue-800" data-no-i18n aria-hidden="true"><span data-count-target="7">0</span></span>
+            </div>
             <p class="mt-2 text-sm leading-relaxed text-blue-800">Laravel, Livewire, Vue, React, Tailwind, APIs, MySQL</p>
           </article>
-          <article class="rounded-2xl border border-violet-200 bg-violet-50 p-5">
-            <p class="font-display text-lg font-bold text-violet-900">Available for Full-Time and Client Work</p>
+          <article class="proof-card rounded-2xl border border-violet-200 bg-violet-50 p-5" data-reveal style="--reveal-delay: 280ms;">
+            <div class="flex items-start justify-between gap-4">
+              <p class="font-display text-lg font-bold text-violet-900">Available for Full-Time and Client Work</p>
+              <span class="proof-chip text-violet-800" data-no-i18n aria-hidden="true"><span data-count-target="3">0</span></span>
+            </div>
             <p class="mt-2 text-sm leading-relaxed text-violet-800">Open to remote, hybrid, and project-based opportunities</p>
           </article>
         </div>
@@ -405,36 +1100,36 @@
       <section class="border-y border-stone-200 bg-white">
         <div class="mx-auto max-w-6xl px-4 py-12">
           <div class="grid gap-6 md:grid-cols-2">
-            <article class="rounded-2xl border border-stone-200 bg-stone-50 p-6 shadow-sm">
+            <article class="rounded-2xl border border-stone-200 bg-stone-50 p-6 shadow-sm" data-reveal="left">
               <p class="text-xs font-bold uppercase tracking-wide text-red-700">For Employers</p>
               <h2 class="mt-3 font-display text-2xl font-bold text-zinc-900">Production-ready development across backend, frontend, product thinking, and deployment.</h2>
               <p class="mt-4 text-sm leading-relaxed text-zinc-700">
                 Looking for a developer who can contribute across backend, frontend, product thinking, and deployment? I build production-ready applications with Laravel, Livewire, Vue, React, Tailwind, and MySQL, and I&apos;m comfortable taking products from idea to launch.
               </p>
               <div class="mt-5 flex flex-wrap gap-3">
-                <a href="#experience" class="rounded-lg bg-red-600 px-4 py-2.5 text-sm font-semibold text-white hover:bg-red-700">View My Experience</a>
-                <a href="./adedayo-ebenezer-oyetoke-cv.html" download class="rounded-lg border border-zinc-300 bg-white px-4 py-2.5 text-sm font-semibold text-zinc-800 hover:border-zinc-400">Download CV</a>
-                <a href="https://github.com/dayoebe" target="_blank" rel="noopener noreferrer" class="rounded-lg border border-zinc-300 bg-white px-4 py-2.5 text-sm font-semibold text-zinc-800 hover:border-zinc-400">Visit GitHub</a>
-                <a href="https://linkedin.com/in/dayoebe" target="_blank" rel="noopener noreferrer" class="rounded-lg border border-zinc-300 bg-white px-4 py-2.5 text-sm font-semibold text-zinc-800 hover:border-zinc-400">View LinkedIn</a>
+                <a href="#experience" class="motion-button rounded-lg bg-red-600 px-4 py-2.5 text-sm font-semibold text-white hover:bg-red-700">View My Experience</a>
+                <a href="./files/Oyetoke_Adedayo_CV.pdf" download class="motion-button rounded-lg border border-zinc-300 bg-white px-4 py-2.5 text-sm font-semibold text-zinc-800 hover:border-zinc-400">Download CV</a>
+                <a href="https://github.com/dayoebe" target="_blank" rel="noopener noreferrer" class="motion-button rounded-lg border border-zinc-300 bg-white px-4 py-2.5 text-sm font-semibold text-zinc-800 hover:border-zinc-400">Visit GitHub</a>
+                <a href="https://linkedin.com/in/dayoebe" target="_blank" rel="noopener noreferrer" class="motion-button rounded-lg border border-zinc-300 bg-white px-4 py-2.5 text-sm font-semibold text-zinc-800 hover:border-zinc-400">View LinkedIn</a>
               </div>
             </article>
 
-            <article class="rounded-2xl border border-stone-200 bg-stone-50 p-6 shadow-sm">
+            <article class="rounded-2xl border border-stone-200 bg-stone-50 p-6 shadow-sm" data-reveal="right" style="--reveal-delay: 100ms;">
               <p class="text-xs font-bold uppercase tracking-wide text-emerald-700">For Clients</p>
               <h2 class="mt-3 font-display text-2xl font-bold text-zinc-900">Reliable web products that improve visibility, operations, and growth.</h2>
               <p class="mt-4 text-sm leading-relaxed text-zinc-700">
                 Need a developer to build or improve your website, platform, admin system, or digital product? I help businesses and organizations create reliable, user-focused solutions that improve visibility, operations, and growth.
               </p>
               <div class="mt-5 flex flex-wrap gap-3">
-                <a href="https://calendly.com/dayoebe" target="_blank" rel="noopener noreferrer" class="rounded-lg bg-emerald-600 px-4 py-2.5 text-sm font-semibold text-white hover:bg-emerald-700">Book a Discovery Call</a>
-                <a href="https://wa.me/2349030036438?text=Hi%20Adedayo%2C%20I%20want%20to%20discuss%20a%20project." target="_blank" rel="noopener noreferrer" class="rounded-lg border border-emerald-300 bg-emerald-100 px-4 py-2.5 text-sm font-semibold text-emerald-800 hover:bg-emerald-200">Chat on WhatsApp</a>
-                <a href="mailto:oyetoke.ebenezer@gmail.com?subject=Project%20Quote%20Request" class="rounded-lg border border-zinc-300 bg-white px-4 py-2.5 text-sm font-semibold text-zinc-800 hover:border-zinc-400">Request a Project Quote</a>
+                <a href="https://calendly.com/dayoebe" target="_blank" rel="noopener noreferrer" class="motion-button rounded-lg bg-emerald-600 px-4 py-2.5 text-sm font-semibold text-white hover:bg-emerald-700">Book a Discovery Call</a>
+                <a href="https://wa.me/2349030036438?text=Hi%20Adedayo%2C%20I%20want%20to%20discuss%20a%20project." target="_blank" rel="noopener noreferrer" class="motion-button rounded-lg border border-emerald-300 bg-emerald-100 px-4 py-2.5 text-sm font-semibold text-emerald-800 hover:bg-emerald-200">Chat on WhatsApp</a>
+                <a href="mailto:oyetoke.ebenezer@gmail.com?subject=Project%20Quote%20Request" class="motion-button rounded-lg border border-zinc-300 bg-white px-4 py-2.5 text-sm font-semibold text-zinc-800 hover:border-zinc-400">Request a Project Quote</a>
               </div>
             </article>
           </div>
         </div>
       </section>
-    <section id="about" class="mx-auto max-w-6xl px-4 py-12">
+    <section id="about" class="mx-auto max-w-6xl px-4 py-12" data-reveal>
       <article class="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
         <h2 class="font-display text-2xl font-bold text-zinc-900">Professional Summary</h2>
         <p class="mt-4 text-sm leading-relaxed text-zinc-700">
@@ -451,44 +1146,72 @@
 
     <section id="skills" class="border-y border-stone-200 bg-white">
       <div class="mx-auto max-w-6xl px-4 py-12">
-        <h2 class="font-display text-2xl font-bold text-zinc-900">Core Stack</h2>
+        <h2 class="font-display text-2xl font-bold text-zinc-900" data-reveal>Core Stack</h2>
         <div class="mt-6 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
-          <article class="rounded-2xl border border-teal-200 bg-teal-50 p-5">
+          <article class="skill-card rounded-2xl border border-teal-200 bg-teal-50 p-5" data-reveal style="--reveal-delay: 40ms;">
             <h3 class="font-display text-lg font-semibold text-teal-800">Backend</h3>
-            <p class="mt-3 text-sm leading-relaxed text-zinc-700">Laravel, PHP, Livewire, REST APIs, LAMP</p>
+            <div class="mt-4 flex flex-wrap gap-2" data-no-i18n>
+              <span class="skill-badge rounded-full border border-teal-200 bg-white px-3 py-1.5 text-xs font-semibold text-teal-800" style="--badge-delay: 40ms;">Laravel</span>
+              <span class="skill-badge rounded-full border border-teal-200 bg-white px-3 py-1.5 text-xs font-semibold text-teal-800" style="--badge-delay: 100ms;">PHP</span>
+              <span class="skill-badge rounded-full border border-teal-200 bg-white px-3 py-1.5 text-xs font-semibold text-teal-800" style="--badge-delay: 160ms;">Livewire</span>
+              <span class="skill-badge rounded-full border border-teal-200 bg-white px-3 py-1.5 text-xs font-semibold text-teal-800" style="--badge-delay: 220ms;">REST APIs</span>
+              <span class="skill-badge rounded-full border border-teal-200 bg-white px-3 py-1.5 text-xs font-semibold text-teal-800" style="--badge-delay: 280ms;">LAMP</span>
+            </div>
+            <p class="mt-4 text-sm leading-relaxed text-zinc-700">Laravel, PHP, Livewire, REST APIs, LAMP</p>
           </article>
-          <article class="rounded-2xl border border-red-200 bg-red-50 p-5">
+          <article class="skill-card rounded-2xl border border-red-200 bg-red-50 p-5" data-reveal style="--reveal-delay: 120ms;">
             <h3 class="font-display text-lg font-semibold text-red-800">Frontend</h3>
-            <p class="mt-3 text-sm leading-relaxed text-zinc-700">HTML, CSS, JavaScript, Vue.js, React.js, Alpine.js, Tailwind CSS</p>
+            <div class="mt-4 flex flex-wrap gap-2" data-no-i18n>
+              <span class="skill-badge rounded-full border border-red-200 bg-white px-3 py-1.5 text-xs font-semibold text-red-800" style="--badge-delay: 40ms;">Vue.js</span>
+              <span class="skill-badge rounded-full border border-red-200 bg-white px-3 py-1.5 text-xs font-semibold text-red-800" style="--badge-delay: 100ms;">React.js</span>
+              <span class="skill-badge rounded-full border border-red-200 bg-white px-3 py-1.5 text-xs font-semibold text-red-800" style="--badge-delay: 160ms;">JavaScript</span>
+              <span class="skill-badge rounded-full border border-red-200 bg-white px-3 py-1.5 text-xs font-semibold text-red-800" style="--badge-delay: 220ms;">Alpine.js</span>
+              <span class="skill-badge rounded-full border border-red-200 bg-white px-3 py-1.5 text-xs font-semibold text-red-800" style="--badge-delay: 280ms;">Tailwind CSS</span>
+            </div>
+            <p class="mt-4 text-sm leading-relaxed text-zinc-700">HTML, CSS, JavaScript, Vue.js, React.js, Alpine.js, Tailwind CSS</p>
           </article>
-          <article class="rounded-2xl border border-blue-200 bg-blue-50 p-5">
+          <article class="skill-card rounded-2xl border border-blue-200 bg-blue-50 p-5" data-reveal style="--reveal-delay: 200ms;">
             <h3 class="font-display text-lg font-semibold text-blue-800">Database / Dev Tools</h3>
-            <p class="mt-3 text-sm leading-relaxed text-zinc-700">MySQL, SQLite, Git, GitHub, Linux, Docker</p>
+            <div class="mt-4 flex flex-wrap gap-2" data-no-i18n>
+              <span class="skill-badge rounded-full border border-blue-200 bg-white px-3 py-1.5 text-xs font-semibold text-blue-800" style="--badge-delay: 40ms;">MySQL</span>
+              <span class="skill-badge rounded-full border border-blue-200 bg-white px-3 py-1.5 text-xs font-semibold text-blue-800" style="--badge-delay: 100ms;">SQLite</span>
+              <span class="skill-badge rounded-full border border-blue-200 bg-white px-3 py-1.5 text-xs font-semibold text-blue-800" style="--badge-delay: 160ms;">Git</span>
+              <span class="skill-badge rounded-full border border-blue-200 bg-white px-3 py-1.5 text-xs font-semibold text-blue-800" style="--badge-delay: 220ms;">Linux</span>
+              <span class="skill-badge rounded-full border border-blue-200 bg-white px-3 py-1.5 text-xs font-semibold text-blue-800" style="--badge-delay: 280ms;">Docker</span>
+            </div>
+            <p class="mt-4 text-sm leading-relaxed text-zinc-700">MySQL, SQLite, Git, GitHub, Linux, Docker</p>
           </article>
-          <article class="rounded-2xl border border-violet-200 bg-violet-50 p-5">
+          <article class="skill-card rounded-2xl border border-violet-200 bg-violet-50 p-5" data-reveal style="--reveal-delay: 280ms;">
             <h3 class="font-display text-lg font-semibold text-violet-800">Product Strengths</h3>
-            <p class="mt-3 text-sm leading-relaxed text-zinc-700">Full-stack development, admin systems, EdTech platforms, media platforms, business websites, UI improvement, deployment support</p>
+            <div class="mt-4 flex flex-wrap gap-2" data-no-i18n>
+              <span class="skill-badge rounded-full border border-violet-200 bg-white px-3 py-1.5 text-xs font-semibold text-violet-800" style="--badge-delay: 40ms;">Admin Systems</span>
+              <span class="skill-badge rounded-full border border-violet-200 bg-white px-3 py-1.5 text-xs font-semibold text-violet-800" style="--badge-delay: 100ms;">EdTech</span>
+              <span class="skill-badge rounded-full border border-violet-200 bg-white px-3 py-1.5 text-xs font-semibold text-violet-800" style="--badge-delay: 160ms;">Media Platforms</span>
+              <span class="skill-badge rounded-full border border-violet-200 bg-white px-3 py-1.5 text-xs font-semibold text-violet-800" style="--badge-delay: 220ms;">UI Improvement</span>
+              <span class="skill-badge rounded-full border border-violet-200 bg-white px-3 py-1.5 text-xs font-semibold text-violet-800" style="--badge-delay: 280ms;">Deployment Support</span>
+            </div>
+            <p class="mt-4 text-sm leading-relaxed text-zinc-700">Full-stack development, admin systems, EdTech platforms, media platforms, business websites, UI improvement, deployment support</p>
           </article>
         </div>
       </div>
     </section>
 
     <section id="experience" class="mx-auto max-w-6xl px-4 py-12">
-      <h2 class="font-display text-2xl font-bold text-zinc-900">Experience Snapshot</h2>
+      <h2 class="font-display text-2xl font-bold text-zinc-900" data-reveal>Experience Snapshot</h2>
       <div class="mt-6 grid gap-5 md:grid-cols-3">
-        <article class="rounded-2xl border border-blue-200 bg-blue-50 p-5">
+        <article class="rounded-2xl border border-blue-200 bg-blue-50 p-5" data-reveal style="--reveal-delay: 40ms;">
           <h3 class="font-display text-lg font-semibold text-zinc-900">Founder &amp; Lead Developer — Wireless Computer Services</h3>
           <p class="mt-3 text-sm leading-relaxed text-zinc-700">
             I lead the design and delivery of web solutions for schools, businesses, financial institutions, and other organizations, handling planning, development, deployment, and support.
           </p>
         </article>
-        <article class="rounded-2xl border border-red-200 bg-red-50 p-5">
+        <article class="rounded-2xl border border-red-200 bg-red-50 p-5" data-reveal style="--reveal-delay: 120ms;">
           <h3 class="font-display text-lg font-semibold text-zinc-900">Digital &amp; Web Specialist — Glow 99.1 FM</h3>
           <p class="mt-3 text-sm leading-relaxed text-zinc-700">
             I build and maintain the station&apos;s digital platform, support online growth initiatives, and contribute to audience engagement through web and content systems.
           </p>
         </article>
-        <article class="rounded-2xl border border-emerald-200 bg-emerald-50 p-5">
+        <article class="rounded-2xl border border-emerald-200 bg-emerald-50 p-5" data-reveal style="--reveal-delay: 200ms;">
           <h3 class="font-display text-lg font-semibold text-zinc-900">Teacher &amp; Developer — Elites International College</h3>
           <p class="mt-3 text-sm leading-relaxed text-zinc-700">
             I taught Mathematics and Physics while also developing the school&apos;s website and management system, combining education and technical delivery in one role.
@@ -499,19 +1222,26 @@
 
     <section id="projects" class="border-y border-stone-200 bg-stone-100">
       <div class="mx-auto max-w-6xl px-4 py-12">
-        <h2 class="font-display text-2xl font-bold text-zinc-900">Featured Case Studies</h2>
-        <p class="mt-2 max-w-3xl text-sm text-zinc-600">
+        <h2 class="font-display text-2xl font-bold text-zinc-900" data-reveal>Featured Case Studies</h2>
+        <p class="mt-2 max-w-3xl text-sm text-zinc-600" data-reveal style="--reveal-delay: 80ms;">
           Selected work across media, education, banking, and developer education, structured around the challenge, the product delivered, the stack, and the outcome.
         </p>
 
         <div class="mt-6 grid gap-6 lg:grid-cols-2">
-          <article class="rounded-2xl border border-red-200 bg-white p-6 shadow-sm">
+          <article class="project-card rounded-2xl border border-red-200 bg-white p-6 shadow-sm" data-reveal="left" style="--project-rgb: 220 38 38; --reveal-delay: 40ms;">
+            <a href="https://www.glowfmradio.com" target="_blank" rel="noopener noreferrer" aria-label="Open Glow 99.1 FM website" class="project-preview block">
+              <div class="project-preview-art">
+                <img src="./files/glow.png" alt="Preview of Glow 99.1 FM website" class="project-preview-image" loading="lazy" decoding="async">
+              </div>
+            </a>
             <div class="flex items-start justify-between gap-4">
               <div>
                 <p class="text-xs font-bold uppercase tracking-wide text-red-700">Media Platform</p>
-                <h3 class="mt-2 font-display text-xl font-bold text-zinc-900">Glow 99.1 FM</h3>
+                <h3 class="mt-2 font-display text-xl font-bold text-zinc-900">
+                  <a href="https://www.glowfmradio.com" target="_blank" rel="noopener noreferrer" class="transition-colors duration-200 hover:text-red-700 focus-visible:text-red-700 focus-visible:outline-none">Glow 99.1 FM</a>
+                </h3>
               </div>
-              <a href="https://www.glowfmradio.com" target="_blank" rel="noopener noreferrer" class="rounded-lg bg-red-600 px-3 py-2 text-xs font-semibold text-white hover:bg-red-700">Visit Project</a>
+              <a href="https://www.glowfmradio.com" target="_blank" rel="noopener noreferrer" class="project-link motion-button rounded-lg bg-red-600 px-3 py-2 text-xs font-semibold text-white hover:bg-red-700"><span>Visit Project</span><span class="project-link-arrow" data-no-i18n aria-hidden="true">↗</span></a>
             </div>
             <dl class="mt-5 space-y-4 text-sm text-zinc-700">
               <div>
@@ -524,7 +1254,12 @@
               </div>
               <div>
                 <dt class="font-semibold text-zinc-900">Stack</dt>
-                <dd class="mt-1">Laravel, Vue.js, Tailwind CSS, MySQL</dd>
+                <dd class="mt-2 project-stack" data-no-i18n>
+                  <span class="project-stack-tag" style="--tag-delay: 40ms;">Laravel</span>
+                  <span class="project-stack-tag" style="--tag-delay: 100ms;">Vue.js</span>
+                  <span class="project-stack-tag" style="--tag-delay: 160ms;">Tailwind CSS</span>
+                  <span class="project-stack-tag" style="--tag-delay: 220ms;">MySQL</span>
+                </dd>
               </div>
               <div>
                 <dt class="font-semibold text-zinc-900">Outcome</dt>
@@ -533,13 +1268,20 @@
             </dl>
           </article>
 
-          <article class="rounded-2xl border border-emerald-200 bg-white p-6 shadow-sm">
+          <article class="project-card rounded-2xl border border-emerald-200 bg-white p-6 shadow-sm" data-reveal="right" style="--project-rgb: 5 150 105; --reveal-delay: 100ms;">
+            <a href="https://www.elitesinternationalcollege.com" target="_blank" rel="noopener noreferrer" aria-label="Open Elites International College website" class="project-preview block">
+              <div class="project-preview-art">
+                <img src="./files/elite.png" alt="Preview of Elites International College website" class="project-preview-image" loading="lazy" decoding="async">
+              </div>
+            </a>
             <div class="flex items-start justify-between gap-4">
               <div>
                 <p class="text-xs font-bold uppercase tracking-wide text-emerald-700">School Operations Platform</p>
-                <h3 class="mt-2 font-display text-xl font-bold text-zinc-900">Elites International College</h3>
+                <h3 class="mt-2 font-display text-xl font-bold text-zinc-900">
+                  <a href="https://www.elitesinternationalcollege.com" target="_blank" rel="noopener noreferrer" class="transition-colors duration-200 hover:text-emerald-700 focus-visible:text-emerald-700 focus-visible:outline-none">Elites International College</a>
+                </h3>
               </div>
-              <a href="https://www.elitesinternationalcollege.com" target="_blank" rel="noopener noreferrer" class="rounded-lg bg-emerald-600 px-3 py-2 text-xs font-semibold text-white hover:bg-emerald-700">Visit Project</a>
+              <a href="https://www.elitesinternationalcollege.com" target="_blank" rel="noopener noreferrer" class="project-link motion-button rounded-lg bg-emerald-600 px-3 py-2 text-xs font-semibold text-white hover:bg-emerald-700"><span>Visit Project</span><span class="project-link-arrow" data-no-i18n aria-hidden="true">↗</span></a>
             </div>
             <dl class="mt-5 space-y-4 text-sm text-zinc-700">
               <div>
@@ -552,7 +1294,12 @@
               </div>
               <div>
                 <dt class="font-semibold text-zinc-900">Stack</dt>
-                <dd class="mt-1">Laravel, Livewire, Tailwind CSS, Alpine.js</dd>
+                <dd class="mt-2 project-stack" data-no-i18n>
+                  <span class="project-stack-tag" style="--tag-delay: 40ms;">Laravel</span>
+                  <span class="project-stack-tag" style="--tag-delay: 100ms;">Livewire</span>
+                  <span class="project-stack-tag" style="--tag-delay: 160ms;">Tailwind CSS</span>
+                  <span class="project-stack-tag" style="--tag-delay: 220ms;">Alpine.js</span>
+                </dd>
               </div>
               <div>
                 <dt class="font-semibold text-zinc-900">Outcome</dt>
@@ -561,13 +1308,20 @@
             </dl>
           </article>
 
-          <article class="rounded-2xl border border-blue-200 bg-white p-6 shadow-sm">
+          <article class="project-card rounded-2xl border border-blue-200 bg-white p-6 shadow-sm" data-reveal="left" style="--project-rgb: 37 99 235; --reveal-delay: 160ms;">
+            <a href="https://www.ikeremfb.com" target="_blank" rel="noopener noreferrer" aria-label="Open Ikere Microfinance Bank website" class="project-preview block">
+              <div class="project-preview-art">
+                <img src="./files/ikere.png" alt="Preview of Ikere Microfinance Bank website" class="project-preview-image" loading="lazy" decoding="async">
+              </div>
+            </a>
             <div class="flex items-start justify-between gap-4">
               <div>
                 <p class="text-xs font-bold uppercase tracking-wide text-blue-700">Banking Website</p>
-                <h3 class="mt-2 font-display text-xl font-bold text-zinc-900">Ikere Microfinance Bank</h3>
+                <h3 class="mt-2 font-display text-xl font-bold text-zinc-900">
+                  <a href="https://www.ikeremfb.com" target="_blank" rel="noopener noreferrer" class="transition-colors duration-200 hover:text-blue-700 focus-visible:text-blue-700 focus-visible:outline-none">Ikere Microfinance Bank</a>
+                </h3>
               </div>
-              <a href="https://www.ikeremfb.com" target="_blank" rel="noopener noreferrer" class="rounded-lg bg-blue-600 px-3 py-2 text-xs font-semibold text-white hover:bg-blue-700">Visit Project</a>
+              <a href="https://www.ikeremfb.com" target="_blank" rel="noopener noreferrer" class="project-link motion-button rounded-lg bg-blue-600 px-3 py-2 text-xs font-semibold text-white hover:bg-blue-700"><span>Visit Project</span><span class="project-link-arrow" data-no-i18n aria-hidden="true">↗</span></a>
             </div>
             <dl class="mt-5 space-y-4 text-sm text-zinc-700">
               <div>
@@ -580,7 +1334,12 @@
               </div>
               <div>
                 <dt class="font-semibold text-zinc-900">Stack</dt>
-                <dd class="mt-1">Web platform / banking site</dd>
+                <dd class="mt-2 project-stack" data-no-i18n>
+                  <span class="project-stack-tag" style="--tag-delay: 40ms;">PHP </span>
+                  <span class="project-stack-tag" style="--tag-delay: 100ms;">Laravel</span>
+                  <span class="project-stack-tag" style="--tag-delay: 160ms;">Livewire</span>
+                  <span class="project-stack-tag" style="--tag-delay: 220ms;">Alpine JS</span>
+                </dd>
               </div>
               <div>
                 <dt class="font-semibold text-zinc-900">Outcome</dt>
@@ -589,7 +1348,7 @@
             </dl>
           </article>
 
-          <article class="rounded-2xl border border-violet-200 bg-white p-6 shadow-sm">
+          <article class="project-card rounded-2xl border border-violet-200 bg-white p-6 shadow-sm" data-reveal="right" style="--project-rgb: 109 40 217; --reveal-delay: 220ms;">
             <div class="flex items-start justify-between gap-4">
               <div>
                 <p class="text-xs font-bold uppercase tracking-wide text-violet-700">EdTech Product</p>
@@ -608,7 +1367,12 @@
               </div>
               <div>
                 <dt class="font-semibold text-zinc-900">Stack</dt>
-                <dd class="mt-1">Laravel, Livewire, Tailwind CSS, Alpine.js</dd>
+                <dd class="mt-2 project-stack" data-no-i18n>
+                  <span class="project-stack-tag" style="--tag-delay: 40ms;">Laravel</span>
+                  <span class="project-stack-tag" style="--tag-delay: 100ms;">Livewire</span>
+                  <span class="project-stack-tag" style="--tag-delay: 160ms;">Tailwind CSS</span>
+                  <span class="project-stack-tag" style="--tag-delay: 220ms;">Alpine.js</span>
+                </dd>
               </div>
               <div>
                 <dt class="font-semibold text-zinc-900">Outcome</dt>
@@ -621,33 +1385,33 @@
     </section>
 
     <section id="faq" class="mx-auto max-w-6xl px-4 py-12">
-      <h2 class="font-display text-2xl font-bold text-zinc-900">Frequently Asked Questions</h2>
-      <p class="mt-2 max-w-2xl text-sm text-zinc-600">
+      <h2 class="font-display text-2xl font-bold text-zinc-900" data-reveal>Frequently Asked Questions</h2>
+      <p class="mt-2 max-w-2xl text-sm text-zinc-600" data-reveal style="--reveal-delay: 80ms;">
         Quick answers about the roles, projects, and support I take on.
       </p>
 
       <div class="mt-6 grid gap-4 md:grid-cols-2">
-        <details class="rounded-2xl border border-stone-200 bg-stone-50 p-5" open>
+        <details class="rounded-2xl border border-stone-200 bg-stone-50 p-5" open data-reveal style="--reveal-delay: 40ms;">
           <summary class="cursor-pointer text-sm font-semibold text-zinc-900">What kind of work do you take on?</summary>
           <p class="mt-3 text-sm leading-relaxed text-zinc-700">I&apos;m open to full-time roles, contract development, freelance projects, and long-term product collaborations.</p>
         </details>
-        <details class="rounded-2xl border border-stone-200 bg-stone-50 p-5">
+        <details class="rounded-2xl border border-stone-200 bg-stone-50 p-5" data-reveal style="--reveal-delay: 100ms;">
           <summary class="cursor-pointer text-sm font-semibold text-zinc-900">What technologies do you work with?</summary>
           <p class="mt-3 text-sm leading-relaxed text-zinc-700">My core stack includes Laravel, Livewire, Vue.js, React.js, Tailwind CSS, PHP, JavaScript, MySQL, and SQLite.</p>
         </details>
-        <details class="rounded-2xl border border-stone-200 bg-stone-50 p-5">
+        <details class="rounded-2xl border border-stone-200 bg-stone-50 p-5" data-reveal style="--reveal-delay: 160ms;">
           <summary class="cursor-pointer text-sm font-semibold text-zinc-900">Do you work with businesses outside Nigeria?</summary>
           <p class="mt-3 text-sm leading-relaxed text-zinc-700">Yes. I&apos;m available to work remotely with companies, startups, schools, media teams, and organizations in different locations.</p>
         </details>
-        <details class="rounded-2xl border border-stone-200 bg-stone-50 p-5">
+        <details class="rounded-2xl border border-stone-200 bg-stone-50 p-5" data-reveal style="--reveal-delay: 220ms;">
           <summary class="cursor-pointer text-sm font-semibold text-zinc-900">Can you build both websites and full web applications?</summary>
           <p class="mt-3 text-sm leading-relaxed text-zinc-700">Yes. I work on everything from business websites and portals to dashboards, admin systems, and custom web applications.</p>
         </details>
-        <details class="rounded-2xl border border-stone-200 bg-stone-50 p-5">
+        <details class="rounded-2xl border border-stone-200 bg-stone-50 p-5" data-reveal style="--reveal-delay: 280ms;">
           <summary class="cursor-pointer text-sm font-semibold text-zinc-900">Do you offer ongoing support after launch?</summary>
           <p class="mt-3 text-sm leading-relaxed text-zinc-700">Yes. I can help with maintenance, updates, improvements, and long-term technical support after deployment.</p>
         </details>
-        <details class="rounded-2xl border border-stone-200 bg-stone-50 p-5">
+        <details class="rounded-2xl border border-stone-200 bg-stone-50 p-5" data-reveal style="--reveal-delay: 340ms;">
           <summary class="cursor-pointer text-sm font-semibold text-zinc-900">Can I hire you for a single project?</summary>
           <p class="mt-3 text-sm leading-relaxed text-zinc-700">Yes. I take on one-time projects as well as longer-term engagements.</p>
         </details>
@@ -657,41 +1421,41 @@
     <section id="contact" class="border-t border-stone-200 bg-white">
       <div class="mx-auto max-w-6xl px-4 py-12">
         <div class="rounded-2xl border border-stone-200 bg-stone-50 p-6 shadow-sm">
-          <h2 class="font-display text-3xl font-bold text-zinc-900">Let&apos;s Work Together</h2>
-          <p class="mt-3 max-w-3xl text-sm leading-relaxed text-zinc-700">
+          <h2 class="font-display text-3xl font-bold text-zinc-900" data-reveal>Let&apos;s Work Together</h2>
+          <p class="mt-3 max-w-3xl text-sm leading-relaxed text-zinc-700" data-reveal style="--reveal-delay: 80ms;">
             Whether you&apos;re hiring for a full-time developer role or looking for someone to build your next web platform, I&apos;d love to hear about it.
           </p>
 
           <div class="mt-6 grid gap-6 md:grid-cols-2">
-            <article class="rounded-2xl border border-stone-200 bg-white p-5">
+            <article class="rounded-2xl border border-stone-200 bg-white p-5" data-reveal="left">
               <h3 class="font-display text-xl font-semibold text-zinc-900">For Employers</h3>
               <p class="mt-3 text-sm leading-relaxed text-zinc-700">
                 Review my experience, projects, and technical stack, then reach out for interviews or role discussions.
               </p>
               <div class="mt-4 flex flex-wrap gap-3">
-                <a href="mailto:oyetoke.ebenezer@gmail.com?subject=Role%20Opportunity" class="rounded-lg bg-red-600 px-4 py-2.5 text-sm font-semibold text-white hover:bg-red-700">Hire Me for a Role</a>
-                <a href="./adedayo-ebenezer-oyetoke-cv.html" download class="rounded-lg border border-zinc-300 bg-white px-4 py-2.5 text-sm font-semibold text-zinc-800 hover:border-zinc-400">Download CV</a>
-                <a href="#experience" class="rounded-lg border border-zinc-300 bg-white px-4 py-2.5 text-sm font-semibold text-zinc-800 hover:border-zinc-400">View Experience</a>
-                <a href="mailto:oyetoke.ebenezer@gmail.com?subject=Interview%20Request" class="rounded-lg border border-zinc-300 bg-white px-4 py-2.5 text-sm font-semibold text-zinc-800 hover:border-zinc-400">Schedule an Interview</a>
+                <a href="mailto:oyetoke.ebenezer@gmail.com?subject=Role%20Opportunity" class="motion-button rounded-lg bg-red-600 px-4 py-2.5 text-sm font-semibold text-white hover:bg-red-700">Hire Me for a Role</a>
+                <a href="./files/Oyetoke_Adedayo_CV.pdf" download class="motion-button rounded-lg border border-zinc-300 bg-white px-4 py-2.5 text-sm font-semibold text-zinc-800 hover:border-zinc-400">Download CV</a>
+                <a href="#experience" class="motion-button rounded-lg border border-zinc-300 bg-white px-4 py-2.5 text-sm font-semibold text-zinc-800 hover:border-zinc-400">View Experience</a>
+                <a href="mailto:oyetoke.ebenezer@gmail.com?subject=Interview%20Request" class="motion-button rounded-lg border border-zinc-300 bg-white px-4 py-2.5 text-sm font-semibold text-zinc-800 hover:border-zinc-400">Schedule an Interview</a>
               </div>
             </article>
-            <article class="rounded-2xl border border-stone-200 bg-white p-5">
+            <article class="rounded-2xl border border-stone-200 bg-white p-5" data-reveal="right" style="--reveal-delay: 100ms;">
               <h3 class="font-display text-xl font-semibold text-zinc-900">For Clients</h3>
               <p class="mt-3 text-sm leading-relaxed text-zinc-700">
                 Book a discovery call or send me a message to discuss your goals, timeline, and the right solution for your project.
               </p>
               <div class="mt-4 flex flex-wrap gap-3">
-                <a href="mailto:oyetoke.ebenezer@gmail.com?subject=Client%20Project%20Inquiry" class="rounded-lg bg-emerald-600 px-4 py-2.5 text-sm font-semibold text-white hover:bg-emerald-700">Work With Me</a>
-                <a href="https://calendly.com/dayoebe" target="_blank" rel="noopener noreferrer" class="rounded-lg border border-emerald-300 bg-emerald-100 px-4 py-2.5 text-sm font-semibold text-emerald-800 hover:bg-emerald-200">Book a Discovery Call</a>
-                <a href="mailto:oyetoke.ebenezer@gmail.com?subject=Project%20Quote%20Request" class="rounded-lg border border-zinc-300 bg-white px-4 py-2.5 text-sm font-semibold text-zinc-800 hover:border-zinc-400">Request a Quote</a>
-                <a href="mailto:oyetoke.ebenezer@gmail.com?subject=Start%20Your%20Project" class="rounded-lg border border-zinc-300 bg-white px-4 py-2.5 text-sm font-semibold text-zinc-800 hover:border-zinc-400">Start Your Project</a>
+                <a href="mailto:oyetoke.ebenezer@gmail.com?subject=Client%20Project%20Inquiry" class="motion-button rounded-lg bg-emerald-600 px-4 py-2.5 text-sm font-semibold text-white hover:bg-emerald-700">Work With Me</a>
+                <a href="https://calendly.com/dayoebe" target="_blank" rel="noopener noreferrer" class="motion-button rounded-lg border border-emerald-300 bg-emerald-100 px-4 py-2.5 text-sm font-semibold text-emerald-800 hover:bg-emerald-200">Book a Discovery Call</a>
+                <a href="mailto:oyetoke.ebenezer@gmail.com?subject=Project%20Quote%20Request" class="motion-button rounded-lg border border-zinc-300 bg-white px-4 py-2.5 text-sm font-semibold text-zinc-800 hover:border-zinc-400">Request a Quote</a>
+                <a href="mailto:oyetoke.ebenezer@gmail.com?subject=Start%20Your%20Project" class="motion-button rounded-lg border border-zinc-300 bg-white px-4 py-2.5 text-sm font-semibold text-zinc-800 hover:border-zinc-400">Start Your Project</a>
               </div>
             </article>
           </div>
         </div>
 
         <div class="mt-8 grid gap-6 md:grid-cols-2">
-          <article class="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
+          <article class="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm" data-reveal="left">
             <h3 class="font-display text-xl font-semibold text-zinc-900">Contact Details</h3>
             <div class="mt-5 space-y-3 text-sm text-zinc-700">
               <p><span class="font-semibold text-zinc-900">Address:</span> Akure, Nigeria</p>
@@ -702,7 +1466,7 @@
             </div>
           </article>
 
-          <form id="contact-form" action="https://formsubmit.co/oyetoke.ebenezer@gmail.com" method="post" class="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
+          <form id="contact-form" action="https://formsubmit.co/oyetoke.ebenezer@gmail.com" method="post" class="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm" data-reveal="right" style="--reveal-delay: 100ms;">
             <h3 class="font-display text-xl font-semibold text-zinc-900">Send a Message</h3>
             <input type="hidden" name="_subject" value="New Portfolio Contact Message">
             <input type="hidden" name="_next" value="https://dayoebe.github.io/?sent=1#contact">
@@ -727,7 +1491,7 @@
                 <textarea id="message" name="message" rows="4" required minlength="20" maxlength="2500" class="w-full rounded-lg border border-stone-300 px-3 py-2 text-sm focus:border-emerald-500 focus:outline-none"></textarea>
               </div>
               <p id="form-status" class="hidden rounded-lg border px-3 py-2 text-sm" aria-live="polite"></p>
-              <button type="submit" class="w-full rounded-lg bg-red-600 px-4 py-2.5 text-sm font-semibold text-white hover:bg-red-700 disabled:cursor-not-allowed disabled:opacity-60">
+              <button type="submit" class="motion-button w-full rounded-lg bg-red-600 px-4 py-2.5 text-sm font-semibold text-white hover:bg-red-700 disabled:cursor-not-allowed disabled:opacity-60">
                 Send Message
               </button>
             </div>
@@ -738,7 +1502,7 @@
 
     </main>
 
-    <a href="https://wa.me/2349030036438?text=Hi%20Adedayo%2C%20I%20want%20to%20discuss%20a%20project." target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" class="fixed bottom-5 left-5 z-50 inline-flex items-center gap-2 rounded-full border border-emerald-300 bg-emerald-500 px-4 py-3 text-sm font-bold text-white shadow-lg hover:bg-emerald-600 animate__animated animate__fadeInUp">
+    <a href="https://wa.me/2349030036438?text=Hi%20Adedayo%2C%20I%20want%20to%20discuss%20a%20project." target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" class="motion-button fixed bottom-5 left-5 z-50 inline-flex items-center gap-2 rounded-full border border-emerald-300 bg-emerald-500 px-4 py-3 text-sm font-bold text-white shadow-lg hover:bg-emerald-600 animate__animated animate__fadeInUp">
       <i class="fa-brands fa-whatsapp text-lg"></i>
       <span class="hidden sm:inline">WhatsApp</span>
     </a>
@@ -765,7 +1529,97 @@
     const PWA_TOAST_BASE_CLASSES = 'pointer-events-none fixed inset-x-4 top-20 z-50 mx-auto max-w-sm rounded-2xl border px-4 py-3 text-sm shadow-lg sm:left-auto sm:right-5 sm:mx-0';
     const NETWORK_BADGE_ONLINE_CLASSES = 'rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1.5 text-emerald-700';
     const NETWORK_BADGE_OFFLINE_CLASSES = 'rounded-full border border-amber-200 bg-amber-50 px-3 py-1.5 text-amber-800';
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
     let toastTimer;
+
+    function markRevealElementsVisible() {
+      document.querySelectorAll('[data-reveal]').forEach((element) => {
+        element.classList.add('is-visible');
+      });
+    }
+
+    function initRevealMotion() {
+      const revealElements = Array.from(document.querySelectorAll('[data-reveal]'));
+      if (revealElements.length === 0) return;
+
+      if (prefersReducedMotion.matches || !('IntersectionObserver' in window)) {
+        markRevealElementsVisible();
+        return;
+      }
+
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add('is-visible');
+          revealObserver.unobserve(entry.target);
+        });
+      }, {
+        threshold: 0.16,
+        rootMargin: '0px 0px -8% 0px'
+      });
+
+      revealElements.forEach((element) => {
+        revealObserver.observe(element);
+      });
+    }
+
+    function setCounterValue(element, value) {
+      const prefix = element.dataset.countPrefix || '';
+      const suffix = element.dataset.countSuffix || '';
+      element.textContent = `${prefix}${value}${suffix}`;
+    }
+
+    function animateCounter(element) {
+      if (element.dataset.countAnimated === 'true') return;
+      element.dataset.countAnimated = 'true';
+
+      const target = Number(element.dataset.countTarget || 0);
+      const duration = Number(element.dataset.countDuration || 1200);
+
+      if (prefersReducedMotion.matches || !Number.isFinite(target)) {
+        setCounterValue(element, target);
+        return;
+      }
+
+      const startTime = performance.now();
+
+      function step(now) {
+        const progress = Math.min((now - startTime) / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        const value = Math.round(target * eased);
+        setCounterValue(element, value);
+
+        if (progress < 1) {
+          window.requestAnimationFrame(step);
+        }
+      }
+
+      window.requestAnimationFrame(step);
+    }
+
+    function initCountMotion() {
+      const counters = Array.from(document.querySelectorAll('[data-count-target]'));
+      if (counters.length === 0) return;
+
+      if (prefersReducedMotion.matches || !('IntersectionObserver' in window)) {
+        counters.forEach((counter) => animateCounter(counter));
+        return;
+      }
+
+      const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          animateCounter(entry.target);
+          counterObserver.unobserve(entry.target);
+        });
+      }, {
+        threshold: 0.4
+      });
+
+      counters.forEach((counter) => {
+        counterObserver.observe(counter);
+      });
+    }
 
     function showToast(message, type = 'info') {
       if (!pwaToast) return;
@@ -905,6 +1759,8 @@
       restoreContactDraft();
     }
 
+    initRevealMotion();
+    initCountMotion();
     updateNetworkStatus();
 
     window.addEventListener('online', () => updateNetworkStatus({ notify: true }));
