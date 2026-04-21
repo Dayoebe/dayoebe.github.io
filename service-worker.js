@@ -1,12 +1,13 @@
-const APP_CACHE = 'wireless-terminal-app-v4';
-const STATIC_CACHE = 'wireless-terminal-static-v4';
-const THIRD_PARTY_CACHE = 'wireless-terminal-third-party-v4';
+const APP_CACHE = 'wireless-terminal-app-v5';
+const STATIC_CACHE = 'wireless-terminal-static-v5';
+const THIRD_PARTY_CACHE = 'wireless-terminal-third-party-v5';
 const KNOWN_CACHES = [APP_CACHE, STATIC_CACHE, THIRD_PARTY_CACHE];
 
 const APP_SHELL = [
   './',
   './index.html',
   './offline.html',
+  './adedayo-ebenezer-oyetoke-cv.html',
   './manifest.webmanifest',
   './robots.txt',
   './sitemap.xml',
