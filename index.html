@@ -44,6 +44,7 @@
   <meta property="og:image:alt" content="Adedayo Ebenezer Oyetoke, Full-Stack Laravel Developer" />
 
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@dayoebe" />
   <meta name="twitter:title" content="Adedayo Ebenezer Oyetoke | Full-Stack Laravel Developer" />
   <meta name="twitter:description" content="Portfolio of Adedayo Ebenezer Oyetoke, Full-Stack Laravel Developer focused on scalable web systems for businesses, media, and education." />
   <meta name="twitter:image" content="https://dayoebe.github.io/social-preview.jpg" />
@@ -52,7 +53,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script defer src="./assets/i18n.js"></script>
@@ -118,6 +118,24 @@
 
     body {
       overflow-x: hidden;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: 0.75rem;
+      top: -3rem;
+      z-index: 1000;
+      border-radius: 0.5rem;
+      background: #111827;
+      color: #fff;
+      padding: 0.6rem 0.85rem;
+      font-size: 0.875rem;
+      font-weight: 700;
+      transition: top 180ms ease;
+    }
+
+    .skip-link:focus {
+      top: 0.75rem;
     }
 
     [x-cloak] {
@@ -798,6 +816,15 @@
         transform: none !important;
       }
     }
+
+    .floating-chat-cta {
+      animation: floatingFadeIn 500ms ease-out both;
+    }
+
+    @keyframes floatingFadeIn {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
   </style>
   <script type="application/ld+json">
     {
@@ -909,6 +936,7 @@
   </script>
 </head>
 <body class="bg-stone-50 text-zinc-900 font-body">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
   <div x-data="{ menuOpen: false }" class="min-h-screen">
     <header class="sticky top-0 z-50 border-b border-stone-200 bg-stone-50/95 backdrop-blur">
       <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
@@ -918,6 +946,8 @@
           @click="menuOpen = !menuOpen"
           class="inline-flex items-center rounded-lg border border-stone-300 px-3 py-2 text-sm font-semibold text-zinc-800 md:hidden"
           aria-label="Toggle menu"
+          :aria-expanded="menuOpen.toString()"
+          aria-controls="mobile-menu"
         >
           Menu
         </button>
@@ -949,7 +979,7 @@
         </div>
       </div>
 
-      <nav x-show="menuOpen" x-cloak class="border-t border-stone-200 bg-white md:hidden">
+      <nav id="mobile-menu" x-show="menuOpen" x-cloak class="border-t border-stone-200 bg-white md:hidden">
         <div class="mx-auto flex max-w-6xl flex-col px-4 py-3 text-sm font-medium">
           <a @click="menuOpen = false" href="#home" class="rounded-md px-3 py-2 hover:bg-red-50 hover:text-red-700">Home</a>
           <a @click="menuOpen = false" href="#about" class="rounded-md px-3 py-2 hover:bg-orange-50 hover:text-orange-700">About</a>
@@ -976,7 +1006,8 @@
       </nav>
     </header>
 
-    <main id="home" class="dot-pattern">
+    <main id="main-content" class="dot-pattern">
+      <span id="home" class="block h-0" aria-hidden="true"></span>
       <section class="hero-section mx-auto grid max-w-6xl gap-8 px-4 pb-12 pt-10 md:grid-cols-[1.15fr,0.85fr] md:items-center md:pt-14">
         <div class="hero-grid" aria-hidden="true"></div>
 
@@ -1502,7 +1533,7 @@
 
     </main>
 
-    <a href="https://wa.me/2349030036438?text=Hi%20Adedayo%2C%20I%20want%20to%20discuss%20a%20project." target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" class="motion-button fixed bottom-5 left-5 z-50 inline-flex items-center gap-2 rounded-full border border-emerald-300 bg-emerald-500 px-4 py-3 text-sm font-bold text-white shadow-lg hover:bg-emerald-600 animate__animated animate__fadeInUp">
+    <a href="https://wa.me/2349030036438?text=Hi%20Adedayo%2C%20I%20want%20to%20discuss%20a%20project." target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" class="motion-button floating-chat-cta fixed bottom-5 left-5 z-50 inline-flex items-center gap-2 rounded-full border border-emerald-300 bg-emerald-500 px-4 py-3 text-sm font-bold text-white shadow-lg hover:bg-emerald-600">
       <i class="fa-brands fa-whatsapp text-lg"></i>
       <span class="hidden sm:inline">WhatsApp</span>
     </a>
