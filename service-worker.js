@@ -1,6 +1,6 @@
-const APP_CACHE = 'wireless-terminal-app-v7';
-const STATIC_CACHE = 'wireless-terminal-static-v7';
-const THIRD_PARTY_CACHE = 'wireless-terminal-third-party-v7';
+const APP_CACHE = 'wireless-terminal-app-v8';
+const STATIC_CACHE = 'wireless-terminal-static-v8';
+const THIRD_PARTY_CACHE = 'wireless-terminal-third-party-v8';
 const KNOWN_CACHES = [APP_CACHE, STATIC_CACHE, THIRD_PARTY_CACHE];
 
 const APP_SHELL = [
@@ -34,6 +34,78 @@ const THIRD_PARTY_ASSETS = [
   'https://cdn.tailwindcss.com',
   'https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js'
 ];
+
+const MANNARISE_PORTFOLIO_SCRIPT = `
+<script>
+(() => {
+  const addMannaRiseProject = () => {
+    if (document.querySelector('[data-project="mannarise"]')) return;
+
+    const projectsSection = document.querySelector('#projects');
+    if (!projectsSection) return;
+
+    const projectGrid = projectsSection.querySelector('.grid') || projectsSection.querySelector('[class*="grid"]');
+    if (!projectGrid) return;
+
+    const card = document.createElement('article');
+    card.dataset.project = 'mannarise';
+    card.setAttribute('data-reveal', 'up');
+    card.style.setProperty('--project-rgb', '22, 101, 52');
+    card.className = 'project-card flex h-full flex-col rounded-2xl border border-stone-200 bg-white p-5 shadow-sm';
+
+    card.innerHTML = `
+      <div class="project-preview mb-5">
+        <div class="project-preview-art">
+          <div class="project-preview-grid"></div>
+          <div class="project-preview-shell">
+            <div class="project-preview-dots"><span></span><span></span><span></span></div>
+            <div class="project-preview-panel project-preview-panel-one"></div>
+            <div class="project-preview-panel project-preview-panel-two"></div>
+            <div class="project-preview-panel project-preview-panel-three"></div>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-1 flex-col">
+        <p class="mb-2 text-sm font-bold uppercase tracking-[0.18em] text-emerald-700">Faith-Based Platform</p>
+        <h3 class="font-display text-xl font-semibold text-zinc-900">MannaRise</h3>
+        <p class="mt-3 flex-1 text-sm leading-6 text-zinc-600">Laravel-powered devotional web application for daily devotionals, audio messages, and faith-based content delivery through a clean, responsive, database-driven experience.</p>
+        <div class="project-stack mt-5">
+          <span class="project-stack-tag" style="--tag-delay: 0ms">Laravel</span>
+          <span class="project-stack-tag" style="--tag-delay: 80ms">MySQL</span>
+          <span class="project-stack-tag" style="--tag-delay: 160ms">Audio Content</span>
+          <span class="project-stack-tag" style="--tag-delay: 240ms">SEO</span>
+        </div>
+        <a href="https://mannarise.ct.ws/" target="_blank" rel="noopener noreferrer" class="project-link mt-6 text-sm font-bold text-emerald-700 hover:text-emerald-800">
+          Visit Website <span class="project-link-arrow">&rarr;</span>
+        </a>
+      </div>
+    `;
+
+    projectGrid.appendChild(card);
+
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+
+      observer.observe(card);
+    } else {
+      card.classList.add('is-visible');
+    }
+  };
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', addMannaRiseProject);
+  } else {
+    addMannaRiseProject();
+  }
+})();
+</script>`;
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
@@ -99,8 +171,10 @@ async function handleNavigationRequest(request) {
   try {
     const networkResponse = await fetch(request);
     if (networkResponse && networkResponse.ok) {
+      const responseToReturn = await injectMannaRiseProject(networkResponse.clone());
       const appCache = await caches.open(APP_CACHE);
-      await appCache.put(request, networkResponse.clone());
+      await appCache.put(request, responseToReturn.clone());
+      return responseToReturn;
     }
     return networkResponse;
   } catch (error) {
@@ -109,8 +183,40 @@ async function handleNavigationRequest(request) {
       (await caches.match('./index.html')) ||
       (await caches.match('./offline.html'));
 
-    return cachedResponse || Response.error();
+    if (cachedResponse) {
+      return injectMannaRiseProject(cachedResponse);
+    }
+
+    return Response.error();
   }
+}
+
+async function injectMannaRiseProject(response) {
+  const contentType = response.headers.get('content-type') || '';
+
+  if (!contentType.includes('text/html')) {
+    return response;
+  }
+
+  const html = await response.text();
+
+  if (html.includes('data-project="mannarise"') || !html.includes('</body>')) {
+    return new Response(html, {
+      status: response.status,
+      statusText: response.statusText,
+      headers: response.headers
+    });
+  }
+
+  const enhancedHtml = html.replace('</body>', `${MANNARISE_PORTFOLIO_SCRIPT}\n</body>`);
+  const headers = new Headers(response.headers);
+  headers.set('content-type', 'text/html; charset=utf-8');
+
+  return new Response(enhancedHtml, {
+    status: response.status,
+    statusText: response.statusText,
+    headers
+  });
 }
 
 async function cacheFirst(request, cacheName) {
