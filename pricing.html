@@ -9,6 +9,12 @@
   <meta name="author" content="Adedayo Ebenezer Oyetoke" />
   <meta name="theme-color" content="#dc2626" />
   <link rel="canonical" href="https://dayoebe.github.io/pricing.html" />
+  <link rel="alternate" hreflang="en" href="https://dayoebe.github.io/pricing.html?lang=en" />
+  <link rel="alternate" hreflang="yo" href="https://dayoebe.github.io/pricing.html?lang=yo" />
+  <link rel="alternate" hreflang="fr" href="https://dayoebe.github.io/pricing.html?lang=fr" />
+  <link rel="alternate" hreflang="es" href="https://dayoebe.github.io/pricing.html?lang=es" />
+  <link rel="alternate" hreflang="ar" href="https://dayoebe.github.io/pricing.html?lang=ar" />
+  <link rel="alternate" hreflang="x-default" href="https://dayoebe.github.io/pricing.html" />
   <link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32.png" />
   <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
 
@@ -43,30 +49,40 @@
   </script>
 </head>
 <body class="bg-stone-50 font-body text-stone-800 antialiased">
-  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-xl focus:bg-stone-950 focus:px-4 focus:py-3 focus:text-white">Skip to content</a>
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-xl focus:bg-stone-950 focus:px-4 focus:py-3 focus:text-white" data-i18n="skipLink">Skip to content</a>
 
   <header class="sticky top-0 z-40 border-b border-stone-200/80 bg-white/85 backdrop-blur-xl">
-    <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8" aria-label="Main navigation">
+    <nav class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-5 py-4 lg:px-8" aria-label="Main navigation">
       <a href="./" class="group inline-flex items-center gap-3">
         <span class="grid h-10 w-10 place-items-center rounded-2xl bg-red-600 text-white shadow-lg shadow-red-600/20">
           <i class="fa-solid fa-code"></i>
         </span>
         <span>
           <span class="block font-display text-sm font-extrabold tracking-tight text-stone-950">Adedayo Ebenezer</span>
-          <span class="block text-xs font-semibold text-stone-500">Full-Stack Web Developer</span>
+          <span class="block text-xs font-semibold text-stone-500" data-i18n="role">Full-Stack Web Developer</span>
         </span>
       </a>
 
       <div class="hidden items-center gap-6 text-sm font-bold text-stone-600 md:flex">
-        <a href="./#projects" class="hover:text-red-600">Projects</a>
-        <a href="./#skills" class="hover:text-red-600">Skills</a>
-        <a href="./pricing.html" class="text-red-600">Pricing</a>
-        <a href="./#contact" class="hover:text-red-600">Contact</a>
+        <a href="./#projects" class="hover:text-red-600" data-i18n="navProjects">Projects</a>
+        <a href="./#skills" class="hover:text-red-600" data-i18n="navSkills">Skills</a>
+        <a href="./pricing.html" class="text-red-600" data-i18n="navPricing">Pricing</a>
+        <a href="./#contact" class="hover:text-red-600" data-i18n="navContact">Contact</a>
       </div>
 
-      <a href="https://wa.me/2349030036438?text=Hello%20Adedayo%2C%20I%20saw%20your%20pricing%20page%20and%20I%20want%20to%20discuss%20a%20project." class="hidden rounded-full bg-stone-950 px-5 py-3 text-sm font-extrabold text-white shadow-lg shadow-stone-950/10 transition hover:-translate-y-0.5 hover:bg-red-600 sm:inline-flex">
-        Request a quote
-      </a>
+      <div class="flex items-center gap-3">
+        <label for="languageSwitcher" class="sr-only" data-i18n="languageLabel">Select language</label>
+        <select id="languageSwitcher" class="rounded-full border border-stone-300 bg-white px-4 py-3 text-sm font-extrabold text-stone-700 shadow-sm outline-none transition focus:border-red-400 focus:ring-4 focus:ring-red-100" aria-label="Select language">
+          <option value="en">English</option>
+          <option value="yo">Yorùbá</option>
+          <option value="fr">Français</option>
+          <option value="es">Español</option>
+          <option value="ar">العربية</option>
+        </select>
+        <a href="https://wa.me/2349030036438?text=Hello%20Adedayo%2C%20I%20saw%20your%20pricing%20page%20and%20I%20want%20to%20discuss%20a%20project." class="hidden rounded-full bg-stone-950 px-5 py-3 text-sm font-extrabold text-white shadow-lg shadow-stone-950/10 transition hover:-translate-y-0.5 hover:bg-red-600 sm:inline-flex">
+          <span data-i18n="requestQuote">Request a quote</span>
+        </a>
+      </div>
     </nav>
   </header>
 
@@ -77,44 +93,44 @@
         <div>
           <p class="mb-5 inline-flex items-center gap-2 rounded-full border border-red-200 bg-red-50 px-4 py-2 text-sm font-extrabold text-red-700">
             <i class="fa-solid fa-naira-sign"></i>
-            Flexible pricing for serious digital projects
+            <span data-i18n="heroBadge">Flexible pricing for serious digital projects</span>
           </p>
-          <h1 class="font-display text-4xl font-extrabold tracking-tight text-stone-950 sm:text-5xl lg:text-6xl">
+          <h1 class="font-display text-4xl font-extrabold tracking-tight text-stone-950 sm:text-5xl lg:text-6xl" data-i18n="heroTitle">
             Clear project tiers for websites, portals, dashboards, and custom web systems.
           </h1>
-          <p class="mt-6 max-w-2xl text-lg leading-8 text-stone-600">
+          <p class="mt-6 max-w-2xl text-lg leading-8 text-stone-600" data-i18n="heroDescription">
             Whether you need a clean business website, a school portal, a media/news platform, or a custom Laravel system, these packages give you a realistic starting point. Final pricing depends on scope, timeline, integrations, and content readiness.
           </p>
           <div class="mt-8 flex flex-col gap-3 sm:flex-row">
             <a href="https://wa.me/2349030036438?text=Hello%20Adedayo%2C%20I%20want%20to%20discuss%20a%20project%20from%20your%20pricing%20page." class="inline-flex items-center justify-center gap-2 rounded-full bg-red-600 px-6 py-4 text-sm font-extrabold text-white shadow-xl shadow-red-600/20 transition hover:-translate-y-1 hover:bg-red-700">
               <i class="fa-brands fa-whatsapp"></i>
-              Discuss my project
+              <span data-i18n="discussProject">Discuss my project</span>
             </a>
             <a href="mailto:oyetoke.ebenezer@gmail.com?subject=Project%20Quote%20Request" class="inline-flex items-center justify-center gap-2 rounded-full border border-stone-300 bg-white px-6 py-4 text-sm font-extrabold text-stone-800 transition hover:-translate-y-1 hover:border-red-300 hover:text-red-700">
               <i class="fa-regular fa-envelope"></i>
-              Send an email
+              <span data-i18n="sendEmail">Send an email</span>
             </a>
           </div>
         </div>
 
         <aside class="rounded-[2rem] border border-stone-200 bg-stone-950 p-6 text-white shadow-2xl shadow-stone-900/20">
           <div class="rounded-[1.5rem] border border-white/10 bg-white/5 p-6">
-            <p class="text-sm font-bold uppercase tracking-[0.2em] text-red-300">Best for clients who need</p>
+            <p class="text-sm font-bold uppercase tracking-[0.2em] text-red-300" data-i18n="bestFor">Best for clients who need</p>
             <ul class="mt-6 space-y-4 text-sm leading-6 text-stone-200">
-              <li class="flex gap-3"><i class="fa-solid fa-check mt-1 text-red-300"></i><span>A professional website that builds trust and converts visitors.</span></li>
-              <li class="flex gap-3"><i class="fa-solid fa-check mt-1 text-red-300"></i><span>An admin dashboard to manage content, users, records, or operations.</span></li>
-              <li class="flex gap-3"><i class="fa-solid fa-check mt-1 text-red-300"></i><span>SEO-ready pages, WhatsApp integration, forms, and mobile-first design.</span></li>
-              <li class="flex gap-3"><i class="fa-solid fa-check mt-1 text-red-300"></i><span>Laravel-powered portals for schools, media brands, NGOs, and businesses.</span></li>
+              <li class="flex gap-3"><i class="fa-solid fa-check mt-1 text-red-300"></i><span data-i18n="bestOne">A professional website that builds trust and converts visitors.</span></li>
+              <li class="flex gap-3"><i class="fa-solid fa-check mt-1 text-red-300"></i><span data-i18n="bestTwo">An admin dashboard to manage content, users, records, or operations.</span></li>
+              <li class="flex gap-3"><i class="fa-solid fa-check mt-1 text-red-300"></i><span data-i18n="bestThree">SEO-ready pages, WhatsApp integration, forms, and mobile-first design.</span></li>
+              <li class="flex gap-3"><i class="fa-solid fa-check mt-1 text-red-300"></i><span data-i18n="bestFour">Laravel-powered portals for schools, media brands, NGOs, and businesses.</span></li>
             </ul>
           </div>
           <div class="mt-6 grid grid-cols-2 gap-4 text-center">
             <div class="rounded-2xl bg-white/5 p-4">
               <span class="block font-display text-2xl font-extrabold">3+</span>
-              <span class="text-xs font-bold text-stone-400">project categories</span>
+              <span class="text-xs font-bold text-stone-400" data-i18n="projectCategories">project categories</span>
             </div>
             <div class="rounded-2xl bg-white/5 p-4">
               <span class="block font-display text-2xl font-extrabold">NGN</span>
-              <span class="text-xs font-bold text-stone-400">local pricing</span>
+              <span class="text-xs font-bold text-stone-400" data-i18n="localPricing">local pricing</span>
             </div>
           </div>
         </aside>
@@ -123,64 +139,64 @@
 
     <section class="mx-auto max-w-7xl px-5 py-16 lg:px-8">
       <div class="mx-auto max-w-3xl text-center">
-        <p class="text-sm font-extrabold uppercase tracking-[0.22em] text-red-600">Pricing tiers</p>
-        <h2 class="mt-3 font-display text-3xl font-extrabold tracking-tight text-stone-950 sm:text-4xl">Choose the level that matches your current need.</h2>
-        <p class="mt-4 text-stone-600">All prices are starting estimates. A proper quote is prepared after understanding the project goals, features, pages, content, and expected delivery timeline.</p>
+        <p class="text-sm font-extrabold uppercase tracking-[0.22em] text-red-600" data-i18n="pricingTiers">Pricing tiers</p>
+        <h2 class="mt-3 font-display text-3xl font-extrabold tracking-tight text-stone-950 sm:text-4xl" data-i18n="pricingHeading">Choose the level that matches your current need.</h2>
+        <p class="mt-4 text-stone-600" data-i18n="pricingIntro">All prices are starting estimates. A proper quote is prepared after understanding the project goals, features, pages, content, and expected delivery timeline.</p>
       </div>
 
       <div class="mt-12 grid gap-6 lg:grid-cols-3">
         <article class="rounded-[1.5rem] border border-stone-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
           <div class="mb-6 flex items-start justify-between gap-4">
             <div>
-              <h3 class="font-display text-xl font-extrabold text-stone-950">Starter Presence</h3>
-              <p class="mt-2 text-sm text-stone-500">For individuals, small brands, and businesses that need a clean online presence.</p>
+              <h3 class="font-display text-xl font-extrabold text-stone-950" data-i18n="starterName">Starter Presence</h3>
+              <p class="mt-2 text-sm text-stone-500" data-i18n="starterDesc">For individuals, small brands, and businesses that need a clean online presence.</p>
             </div>
-            <span class="rounded-full bg-stone-100 px-3 py-1 text-xs font-extrabold text-stone-600">Basic</span>
+            <span class="rounded-full bg-stone-100 px-3 py-1 text-xs font-extrabold text-stone-600" data-i18n="basicBadge">Basic</span>
           </div>
           <p class="font-display text-4xl font-extrabold text-stone-950">₦180k<span class="text-base font-bold text-stone-500">+</span></p>
-          <p class="mt-1 text-sm font-bold text-stone-500">Best for simple business websites</p>
+          <p class="mt-1 text-sm font-bold text-stone-500" data-i18n="starterBest">Best for simple business websites</p>
           <ul class="mt-6 space-y-3 text-sm text-stone-600">
-            <li class="flex gap-3"><i class="fa-solid fa-check mt-1 text-red-600"></i><span>Up to 5 core pages</span></li>
-            <li class="flex gap-3"><i class="fa-solid fa-check mt-1 text-red-600"></i><span>Mobile-responsive design</span></li>
-            <li class="flex gap-3"><i class="fa-solid fa-check mt-1 text-red-600"></i><span>Contact form and WhatsApp CTA</span></li>
-            <li class="flex gap-3"><i class="fa-solid fa-check mt-1 text-red-600"></i><span>Basic SEO and analytics setup</span></li>
-            <li class="flex gap-3"><i class="fa-solid fa-check mt-1 text-red-600"></i><span>Social media links and Google Map embed</span></li>
+            <li class="flex gap-3"><i class="fa-solid fa-check mt-1 text-red-600"></i><span data-i18n="starterOne">Up to 5 core pages</span></li>
+            <li class="flex gap-3"><i class="fa-solid fa-check mt-1 text-red-600"></i><span data-i18n="starterTwo">Mobile-responsive design</span></li>
+            <li class="flex gap-3"><i class="fa-solid fa-check mt-1 text-red-600"></i><span data-i18n="starterThree">Contact form and WhatsApp CTA</span></li>
+            <li class="flex gap-3"><i class="fa-solid fa-check mt-1 text-red-600"></i><span data-i18n="starterFour">Basic SEO and analytics setup</span></li>
+            <li class="flex gap-3"><i class="fa-solid fa-check mt-1 text-red-600"></i><span data-i18n="starterFive">Social media links and Google Map embed</span></li>
           </ul>
         </article>
 
         <article class="relative rounded-[1.5rem] border-2 border-red-600 bg-white p-6 shadow-2xl shadow-red-600/10 transition hover:-translate-y-1">
-          <span class="absolute right-6 top-6 rounded-full bg-red-600 px-3 py-1 text-xs font-extrabold text-white">Popular</span>
+          <span class="absolute right-6 top-6 rounded-full bg-red-600 px-3 py-1 text-xs font-extrabold text-white" data-i18n="popular">Popular</span>
           <div class="mb-6 pr-24">
-            <h3 class="font-display text-xl font-extrabold text-stone-950">Professional Platform</h3>
-            <p class="mt-2 text-sm text-stone-500">For schools, NGOs, media brands, companies, and growing businesses.</p>
+            <h3 class="font-display text-xl font-extrabold text-stone-950" data-i18n="professionalName">Professional Platform</h3>
+            <p class="mt-2 text-sm text-stone-500" data-i18n="professionalDesc">For schools, NGOs, media brands, companies, and growing businesses.</p>
           </div>
           <p class="font-display text-4xl font-extrabold text-stone-950">₦350k<span class="text-base font-bold text-stone-500">+</span></p>
-          <p class="mt-1 text-sm font-bold text-stone-500">Best for websites with content management</p>
+          <p class="mt-1 text-sm font-bold text-stone-500" data-i18n="professionalBest">Best for websites with content management</p>
           <ul class="mt-6 space-y-3 text-sm text-stone-600">
-            <li class="flex gap-3"><i class="fa-solid fa-check mt-1 text-red-600"></i><span>Everything in Starter Presence</span></li>
-            <li class="flex gap-3"><i class="fa-solid fa-check mt-1 text-red-600"></i><span>Admin dashboard for updates</span></li>
-            <li class="flex gap-3"><i class="fa-solid fa-check mt-1 text-red-600"></i><span>Blog, news, events, gallery, or service modules</span></li>
-            <li class="flex gap-3"><i class="fa-solid fa-check mt-1 text-red-600"></i><span>Better UI/UX structure and conversion sections</span></li>
-            <li class="flex gap-3"><i class="fa-solid fa-check mt-1 text-red-600"></i><span>Search engine essentials and performance checks</span></li>
+            <li class="flex gap-3"><i class="fa-solid fa-check mt-1 text-red-600"></i><span data-i18n="professionalOne">Everything in Starter Presence</span></li>
+            <li class="flex gap-3"><i class="fa-solid fa-check mt-1 text-red-600"></i><span data-i18n="professionalTwo">Admin dashboard for updates</span></li>
+            <li class="flex gap-3"><i class="fa-solid fa-check mt-1 text-red-600"></i><span data-i18n="professionalThree">Blog, news, events, gallery, or service modules</span></li>
+            <li class="flex gap-3"><i class="fa-solid fa-check mt-1 text-red-600"></i><span data-i18n="professionalFour">Better UI/UX structure and conversion sections</span></li>
+            <li class="flex gap-3"><i class="fa-solid fa-check mt-1 text-red-600"></i><span data-i18n="professionalFive">Search engine essentials and performance checks</span></li>
           </ul>
         </article>
 
         <article class="rounded-[1.5rem] border border-stone-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
           <div class="mb-6 flex items-start justify-between gap-4">
             <div>
-              <h3 class="font-display text-xl font-extrabold text-stone-950">Custom Web System</h3>
-              <p class="mt-2 text-sm text-stone-500">For portals, dashboards, SaaS tools, and workflow-based platforms.</p>
+              <h3 class="font-display text-xl font-extrabold text-stone-950" data-i18n="customName">Custom Web System</h3>
+              <p class="mt-2 text-sm text-stone-500" data-i18n="customDesc">For portals, dashboards, SaaS tools, and workflow-based platforms.</p>
             </div>
-            <span class="rounded-full bg-red-50 px-3 py-1 text-xs font-extrabold text-red-700">Advanced</span>
+            <span class="rounded-full bg-red-50 px-3 py-1 text-xs font-extrabold text-red-700" data-i18n="advancedBadge">Advanced</span>
           </div>
           <p class="font-display text-4xl font-extrabold text-stone-950">₦700k<span class="text-base font-bold text-stone-500">+</span></p>
-          <p class="mt-1 text-sm font-bold text-stone-500">Best for custom Laravel applications</p>
+          <p class="mt-1 text-sm font-bold text-stone-500" data-i18n="customBest">Best for custom Laravel applications</p>
           <ul class="mt-6 space-y-3 text-sm text-stone-600">
-            <li class="flex gap-3"><i class="fa-solid fa-check mt-1 text-red-600"></i><span>Custom database and user roles</span></li>
-            <li class="flex gap-3"><i class="fa-solid fa-check mt-1 text-red-600"></i><span>Dashboards, reports, forms, and workflows</span></li>
-            <li class="flex gap-3"><i class="fa-solid fa-check mt-1 text-red-600"></i><span>Payment, email, SMS, or third-party integrations</span></li>
-            <li class="flex gap-3"><i class="fa-solid fa-check mt-1 text-red-600"></i><span>Authentication and secure admin management</span></li>
-            <li class="flex gap-3"><i class="fa-solid fa-check mt-1 text-red-600"></i><span>Deployment support and launch preparation</span></li>
+            <li class="flex gap-3"><i class="fa-solid fa-check mt-1 text-red-600"></i><span data-i18n="customOne">Custom database and user roles</span></li>
+            <li class="flex gap-3"><i class="fa-solid fa-check mt-1 text-red-600"></i><span data-i18n="customTwo">Dashboards, reports, forms, and workflows</span></li>
+            <li class="flex gap-3"><i class="fa-solid fa-check mt-1 text-red-600"></i><span data-i18n="customThree">Payment, email, SMS, or third-party integrations</span></li>
+            <li class="flex gap-3"><i class="fa-solid fa-check mt-1 text-red-600"></i><span data-i18n="customFour">Authentication and secure admin management</span></li>
+            <li class="flex gap-3"><i class="fa-solid fa-check mt-1 text-red-600"></i><span data-i18n="customFive">Deployment support and launch preparation</span></li>
           </ul>
         </article>
       </div>
@@ -190,27 +206,27 @@
       <div class="mx-auto max-w-7xl px-5 lg:px-8">
         <div class="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           <div>
-            <p class="text-sm font-extrabold uppercase tracking-[0.22em] text-red-600">Monthly care</p>
-            <h2 class="mt-3 font-display text-3xl font-extrabold tracking-tight text-stone-950">Keep your website secure, updated, and useful after launch.</h2>
-            <p class="mt-4 text-stone-600">A website should not be abandoned after delivery. Maintenance plans help with updates, backups, fixes, content uploads, and continuous improvement.</p>
+            <p class="text-sm font-extrabold uppercase tracking-[0.22em] text-red-600" data-i18n="monthlyCare">Monthly care</p>
+            <h2 class="mt-3 font-display text-3xl font-extrabold tracking-tight text-stone-950" data-i18n="monthlyHeading">Keep your website secure, updated, and useful after launch.</h2>
+            <p class="mt-4 text-stone-600" data-i18n="monthlyIntro">A website should not be abandoned after delivery. Maintenance plans help with updates, backups, fixes, content uploads, and continuous improvement.</p>
           </div>
 
           <div class="overflow-hidden rounded-[1.5rem] border border-stone-200 bg-stone-50">
             <div class="grid gap-px bg-stone-200 sm:grid-cols-3">
               <div class="bg-white p-6">
-                <h3 class="font-display font-extrabold text-stone-950">Basic Care</h3>
-                <p class="mt-3 font-display text-3xl font-extrabold">₦30k<span class="text-sm text-stone-500">/mo</span></p>
-                <p class="mt-3 text-sm text-stone-600">Small updates, uptime checks, and basic support.</p>
+                <h3 class="font-display font-extrabold text-stone-950" data-i18n="basicCare">Basic Care</h3>
+                <p class="mt-3 font-display text-3xl font-extrabold">₦30k<span class="text-sm text-stone-500" data-i18n="perMonth">/mo</span></p>
+                <p class="mt-3 text-sm text-stone-600" data-i18n="basicCareDesc">Small updates, uptime checks, and basic support.</p>
               </div>
               <div class="bg-white p-6">
-                <h3 class="font-display font-extrabold text-stone-950">Growth Care</h3>
-                <p class="mt-3 font-display text-3xl font-extrabold">₦60k<span class="text-sm text-stone-500">/mo</span></p>
-                <p class="mt-3 text-sm text-stone-600">Content updates, performance checks, backups, and improvements.</p>
+                <h3 class="font-display font-extrabold text-stone-950" data-i18n="growthCare">Growth Care</h3>
+                <p class="mt-3 font-display text-3xl font-extrabold">₦60k<span class="text-sm text-stone-500" data-i18n="perMonth">/mo</span></p>
+                <p class="mt-3 text-sm text-stone-600" data-i18n="growthCareDesc">Content updates, performance checks, backups, and improvements.</p>
               </div>
               <div class="bg-white p-6">
-                <h3 class="font-display font-extrabold text-stone-950">Priority Care</h3>
-                <p class="mt-3 font-display text-3xl font-extrabold">₦120k<span class="text-sm text-stone-500">/mo</span></p>
-                <p class="mt-3 text-sm text-stone-600">Priority fixes, feature support, monitoring, and strategy guidance.</p>
+                <h3 class="font-display font-extrabold text-stone-950" data-i18n="priorityCare">Priority Care</h3>
+                <p class="mt-3 font-display text-3xl font-extrabold">₦120k<span class="text-sm text-stone-500" data-i18n="perMonth">/mo</span></p>
+                <p class="mt-3 text-sm text-stone-600" data-i18n="priorityCareDesc">Priority fixes, feature support, monitoring, and strategy guidance.</p>
               </div>
             </div>
           </div>
@@ -222,18 +238,18 @@
       <div class="rounded-[2rem] bg-stone-950 p-8 text-white lg:p-12">
         <div class="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
           <div>
-            <p class="text-sm font-extrabold uppercase tracking-[0.22em] text-red-300">Ready to build?</p>
-            <h2 class="mt-3 font-display text-3xl font-extrabold tracking-tight sm:text-4xl">Tell me what you want to build, and I will recommend the best package.</h2>
-            <p class="mt-4 max-w-2xl text-stone-300">Send your project idea, timeline, preferred features, and any reference website you like. I will review it and provide a realistic estimate.</p>
+            <p class="text-sm font-extrabold uppercase tracking-[0.22em] text-red-300" data-i18n="readyBuild">Ready to build?</p>
+            <h2 class="mt-3 font-display text-3xl font-extrabold tracking-tight sm:text-4xl" data-i18n="ctaHeading">Tell me what you want to build, and I will recommend the best package.</h2>
+            <p class="mt-4 max-w-2xl text-stone-300" data-i18n="ctaText">Send your project idea, timeline, preferred features, and any reference website you like. I will review it and provide a realistic estimate.</p>
           </div>
           <div class="flex flex-col gap-3 sm:flex-row lg:flex-col">
             <a href="https://wa.me/2349030036438?text=Hello%20Adedayo%2C%20I%20want%20a%20quote%20for%20a%20website%20or%20web%20application." class="inline-flex items-center justify-center gap-2 rounded-full bg-red-600 px-6 py-4 text-sm font-extrabold text-white transition hover:-translate-y-1 hover:bg-red-700">
               <i class="fa-brands fa-whatsapp"></i>
-              Chat on WhatsApp
+              <span data-i18n="chatWhatsapp">Chat on WhatsApp</span>
             </a>
             <a href="./" class="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 px-6 py-4 text-sm font-extrabold text-white transition hover:-translate-y-1 hover:border-white/50">
               <i class="fa-solid fa-arrow-left"></i>
-              Back to portfolio
+              <span data-i18n="backPortfolio">Back to portfolio</span>
             </a>
           </div>
         </div>
@@ -242,7 +258,117 @@
   </main>
 
   <footer class="border-t border-stone-200 bg-white px-5 py-8 text-center text-sm text-stone-500">
-    <p>&copy; 2026 Adedayo Ebenezer Oyetoke. Built with care for clients who need reliable digital systems.</p>
+    <p data-i18n="footerText">&copy; 2026 Adedayo Ebenezer Oyetoke. Built with care for clients who need reliable digital systems.</p>
   </footer>
+
+  <script>
+    const translations = {
+      en: {
+        title: 'Pricing | Adedayo Ebenezer Oyetoke - Full-Stack Web Developer',
+        description: 'Transparent website, web application, portal, dashboard, and maintenance pricing for clients who want professional digital solutions from Adedayo Ebenezer Oyetoke.',
+        skipLink: 'Skip to content', role: 'Full-Stack Web Developer', navProjects: 'Projects', navSkills: 'Skills', navPricing: 'Pricing', navContact: 'Contact', languageLabel: 'Select language', requestQuote: 'Request a quote',
+        heroBadge: 'Flexible pricing for serious digital projects', heroTitle: 'Clear project tiers for websites, portals, dashboards, and custom web systems.', heroDescription: 'Whether you need a clean business website, a school portal, a media/news platform, or a custom Laravel system, these packages give you a realistic starting point. Final pricing depends on scope, timeline, integrations, and content readiness.', discussProject: 'Discuss my project', sendEmail: 'Send an email',
+        bestFor: 'Best for clients who need', bestOne: 'A professional website that builds trust and converts visitors.', bestTwo: 'An admin dashboard to manage content, users, records, or operations.', bestThree: 'SEO-ready pages, WhatsApp integration, forms, and mobile-first design.', bestFour: 'Laravel-powered portals for schools, media brands, NGOs, and businesses.', projectCategories: 'project categories', localPricing: 'local pricing',
+        pricingTiers: 'Pricing tiers', pricingHeading: 'Choose the level that matches your current need.', pricingIntro: 'All prices are starting estimates. A proper quote is prepared after understanding the project goals, features, pages, content, and expected delivery timeline.',
+        starterName: 'Starter Presence', starterDesc: 'For individuals, small brands, and businesses that need a clean online presence.', basicBadge: 'Basic', starterBest: 'Best for simple business websites', starterOne: 'Up to 5 core pages', starterTwo: 'Mobile-responsive design', starterThree: 'Contact form and WhatsApp CTA', starterFour: 'Basic SEO and analytics setup', starterFive: 'Social media links and Google Map embed',
+        popular: 'Popular', professionalName: 'Professional Platform', professionalDesc: 'For schools, NGOs, media brands, companies, and growing businesses.', professionalBest: 'Best for websites with content management', professionalOne: 'Everything in Starter Presence', professionalTwo: 'Admin dashboard for updates', professionalThree: 'Blog, news, events, gallery, or service modules', professionalFour: 'Better UI/UX structure and conversion sections', professionalFive: 'Search engine essentials and performance checks',
+        customName: 'Custom Web System', customDesc: 'For portals, dashboards, SaaS tools, and workflow-based platforms.', advancedBadge: 'Advanced', customBest: 'Best for custom Laravel applications', customOne: 'Custom database and user roles', customTwo: 'Dashboards, reports, forms, and workflows', customThree: 'Payment, email, SMS, or third-party integrations', customFour: 'Authentication and secure admin management', customFive: 'Deployment support and launch preparation',
+        monthlyCare: 'Monthly care', monthlyHeading: 'Keep your website secure, updated, and useful after launch.', monthlyIntro: 'A website should not be abandoned after delivery. Maintenance plans help with updates, backups, fixes, content uploads, and continuous improvement.', basicCare: 'Basic Care', growthCare: 'Growth Care', priorityCare: 'Priority Care', perMonth: '/mo', basicCareDesc: 'Small updates, uptime checks, and basic support.', growthCareDesc: 'Content updates, performance checks, backups, and improvements.', priorityCareDesc: 'Priority fixes, feature support, monitoring, and strategy guidance.',
+        readyBuild: 'Ready to build?', ctaHeading: 'Tell me what you want to build, and I will recommend the best package.', ctaText: 'Send your project idea, timeline, preferred features, and any reference website you like. I will review it and provide a realistic estimate.', chatWhatsapp: 'Chat on WhatsApp', backPortfolio: 'Back to portfolio', footerText: '© 2026 Adedayo Ebenezer Oyetoke. Built with care for clients who need reliable digital systems.'
+      },
+      yo: {
+        title: 'Ìdíyelé | Adedayo Ebenezer Oyetoke - Olùdàgbàsókè Wẹẹbu',
+        description: 'Ìdíyelé tó ṣalaye iṣẹ́ wẹẹbu, app, portal, dashboard, àti itọju oṣooṣu fún àwọn oníbàárà tó fẹ́ ojútùú dígítà tó dára.',
+        skipLink: 'Lọ sí àkóónú', role: 'Olùdàgbàsókè Wẹẹbu Full-Stack', navProjects: 'Àwọn iṣẹ́', navSkills: 'Ọgbọn', navPricing: 'Ìdíyelé', navContact: 'Ìbánisọ̀rọ̀', languageLabel: 'Yan èdè', requestQuote: 'Béèrè iye owo',
+        heroBadge: 'Ìdíyelé tó rọrùn fún iṣẹ́ dígítà pataki', heroTitle: 'Àwọn ipele iṣẹ́ kedere fún wẹẹbu, portal, dashboard, àti eto wẹẹbu àdáṣe.', heroDescription: 'Bóyá o nilo wẹẹbu iṣowo tó mọ́, portal ilé-ẹ̀kọ́, platform media/iroyin, tàbí eto Laravel àdáṣe, àwọn package wọ̀nyí jẹ́ ibẹrẹ tó dájú. Iye gangan da lori iwọn iṣẹ́, akoko, integration, àti bó ṣe ti ṣetan àkóónú rẹ.', discussProject: 'Jẹ́ ká jíròrò iṣẹ́ mi', sendEmail: 'Fi email ránṣẹ́',
+        bestFor: 'Ó dara fún oníbàárà tó nilo', bestOne: 'Wẹẹbu amọ̀ja tó ń kọ́ ìgbẹ́kẹ̀lé, tó sì ń yi alejo padà sí oníbàárà.', bestTwo: 'Dashboard admin fún mímú àkóónú, users, records, tàbí operations ṣiṣẹ́.', bestThree: 'Àwọn ojúewé SEO-ready, WhatsApp integration, forms, àti design tó dáa lórí mobile.', bestFour: 'Portal Laravel fún ilé-ẹ̀kọ́, media, NGO, àti business.', projectCategories: 'ẹ̀ka iṣẹ́', localPricing: 'ìdíyelé Naira',
+        pricingTiers: 'Àwọn ipele ìdíyelé', pricingHeading: 'Yan ipele tó ba ohun tí o nilo mu.', pricingIntro: 'Gbogbo iye owo jẹ́ ibẹrẹ nikan. A máa ṣe quote gangan lẹ́yìn tí a bá mọ ibi-afẹ́ iṣẹ́, features, pages, content, àti deadline.',
+        starterName: 'Starter Presence', starterDesc: 'Fún ẹni-kọọkan, brand kékeré, àti business tó nilo online presence tó mọ́.', basicBadge: 'Basic', starterBest: 'Ó dara fún wẹẹbu business tó rọrùn', starterOne: 'Títí dé oju-iwe pataki 5', starterTwo: 'Design tó ṣiṣẹ́ dáadáa lori foonu', starterThree: 'Contact form àti WhatsApp CTA', starterFour: 'SEO ipilẹ àti analytics setup', starterFive: 'Social media links àti Google Map embed',
+        popular: 'Tó gbajúmọ̀', professionalName: 'Professional Platform', professionalDesc: 'Fún ilé-ẹ̀kọ́, NGO, media, company, àti business tó ń dagba.', professionalBest: 'Ó dara fún wẹẹbu tó ní content management', professionalOne: 'Gbogbo ohun tó wà ninu Starter Presence', professionalTwo: 'Admin dashboard fún updates', professionalThree: 'Blog, iroyin, events, gallery, tàbí service modules', professionalFour: 'UI/UX tó dára àti sections fún conversion', professionalFive: 'SEO essentials àti performance checks',
+        customName: 'Custom Web System', customDesc: 'Fún portal, dashboard, SaaS tools, àti workflow platforms.', advancedBadge: 'Advanced', customBest: 'Ó dara fún Laravel application àdáṣe', customOne: 'Database àdáṣe àti user roles', customTwo: 'Dashboards, reports, forms, àti workflows', customThree: 'Payment, email, SMS, tàbí third-party integrations', customFour: 'Authentication àti admin security', customFive: 'Deployment support àti launch preparation',
+        monthlyCare: 'Itọju oṣooṣu', monthlyHeading: 'Jẹ́ kí wẹẹbu rẹ secure, updated, àti wúlò lẹ́yìn launch.', monthlyIntro: 'A kò gbọ́dọ̀ fi wẹẹbu sílẹ̀ lẹ́yìn delivery. Maintenance plans ràn wá lọwọ pẹ̀lú updates, backups, fixes, content uploads, àti improvement.', basicCare: 'Basic Care', growthCare: 'Growth Care', priorityCare: 'Priority Care', perMonth: '/oṣù', basicCareDesc: 'Updates kékeré, uptime checks, àti support ipilẹ.', growthCareDesc: 'Content updates, performance checks, backups, àti improvements.', priorityCareDesc: 'Priority fixes, feature support, monitoring, àti strategy guidance.',
+        readyBuild: 'Ṣé o setán láti kọ́ nkan?', ctaHeading: 'Sọ ohun tí o fẹ́ kọ́, màá sì ṣeduro package tó dara jù.', ctaText: 'Fi project idea, timeline, features, àti reference website ránṣẹ́. Màá ṣàyẹ̀wò ó, màá sì fun ọ ní estimate tó tọ́.', chatWhatsapp: 'Bá mi sọrọ lori WhatsApp', backPortfolio: 'Padà sí portfolio', footerText: '© 2026 Adedayo Ebenezer Oyetoke. A kọ́ ọ pẹ̀lú ìtọju fún oníbàárà tó nilo eto dígítà tó gbẹ́kẹ̀lé.'
+      },
+      fr: {
+        title: 'Tarifs | Adedayo Ebenezer Oyetoke - Développeur Full-Stack',
+        description: 'Tarifs transparents pour sites web, applications, portails, tableaux de bord et maintenance pour les clients qui veulent des solutions digitales professionnelles.',
+        skipLink: 'Aller au contenu', role: 'Développeur Web Full-Stack', navProjects: 'Projets', navSkills: 'Compétences', navPricing: 'Tarifs', navContact: 'Contact', languageLabel: 'Choisir la langue', requestQuote: 'Demander un devis',
+        heroBadge: 'Tarifs flexibles pour projets digitaux sérieux', heroTitle: 'Des offres claires pour sites web, portails, tableaux de bord et systèmes web sur mesure.', heroDescription: 'Que vous ayez besoin d’un site professionnel, d’un portail scolaire, d’une plateforme média/actualités ou d’un système Laravel sur mesure, ces offres donnent un point de départ réaliste. Le prix final dépend du périmètre, du délai, des intégrations et de la préparation du contenu.', discussProject: 'Discuter de mon projet', sendEmail: 'Envoyer un e-mail',
+        bestFor: 'Idéal pour les clients qui ont besoin de', bestOne: 'Un site professionnel qui renforce la confiance et convertit les visiteurs.', bestTwo: 'Un tableau de bord admin pour gérer le contenu, les utilisateurs, les données ou les opérations.', bestThree: 'Pages prêtes pour le SEO, intégration WhatsApp, formulaires et design mobile-first.', bestFour: 'Portails Laravel pour écoles, médias, ONG et entreprises.', projectCategories: 'catégories de projets', localPricing: 'tarifs locaux',
+        pricingTiers: 'Offres tarifaires', pricingHeading: 'Choisissez le niveau qui correspond à votre besoin actuel.', pricingIntro: 'Tous les prix sont des estimations de départ. Un devis précis est préparé après analyse des objectifs, fonctionnalités, pages, contenu et délai de livraison.',
+        starterName: 'Présence Starter', starterDesc: 'Pour particuliers, petites marques et entreprises qui veulent une présence en ligne propre.', basicBadge: 'Basique', starterBest: 'Idéal pour les sites business simples', starterOne: 'Jusqu’à 5 pages principales', starterTwo: 'Design responsive mobile', starterThree: 'Formulaire de contact et CTA WhatsApp', starterFour: 'SEO de base et configuration analytics', starterFive: 'Liens sociaux et intégration Google Map',
+        popular: 'Populaire', professionalName: 'Plateforme Professionnelle', professionalDesc: 'Pour écoles, ONG, médias, entreprises et marques en croissance.', professionalBest: 'Idéal pour les sites avec gestion de contenu', professionalOne: 'Tout ce qui est inclus dans Présence Starter', professionalTwo: 'Tableau de bord admin pour les mises à jour', professionalThree: 'Blog, actualités, événements, galerie ou modules de services', professionalFour: 'Meilleure structure UI/UX et sections de conversion', professionalFive: 'Essentiels SEO et vérifications de performance',
+        customName: 'Système Web Sur Mesure', customDesc: 'Pour portails, tableaux de bord, outils SaaS et plateformes de workflow.', advancedBadge: 'Avancé', customBest: 'Idéal pour applications Laravel sur mesure', customOne: 'Base de données personnalisée et rôles utilisateurs', customTwo: 'Tableaux de bord, rapports, formulaires et workflows', customThree: 'Paiement, e-mail, SMS ou intégrations tierces', customFour: 'Authentification et gestion admin sécurisée', customFive: 'Support de déploiement et préparation au lancement',
+        monthlyCare: 'Maintenance mensuelle', monthlyHeading: 'Gardez votre site sécurisé, à jour et utile après le lancement.', monthlyIntro: 'Un site ne doit pas être abandonné après la livraison. Les plans de maintenance couvrent les mises à jour, sauvegardes, corrections, ajouts de contenu et améliorations continues.', basicCare: 'Maintenance Basic', growthCare: 'Maintenance Growth', priorityCare: 'Maintenance Priority', perMonth: '/mois', basicCareDesc: 'Petites mises à jour, contrôles de disponibilité et support de base.', growthCareDesc: 'Mises à jour de contenu, performance, sauvegardes et améliorations.', priorityCareDesc: 'Corrections prioritaires, support de fonctionnalités, monitoring et conseils stratégiques.',
+        readyBuild: 'Prêt à construire ?', ctaHeading: 'Dites-moi ce que vous voulez créer, et je vous recommanderai la meilleure offre.', ctaText: 'Envoyez votre idée, votre délai, vos fonctionnalités préférées et tout site de référence. Je l’examinerai et fournirai une estimation réaliste.', chatWhatsapp: 'Discuter sur WhatsApp', backPortfolio: 'Retour au portfolio', footerText: '© 2026 Adedayo Ebenezer Oyetoke. Construit avec soin pour les clients qui ont besoin de systèmes digitaux fiables.'
+      },
+      es: {
+        title: 'Precios | Adedayo Ebenezer Oyetoke - Desarrollador Full-Stack',
+        description: 'Precios transparentes para sitios web, aplicaciones, portales, paneles y mantenimiento para clientes que necesitan soluciones digitales profesionales.',
+        skipLink: 'Saltar al contenido', role: 'Desarrollador Web Full-Stack', navProjects: 'Proyectos', navSkills: 'Habilidades', navPricing: 'Precios', navContact: 'Contacto', languageLabel: 'Seleccionar idioma', requestQuote: 'Solicitar cotización',
+        heroBadge: 'Precios flexibles para proyectos digitales serios', heroTitle: 'Niveles claros para sitios web, portales, paneles y sistemas web personalizados.', heroDescription: 'Ya sea que necesites un sitio empresarial, un portal escolar, una plataforma de medios/noticias o un sistema Laravel personalizado, estos paquetes dan un punto de partida realista. El precio final depende del alcance, tiempo, integraciones y preparación del contenido.', discussProject: 'Hablar de mi proyecto', sendEmail: 'Enviar correo',
+        bestFor: 'Ideal para clientes que necesitan', bestOne: 'Un sitio profesional que genere confianza y convierta visitantes.', bestTwo: 'Un panel de administración para gestionar contenido, usuarios, registros u operaciones.', bestThree: 'Páginas listas para SEO, integración con WhatsApp, formularios y diseño mobile-first.', bestFour: 'Portales Laravel para escuelas, marcas de medios, ONGs y empresas.', projectCategories: 'categorías de proyectos', localPricing: 'precios locales',
+        pricingTiers: 'Niveles de precios', pricingHeading: 'Elige el nivel que se ajuste a tu necesidad actual.', pricingIntro: 'Todos los precios son estimaciones iniciales. La cotización final se prepara después de entender los objetivos, funciones, páginas, contenido y fecha de entrega.',
+        starterName: 'Presencia Starter', starterDesc: 'Para personas, marcas pequeñas y negocios que necesitan una presencia online limpia.', basicBadge: 'Básico', starterBest: 'Ideal para sitios empresariales simples', starterOne: 'Hasta 5 páginas principales', starterTwo: 'Diseño adaptable a móviles', starterThree: 'Formulario de contacto y CTA de WhatsApp', starterFour: 'SEO básico y configuración de analítica', starterFive: 'Enlaces sociales e integración de Google Map',
+        popular: 'Popular', professionalName: 'Plataforma Profesional', professionalDesc: 'Para escuelas, ONGs, medios, empresas y negocios en crecimiento.', professionalBest: 'Ideal para sitios con gestión de contenido', professionalOne: 'Todo lo incluido en Presencia Starter', professionalTwo: 'Panel admin para actualizaciones', professionalThree: 'Blog, noticias, eventos, galería o módulos de servicios', professionalFour: 'Mejor estructura UI/UX y secciones de conversión', professionalFive: 'Fundamentos SEO y revisión de rendimiento',
+        customName: 'Sistema Web Personalizado', customDesc: 'Para portales, paneles, herramientas SaaS y plataformas de flujo de trabajo.', advancedBadge: 'Avanzado', customBest: 'Ideal para aplicaciones Laravel personalizadas', customOne: 'Base de datos personalizada y roles de usuario', customTwo: 'Paneles, reportes, formularios y flujos de trabajo', customThree: 'Pagos, email, SMS o integraciones externas', customFour: 'Autenticación y administración segura', customFive: 'Soporte de despliegue y preparación de lanzamiento',
+        monthlyCare: 'Cuidado mensual', monthlyHeading: 'Mantén tu sitio seguro, actualizado y útil después del lanzamiento.', monthlyIntro: 'Un sitio web no debe abandonarse después de la entrega. Los planes de mantenimiento ayudan con actualizaciones, copias de seguridad, correcciones, carga de contenido y mejoras continuas.', basicCare: 'Cuidado Básico', growthCare: 'Cuidado Growth', priorityCare: 'Cuidado Priority', perMonth: '/mes', basicCareDesc: 'Pequeñas actualizaciones, revisión de disponibilidad y soporte básico.', growthCareDesc: 'Actualizaciones de contenido, rendimiento, copias de seguridad y mejoras.', priorityCareDesc: 'Correcciones prioritarias, soporte de funciones, monitoreo y guía estratégica.',
+        readyBuild: '¿Listo para construir?', ctaHeading: 'Cuéntame qué quieres crear y te recomendaré el mejor paquete.', ctaText: 'Envía tu idea, plazo, funciones preferidas y cualquier sitio de referencia. Lo revisaré y daré una estimación realista.', chatWhatsapp: 'Chatear por WhatsApp', backPortfolio: 'Volver al portfolio', footerText: '© 2026 Adedayo Ebenezer Oyetoke. Construido con cuidado para clientes que necesitan sistemas digitales confiables.'
+      },
+      ar: {
+        title: 'الأسعار | Adedayo Ebenezer Oyetoke - مطور ويب Full-Stack',
+        description: 'أسعار واضحة للمواقع والتطبيقات والبوابات ولوحات التحكم والصيانة للعملاء الذين يحتاجون إلى حلول رقمية احترافية.',
+        skipLink: 'تجاوز إلى المحتوى', role: 'مطور ويب Full-Stack', navProjects: 'المشاريع', navSkills: 'المهارات', navPricing: 'الأسعار', navContact: 'تواصل', languageLabel: 'اختر اللغة', requestQuote: 'اطلب عرض سعر',
+        heroBadge: 'أسعار مرنة للمشاريع الرقمية الجادة', heroTitle: 'باقات واضحة للمواقع والبوابات ولوحات التحكم والأنظمة المخصصة.', heroDescription: 'سواء كنت تحتاج إلى موقع أعمال، بوابة مدرسية، منصة إعلامية/إخبارية، أو نظام Laravel مخصص، تمنحك هذه الباقات نقطة بداية واقعية. يعتمد السعر النهائي على نطاق العمل والمدة والتكاملات وجاهزية المحتوى.', discussProject: 'ناقش مشروعي', sendEmail: 'إرسال بريد',
+        bestFor: 'مناسب للعملاء الذين يحتاجون إلى', bestOne: 'موقع احترافي يبني الثقة ويحوّل الزوار إلى عملاء.', bestTwo: 'لوحة تحكم لإدارة المحتوى والمستخدمين والسجلات أو العمليات.', bestThree: 'صفحات جاهزة للسيو، تكامل واتساب، نماذج، وتصميم مناسب للجوال.', bestFour: 'بوابات Laravel للمدارس والمؤسسات الإعلامية والمنظمات والشركات.', projectCategories: 'فئات المشاريع', localPricing: 'تسعير محلي',
+        pricingTiers: 'باقات الأسعار', pricingHeading: 'اختر المستوى الذي يناسب احتياجك الحالي.', pricingIntro: 'كل الأسعار تقديرية كبداية. يتم إعداد عرض سعر دقيق بعد فهم أهداف المشروع والخصائص والصفحات والمحتوى وموعد التسليم.',
+        starterName: 'حضور رقمي أساسي', starterDesc: 'للأفراد والعلامات الصغيرة والشركات التي تحتاج إلى حضور واضح على الإنترنت.', basicBadge: 'أساسي', starterBest: 'مناسب لمواقع الأعمال البسيطة', starterOne: 'حتى 5 صفحات رئيسية', starterTwo: 'تصميم متجاوب مع الجوال', starterThree: 'نموذج تواصل وزر واتساب', starterFour: 'إعداد SEO وتحليلات أساسية', starterFive: 'روابط التواصل الاجتماعي وتضمين خريطة Google',
+        popular: 'الأكثر طلبًا', professionalName: 'منصة احترافية', professionalDesc: 'للمدارس والمنظمات والمؤسسات الإعلامية والشركات النامية.', professionalBest: 'مناسب للمواقع التي تحتاج إلى إدارة محتوى', professionalOne: 'كل ما في الباقة الأساسية', professionalTwo: 'لوحة تحكم للتحديثات', professionalThree: 'مدونة، أخبار، فعاليات، معرض أو وحدات خدمات', professionalFour: 'هيكلة UI/UX أفضل وأقسام للتحويل', professionalFive: 'أساسيات SEO وفحص الأداء',
+        customName: 'نظام ويب مخصص', customDesc: 'للبوابات ولوحات التحكم وأدوات SaaS ومنصات سير العمل.', advancedBadge: 'متقدم', customBest: 'مناسب لتطبيقات Laravel المخصصة', customOne: 'قاعدة بيانات مخصصة وأدوار مستخدمين', customTwo: 'لوحات تحكم وتقارير ونماذج وسير عمل', customThree: 'دفع أو بريد أو SMS أو تكاملات خارجية', customFour: 'مصادقة وإدارة آمنة للمسؤولين', customFive: 'دعم النشر والتحضير للإطلاق',
+        monthlyCare: 'صيانة شهرية', monthlyHeading: 'حافظ على موقعك آمنًا ومحدّثًا ومفيدًا بعد الإطلاق.', monthlyIntro: 'لا ينبغي ترك الموقع بعد التسليم. تساعد خطط الصيانة في التحديثات والنسخ الاحتياطي والإصلاحات ورفع المحتوى والتحسين المستمر.', basicCare: 'رعاية أساسية', growthCare: 'رعاية نمو', priorityCare: 'رعاية أولوية', perMonth: '/شهر', basicCareDesc: 'تحديثات صغيرة وفحص التوفر ودعم أساسي.', growthCareDesc: 'تحديثات محتوى وفحص أداء ونسخ احتياطي وتحسينات.', priorityCareDesc: 'إصلاحات أولوية ودعم خصائص ومراقبة وتوجيه استراتيجي.',
+        readyBuild: 'جاهز للبناء؟', ctaHeading: 'أخبرني بما تريد بناءه وسأقترح لك أفضل باقة.', ctaText: 'أرسل فكرة المشروع والجدول الزمني والخصائص المطلوبة وأي موقع مرجعي يعجبك. سأراجعه وأقدم تقديرًا واقعيًا.', chatWhatsapp: 'تواصل عبر واتساب', backPortfolio: 'العودة إلى المعرض', footerText: '© 2026 Adedayo Ebenezer Oyetoke. صُمم بعناية للعملاء الذين يحتاجون إلى أنظمة رقمية موثوقة.'
+      }
+    };
+
+    const supportedLanguages = Object.keys(translations);
+    const params = new URLSearchParams(window.location.search);
+    const requestedLanguage = params.get('lang');
+    const savedLanguage = localStorage.getItem('pricingLanguage');
+    const browserLanguage = (navigator.language || 'en').slice(0, 2).toLowerCase();
+    const initialLanguage = supportedLanguages.includes(requestedLanguage)
+      ? requestedLanguage
+      : supportedLanguages.includes(savedLanguage)
+        ? savedLanguage
+        : supportedLanguages.includes(browserLanguage)
+          ? browserLanguage
+          : 'en';
+
+    const languageSwitcher = document.getElementById('languageSwitcher');
+
+    function applyLanguage(language) {
+      const activeLanguage = supportedLanguages.includes(language) ? language : 'en';
+      const dictionary = translations[activeLanguage];
+      document.documentElement.lang = activeLanguage;
+      document.documentElement.dir = activeLanguage === 'ar' ? 'rtl' : 'ltr';
+      document.title = dictionary.title;
+      const metaDescription = document.querySelector('meta[name="description"]');
+      if (metaDescription) metaDescription.setAttribute('content', dictionary.description);
+      document.querySelectorAll('[data-i18n]').forEach((element) => {
+        const key = element.getAttribute('data-i18n');
+        if (dictionary[key]) element.textContent = dictionary[key];
+      });
+      if (languageSwitcher) languageSwitcher.value = activeLanguage;
+      localStorage.setItem('pricingLanguage', activeLanguage);
+      const nextUrl = new URL(window.location.href);
+      nextUrl.searchParams.set('lang', activeLanguage);
+      window.history.replaceState({}, '', nextUrl);
+    }
+
+    if (languageSwitcher) {
+      languageSwitcher.addEventListener('change', (event) => applyLanguage(event.target.value));
+    }
+
+    applyLanguage(initialLanguage);
+  </script>
 </body>
 </html>
