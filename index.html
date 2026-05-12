@@ -959,6 +959,7 @@
             <a href="#skills" class="text-zinc-700 hover:text-emerald-600">Skills</a>
             <a href="#experience" class="text-zinc-700 hover:text-blue-600">Experience</a>
             <a href="#projects" class="text-zinc-700 hover:text-indigo-600">Projects</a>
+            <a href="#pricing" class="text-zinc-700 hover:text-red-600">Pricing</a>
             <a href="#contact" class="text-zinc-700 hover:text-rose-600">Contact</a>
           </nav>
           <label for="language-select" class="sr-only">Language</label>
@@ -986,6 +987,7 @@
           <a @click="menuOpen = false" href="#skills" class="rounded-md px-3 py-2 hover:bg-emerald-50 hover:text-emerald-700">Skills</a>
           <a @click="menuOpen = false" href="#experience" class="rounded-md px-3 py-2 hover:bg-blue-50 hover:text-blue-700">Experience</a>
           <a @click="menuOpen = false" href="#projects" class="rounded-md px-3 py-2 hover:bg-indigo-50 hover:text-indigo-700">Projects</a>
+          <a @click="menuOpen = false" href="#pricing" class="rounded-md px-3 py-2 hover:bg-red-50 hover:text-red-700">Pricing</a>
           <a @click="menuOpen = false" href="#contact" class="rounded-md px-3 py-2 hover:bg-rose-50 hover:text-rose-700">Contact</a>
           <label for="mobile-language-select" class="mt-2 px-3 text-xs font-semibold uppercase tracking-wide text-zinc-500">Language</label>
           <select
@@ -1411,6 +1413,102 @@
               </div>
             </dl>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing" class="border-y border-stone-200 bg-white">
+      <div class="mx-auto max-w-6xl px-4 py-12">
+        <div class="grid gap-6 lg:grid-cols-[0.85fr,1.15fr] lg:items-end">
+          <div data-reveal="left">
+            <p class="text-xs font-bold uppercase tracking-wide text-red-700">Pricing</p>
+            <h2 class="mt-3 font-display text-3xl font-bold text-zinc-900">Clear starting prices for websites, platforms, and custom systems.</h2>
+            <p class="mt-4 text-sm leading-relaxed text-zinc-700">
+              These are realistic starting points for serious client work. Final pricing depends on project scope, timeline, pages, integrations, content readiness, and support needs.
+            </p>
+          </div>
+          <div class="rounded-2xl border border-red-200 bg-red-50 p-5 text-sm leading-relaxed text-red-900" data-reveal="right" style="--reveal-delay: 80ms;">
+            <p class="font-semibold">Need help choosing?</p>
+            <p class="mt-2">Send your project idea, timeline, preferred features, and any reference website. I will recommend the right package and provide a proper quote.</p>
+          </div>
+        </div>
+
+        <div class="mt-8 grid gap-5 lg:grid-cols-3">
+          <article class="rounded-2xl border border-stone-200 bg-stone-50 p-6 shadow-sm" data-reveal style="--reveal-delay: 40ms;">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <p class="text-xs font-bold uppercase tracking-wide text-zinc-500">Basic</p>
+                <h3 class="mt-2 font-display text-xl font-bold text-zinc-900">Starter Presence</h3>
+              </div>
+              <i class="fa-solid fa-window-maximize text-lg text-red-600" aria-hidden="true"></i>
+            </div>
+            <p class="mt-5 font-display text-4xl font-extrabold text-zinc-900">₦180k<span class="text-base font-bold text-zinc-500">+</span></p>
+            <p class="mt-2 text-sm font-semibold text-zinc-600">Best for simple business websites</p>
+            <ul class="mt-5 space-y-3 text-sm text-zinc-700">
+              <li class="flex gap-3"><i class="fa-solid fa-check mt-1 text-red-600"></i><span>Up to 5 core pages</span></li>
+              <li class="flex gap-3"><i class="fa-solid fa-check mt-1 text-red-600"></i><span>Mobile-responsive design</span></li>
+              <li class="flex gap-3"><i class="fa-solid fa-check mt-1 text-red-600"></i><span>Contact form and WhatsApp CTA</span></li>
+              <li class="flex gap-3"><i class="fa-solid fa-check mt-1 text-red-600"></i><span>Basic SEO and analytics setup</span></li>
+            </ul>
+          </article>
+
+          <article class="relative rounded-2xl border-2 border-red-600 bg-white p-6 shadow-xl shadow-red-600/10" data-reveal style="--reveal-delay: 120ms;">
+            <span class="absolute right-5 top-5 rounded-full bg-red-600 px-3 py-1 text-xs font-bold text-white">Popular</span>
+            <div class="pr-20">
+              <p class="text-xs font-bold uppercase tracking-wide text-red-700">Growth</p>
+              <h3 class="mt-2 font-display text-xl font-bold text-zinc-900">Professional Platform</h3>
+            </div>
+            <p class="mt-5 font-display text-4xl font-extrabold text-zinc-900">₦350k<span class="text-base font-bold text-zinc-500">+</span></p>
+            <p class="mt-2 text-sm font-semibold text-zinc-600">Best for websites with content management</p>
+            <ul class="mt-5 space-y-3 text-sm text-zinc-700">
+              <li class="flex gap-3"><i class="fa-solid fa-check mt-1 text-red-600"></i><span>Everything in Starter Presence</span></li>
+              <li class="flex gap-3"><i class="fa-solid fa-check mt-1 text-red-600"></i><span>Admin dashboard for updates</span></li>
+              <li class="flex gap-3"><i class="fa-solid fa-check mt-1 text-red-600"></i><span>Blog, news, events, gallery, or service modules</span></li>
+              <li class="flex gap-3"><i class="fa-solid fa-check mt-1 text-red-600"></i><span>SEO essentials and performance checks</span></li>
+            </ul>
+          </article>
+
+          <article class="rounded-2xl border border-stone-200 bg-stone-50 p-6 shadow-sm" data-reveal style="--reveal-delay: 200ms;">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <p class="text-xs font-bold uppercase tracking-wide text-zinc-500">Advanced</p>
+                <h3 class="mt-2 font-display text-xl font-bold text-zinc-900">Custom Web System</h3>
+              </div>
+              <i class="fa-solid fa-diagram-project text-lg text-red-600" aria-hidden="true"></i>
+            </div>
+            <p class="mt-5 font-display text-4xl font-extrabold text-zinc-900">₦700k<span class="text-base font-bold text-zinc-500">+</span></p>
+            <p class="mt-2 text-sm font-semibold text-zinc-600">Best for custom Laravel applications</p>
+            <ul class="mt-5 space-y-3 text-sm text-zinc-700">
+              <li class="flex gap-3"><i class="fa-solid fa-check mt-1 text-red-600"></i><span>Custom database and user roles</span></li>
+              <li class="flex gap-3"><i class="fa-solid fa-check mt-1 text-red-600"></i><span>Dashboards, reports, forms, and workflows</span></li>
+              <li class="flex gap-3"><i class="fa-solid fa-check mt-1 text-red-600"></i><span>Payment, email, SMS, or third-party integrations</span></li>
+              <li class="flex gap-3"><i class="fa-solid fa-check mt-1 text-red-600"></i><span>Deployment support and launch preparation</span></li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="mt-6 grid gap-4 md:grid-cols-3">
+          <article class="rounded-2xl border border-emerald-200 bg-emerald-50 p-5" data-reveal style="--reveal-delay: 80ms;">
+            <h3 class="font-display text-lg font-bold text-emerald-900">Basic Care</h3>
+            <p class="mt-3 font-display text-3xl font-extrabold text-emerald-950">₦30k<span class="text-sm font-bold text-emerald-700">/mo</span></p>
+            <p class="mt-2 text-sm text-emerald-800">Small updates, uptime checks, and basic support.</p>
+          </article>
+          <article class="rounded-2xl border border-blue-200 bg-blue-50 p-5" data-reveal style="--reveal-delay: 140ms;">
+            <h3 class="font-display text-lg font-bold text-blue-900">Growth Care</h3>
+            <p class="mt-3 font-display text-3xl font-extrabold text-blue-950">₦60k<span class="text-sm font-bold text-blue-700">/mo</span></p>
+            <p class="mt-2 text-sm text-blue-800">Content updates, performance checks, backups, and improvements.</p>
+          </article>
+          <article class="rounded-2xl border border-violet-200 bg-violet-50 p-5" data-reveal style="--reveal-delay: 200ms;">
+            <h3 class="font-display text-lg font-bold text-violet-900">Priority Care</h3>
+            <p class="mt-3 font-display text-3xl font-extrabold text-violet-950">₦120k<span class="text-sm font-bold text-violet-700">/mo</span></p>
+            <p class="mt-2 text-sm text-violet-800">Priority fixes, feature support, monitoring, and strategy guidance.</p>
+          </article>
+        </div>
+
+        <div class="mt-8 flex flex-wrap gap-3" data-reveal>
+          <a href="https://wa.me/2349030036438?text=Hello%20Adedayo%2C%20I%20want%20to%20discuss%20a%20project%20from%20your%20pricing%20section." target="_blank" rel="noopener noreferrer" class="motion-button rounded-lg bg-red-600 px-5 py-3 text-sm font-semibold text-white hover:bg-red-700">Discuss My Project</a>
+          <a href="mailto:oyetoke.ebenezer@gmail.com?subject=Project%20Quote%20Request" class="motion-button rounded-lg border border-zinc-300 bg-white px-5 py-3 text-sm font-semibold text-zinc-800 hover:border-zinc-400">Request a Quote</a>
+          <a href="./pricing.html" class="motion-button rounded-lg border border-red-200 bg-red-50 px-5 py-3 text-sm font-semibold text-red-800 hover:bg-red-100">Open Full Pricing Page</a>
         </div>
       </div>
     </section>
