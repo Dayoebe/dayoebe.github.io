@@ -1,6 +1,6 @@
-const APP_CACHE = 'wireless-terminal-app-v11';
-const STATIC_CACHE = 'wireless-terminal-static-v11';
-const THIRD_PARTY_CACHE = 'wireless-terminal-third-party-v11';
+const APP_CACHE = 'wireless-terminal-app-v12';
+const STATIC_CACHE = 'wireless-terminal-static-v12';
+const THIRD_PARTY_CACHE = 'wireless-terminal-third-party-v12';
 const KNOWN_CACHES = [APP_CACHE, STATIC_CACHE, THIRD_PARTY_CACHE];
 
 const PORTFOLIO_ENHANCEMENT_SCRIPT = './assets/portfolio-enhancements.js';
