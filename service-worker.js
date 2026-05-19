@@ -22,6 +22,7 @@ const APP_SHELL = [
   './files/glow.png',
   './files/elite.png',
   './files/ikere.png',
+  './files/bootkode.png',
   './files/mannarise-preview.svg',
   './manifest.webmanifest',
   './robots.txt',
