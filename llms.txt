@@ -1,0 +1,35 @@
+# Adedayo Ebenezer Oyetoke - Full-Stack Laravel Developer
+
+Adedayo Ebenezer Oyetoke is a full-stack Laravel developer and founder of Wireless Computer Services. He builds SEO-ready websites, Laravel web applications, school portals, media and news platforms, admin dashboards, business systems, and maintenance workflows for clients worldwide.
+
+## Primary URLs
+
+- Portfolio: https://dayoebe.github.io/
+- Services: https://dayoebe.github.io/services/
+- Pricing: https://dayoebe.github.io/pricing.html
+- Sitemap: https://dayoebe.github.io/sitemap.xml
+
+## Services
+
+- SEO-ready business website development
+- Custom Laravel web application development
+- Admin dashboard and workflow system development
+- School portal and EdTech platform development
+- Media, news, and content publishing platform development
+- Website performance, technical SEO, and UI improvement
+- Website maintenance, updates, backups, and post-launch support
+
+## Technical Stack
+
+Laravel, PHP, Livewire, Vue.js, React, JavaScript, Tailwind CSS, Alpine.js, MySQL, SQLite, LAMP, Git, Linux, deployment support, analytics setup, and search-friendly web architecture.
+
+## Best-Fit Clients
+
+Businesses, startups, schools, colleges, churches, NGOs, media brands, financial institutions, consultants, and organizations that need a credible website, portal, dashboard, or custom web system.
+
+## Contact
+
+- Email: oyetoke.ebenezer@gmail.com
+- WhatsApp/Phone: +2349030036438
+- GitHub: https://github.com/dayoebe
+- LinkedIn: https://linkedin.com/in/dayoebe

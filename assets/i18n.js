@@ -12,53 +12,53 @@
 
   const META = {
     en: {
-      title: 'Adedayo Ebenezer Oyetoke | Full-Stack Laravel Developer',
-      description: 'Adedayo Ebenezer Oyetoke is a Full-Stack Laravel Developer building scalable web platforms for businesses, media, and education with Laravel, Livewire, Vue, React, Tailwind CSS, and MySQL.',
-      ogDescription: 'Portfolio of Adedayo Ebenezer Oyetoke, Full-Stack Laravel Developer focused on scalable business, media, and education platforms.',
-      twitterDescription: 'Portfolio of Adedayo Ebenezer Oyetoke, Full-Stack Laravel Developer focused on scalable web systems for businesses, media, and education.',
-      imageAlt: 'Adedayo Ebenezer Oyetoke, Full-Stack Laravel Developer'
+      title: 'Adedayo Ebenezer Oyetoke | Laravel Web Developer for Websites & Web Apps',
+      description: 'Hire Adedayo Ebenezer Oyetoke, a full-stack Laravel developer building SEO-ready websites, portals, dashboards, and web applications for clients worldwide.',
+      ogDescription: 'Hire a full-stack Laravel developer for SEO-ready websites, portals, dashboards, media platforms, school systems, and custom web applications.',
+      twitterDescription: 'SEO-ready website development, Laravel web applications, portals, dashboards, and maintenance for clients worldwide.',
+      imageAlt: 'Adedayo Ebenezer Oyetoke, Laravel web developer for websites and web applications'
     },
     es: {
-      title: 'Adedayo Ebenezer Oyetoke | Desarrollador Laravel Full-Stack',
-      description: 'Adedayo Ebenezer Oyetoke es un desarrollador Laravel full-stack que crea plataformas web escalables para negocios, medios y educación con Laravel, Livewire, Vue, React, Tailwind CSS y MySQL.',
-      ogDescription: 'Portafolio de Adedayo Ebenezer Oyetoke, desarrollador Laravel full-stack centrado en plataformas escalables para negocios, medios y educación.',
-      twitterDescription: 'Portafolio de Adedayo Ebenezer Oyetoke, desarrollador Laravel full-stack centrado en sistemas web escalables para negocios, medios y educación.',
-      imageAlt: 'Adedayo Ebenezer Oyetoke, desarrollador Laravel full-stack'
+      title: 'Adedayo Ebenezer Oyetoke | Desarrollador Laravel para sitios y apps web',
+      description: 'Contrata a Adedayo Ebenezer Oyetoke, desarrollador Laravel full-stack que crea sitios SEO-ready, portales, paneles y aplicaciones web para clientes globales.',
+      ogDescription: 'Contrata a un desarrollador Laravel full-stack para sitios SEO-ready, portales, paneles, plataformas de medios, sistemas escolares y apps web.',
+      twitterDescription: 'Desarrollo de sitios SEO-ready, aplicaciones Laravel, portales, paneles y mantenimiento para clientes globales.',
+      imageAlt: 'Adedayo Ebenezer Oyetoke, desarrollador Laravel para sitios y aplicaciones web'
     },
     fr: {
-      title: 'Adedayo Ebenezer Oyetoke | Développeur Laravel Full-Stack',
-      description: 'Adedayo Ebenezer Oyetoke est un développeur Laravel full-stack qui crée des plateformes web évolutives pour les entreprises, les médias et l’éducation avec Laravel, Livewire, Vue, React, Tailwind CSS et MySQL.',
-      ogDescription: 'Portfolio d’Adedayo Ebenezer Oyetoke, développeur Laravel full-stack axé sur des plateformes évolutives pour les entreprises, les médias et l’éducation.',
-      twitterDescription: 'Portfolio d’Adedayo Ebenezer Oyetoke, développeur Laravel full-stack axé sur des systèmes web évolutifs pour les entreprises, les médias et l’éducation.',
-      imageAlt: 'Adedayo Ebenezer Oyetoke, développeur Laravel full-stack'
+      title: 'Adedayo Ebenezer Oyetoke | Développeur Laravel pour sites et apps web',
+      description: 'Recrutez Adedayo Ebenezer Oyetoke, développeur Laravel full-stack créant des sites SEO-ready, portails, tableaux de bord et applications web pour clients internationaux.',
+      ogDescription: 'Recrutez un développeur Laravel full-stack pour sites SEO-ready, portails, tableaux de bord, plateformes médias, systèmes scolaires et apps web.',
+      twitterDescription: 'Développement de sites SEO-ready, applications Laravel, portails, tableaux de bord et maintenance pour clients internationaux.',
+      imageAlt: 'Adedayo Ebenezer Oyetoke, développeur Laravel pour sites et applications web'
     },
     ar: {
-      title: 'أديدايو إبنيزر أويتوك | مطور Laravel متكامل',
-      description: 'أديدايو إبنيزر أويتوك مطور Laravel متكامل يبني منصات ويب قابلة للتوسع للأعمال والإعلام والتعليم باستخدام Laravel وLivewire وVue وReact وTailwind CSS وMySQL.',
-      ogDescription: 'ملف أعمال أديدايو إبنيزر أويتوك، مطور Laravel متكامل يركز على منصات قابلة للتوسع للأعمال والإعلام والتعليم.',
-      twitterDescription: 'ملف أعمال أديدايو إبنيزر أويتوك، مطور Laravel متكامل يركز على أنظمة ويب قابلة للتوسع للأعمال والإعلام والتعليم.',
-      imageAlt: 'أديدايو إبنيزر أويتوك، مطور Laravel متكامل'
+      title: 'أديدايو إبنيزر أويتوك | مطور Laravel للمواقع وتطبيقات الويب',
+      description: 'وظف أديدايو إبنيزر أويتوك، مطور Laravel متكامل يبني مواقع جاهزة للسيو وبوابات ولوحات تحكم وتطبيقات ويب لعملاء حول العالم.',
+      ogDescription: 'وظف مطور Laravel متكامل لمواقع جاهزة للسيو وبوابات ولوحات تحكم ومنصات إعلامية وأنظمة مدرسية وتطبيقات ويب.',
+      twitterDescription: 'تطوير مواقع جاهزة للسيو وتطبيقات Laravel وبوابات ولوحات تحكم وصيانة لعملاء عالميين.',
+      imageAlt: 'أديدايو إبنيزر أويتوك، مطور Laravel للمواقع وتطبيقات الويب'
     },
     sw: {
-      title: 'Adedayo Ebenezer Oyetoke | Msanidi wa Laravel Full-Stack',
-      description: 'Adedayo Ebenezer Oyetoke ni msanidi wa Laravel full-stack anayejenga majukwaa ya wavuti yanayokua kwa biashara, vyombo vya habari na elimu kwa kutumia Laravel, Livewire, Vue, React, Tailwind CSS na MySQL.',
-      ogDescription: 'Portifolio ya Adedayo Ebenezer Oyetoke, msanidi wa Laravel full-stack anayelenga majukwaa yanayokua kwa biashara, vyombo vya habari na elimu.',
-      twitterDescription: 'Portifolio ya Adedayo Ebenezer Oyetoke, msanidi wa Laravel full-stack anayelenga mifumo ya wavuti inayokua kwa biashara, vyombo vya habari na elimu.',
-      imageAlt: 'Adedayo Ebenezer Oyetoke, msanidi wa Laravel full-stack'
+      title: 'Adedayo Ebenezer Oyetoke | Msanidi wa Laravel kwa tovuti na app za web',
+      description: 'Mkodishe Adedayo Ebenezer Oyetoke, msanidi wa Laravel full-stack anayejenga tovuti za SEO, portali, dashibodi na programu za web kwa wateja duniani.',
+      ogDescription: 'Mkodishe msanidi wa Laravel full-stack kwa tovuti za SEO, portali, dashibodi, majukwaa ya media, mifumo ya shule na app za web.',
+      twitterDescription: 'Utengenezaji wa tovuti za SEO, Laravel apps, portali, dashibodi na matengenezo kwa wateja duniani.',
+      imageAlt: 'Adedayo Ebenezer Oyetoke, msanidi wa Laravel kwa tovuti na programu za web'
     },
     hi: {
-      title: 'Adedayo Ebenezer Oyetoke | फुल-स्टैक Laravel डेवलपर',
-      description: 'Adedayo Ebenezer Oyetoke एक फुल-स्टैक Laravel डेवलपर हैं, जो Laravel, Livewire, Vue, React, Tailwind CSS और MySQL के साथ बिज़नेस, मीडिया और शिक्षा के लिए स्केलेबल वेब प्लेटफ़ॉर्म बनाते हैं।',
-      ogDescription: 'Adedayo Ebenezer Oyetoke का पोर्टफोलियो, बिज़नेस, मीडिया और शिक्षा के लिए स्केलेबल प्लेटफ़ॉर्म पर केंद्रित फुल-स्टैक Laravel डेवलपर।',
-      twitterDescription: 'Adedayo Ebenezer Oyetoke का पोर्टफोलियो, बिज़नेस, मीडिया और शिक्षा के लिए स्केलेबल वेब सिस्टम पर केंद्रित फुल-स्टैक Laravel डेवलपर।',
-      imageAlt: 'Adedayo Ebenezer Oyetoke, फुल-स्टैक Laravel डेवलपर'
+      title: 'Adedayo Ebenezer Oyetoke | Websites और Web Apps के लिए Laravel Developer',
+      description: 'Adedayo Ebenezer Oyetoke को hire करें, full-stack Laravel developer जो global clients के लिए SEO-ready websites, portals, dashboards और web apps बनाते हैं।',
+      ogDescription: 'SEO-ready websites, portals, dashboards, media platforms, school systems और custom web apps के लिए full-stack Laravel developer hire करें।',
+      twitterDescription: 'Global clients के लिए SEO-ready website development, Laravel apps, portals, dashboards और maintenance.',
+      imageAlt: 'Adedayo Ebenezer Oyetoke, websites और web applications के लिए Laravel developer'
     },
     pt: {
-      title: 'Adedayo Ebenezer Oyetoke | Desenvolvedor Laravel Full-Stack',
-      description: 'Adedayo Ebenezer Oyetoke é um desenvolvedor Laravel full-stack que cria plataformas web escaláveis para negócios, mídia e educação com Laravel, Livewire, Vue, React, Tailwind CSS e MySQL.',
-      ogDescription: 'Portfólio de Adedayo Ebenezer Oyetoke, desenvolvedor Laravel full-stack focado em plataformas escaláveis para negócios, mídia e educação.',
-      twitterDescription: 'Portfólio de Adedayo Ebenezer Oyetoke, desenvolvedor Laravel full-stack focado em sistemas web escaláveis para negócios, mídia e educação.',
-      imageAlt: 'Adedayo Ebenezer Oyetoke, desenvolvedor Laravel full-stack'
+      title: 'Adedayo Ebenezer Oyetoke | Desenvolvedor Laravel para sites e apps web',
+      description: 'Contrate Adedayo Ebenezer Oyetoke, desenvolvedor Laravel full-stack que cria sites prontos para SEO, portais, dashboards e aplicações web para clientes globais.',
+      ogDescription: 'Contrate um desenvolvedor Laravel full-stack para sites prontos para SEO, portais, dashboards, plataformas de mídia, sistemas escolares e apps web.',
+      twitterDescription: 'Desenvolvimento de sites SEO-ready, aplicações Laravel, portais, dashboards e manutenção para clientes globais.',
+      imageAlt: 'Adedayo Ebenezer Oyetoke, desenvolvedor Laravel para sites e aplicações web'
     }
   };
 
@@ -72,6 +72,7 @@
       "Skills": "Habilidades",
       "Experience": "Experiencia",
       "Projects": "Proyectos",
+      "Services": "Servicios",
       "Contact": "Contacto",
       "Language": "Idioma",
       "Full-Stack Web Developer | EdTech and Digital Growth": "Desarrollador Web Full-Stack | EdTech y Crecimiento Digital",
@@ -240,6 +241,7 @@
       "Skills": "Compétences",
       "Experience": "Expérience",
       "Projects": "Projets",
+      "Services": "Services",
       "Contact": "Contact",
       "Language": "Langue",
       "Full-Stack Web Developer | EdTech and Digital Growth": "Développeur Web Full-Stack | EdTech et Croissance Digitale",
@@ -406,6 +408,7 @@
       "Skills": "المهارات",
       "Experience": "الخبرة",
       "Projects": "المشاريع",
+      "Services": "الخدمات",
       "Contact": "تواصل",
       "Language": "اللغة",
       "Full-Stack Web Developer | EdTech and Digital Growth": "مطور ويب Full-Stack | تقنيات التعليم والنمو الرقمي",
@@ -555,6 +558,7 @@
       "Skills": "Ujuzi",
       "Experience": "Uzoefu",
       "Projects": "Miradi",
+      "Services": "Huduma",
       "Contact": "Mawasiliano",
       "Language": "Lugha",
       "Full-Stack Web Developer | EdTech and Digital Growth": "Msanidi wa Wavuti Full-Stack | EdTech na Ukuaji wa Kidijitali",
@@ -663,6 +667,7 @@
       "Skills": "कौशल",
       "Experience": "अनुभव",
       "Projects": "प्रोजेक्ट्स",
+      "Services": "सेवाएँ",
       "Contact": "संपर्क",
       "Language": "भाषा",
       "Full-Stack Web Developer | EdTech and Digital Growth": "फुल-स्टैक वेब डेवलपर | EdTech और डिजिटल ग्रोथ",
@@ -758,6 +763,7 @@
       "Skills": "Competências",
       "Experience": "Experiência",
       "Projects": "Projetos",
+      "Services": "Serviços",
       "Contact": "Contato",
       "Language": "Idioma",
       "Full-Stack Web Developer | EdTech and Digital Growth": "Desenvolvedor Web Full-Stack | EdTech e Crescimento Digital",
@@ -1644,6 +1650,10 @@
     "Pricing": "Precios",
     "Select language": "Seleccionar idioma",
     "Request a quote": "Solicitar cotización",
+    "Website Development Pricing | Adedayo Ebenezer Oyetoke": "Precios de desarrollo web | Adedayo Ebenezer Oyetoke",
+    "Transparent pricing for SEO-ready websites, Laravel web applications, portals, dashboards, and monthly maintenance from Adedayo Ebenezer Oyetoke.": "Precios transparentes para sitios preparados para SEO, aplicaciones Laravel, portales, paneles y mantenimiento mensual de Adedayo Ebenezer Oyetoke.",
+    "Explore flexible pricing for SEO-ready websites, Laravel web applications, portals, dashboards, and monthly maintenance.": "Explora precios flexibles para sitios preparados para SEO, aplicaciones Laravel, portales, paneles y mantenimiento mensual.",
+    "Transparent starting prices for SEO-ready websites, portals, dashboards, Laravel applications, and maintenance.": "Precios iniciales transparentes para sitios preparados para SEO, portales, paneles, aplicaciones Laravel y mantenimiento.",
     "Pricing | Adedayo Ebenezer Oyetoke - Full-Stack Web Developer": "Precios | Adedayo Ebenezer Oyetoke - Desarrollador Full-Stack",
     "Transparent website, web application, portal, dashboard, and maintenance pricing for clients who want professional digital solutions from Adedayo Ebenezer Oyetoke.": "Precios transparentes para sitios web, aplicaciones, portales, paneles y mantenimiento para clientes que necesitan soluciones digitales profesionales.",
     "Explore flexible pricing for websites, portals, dashboards, web applications, and monthly maintenance plans.": "Explora precios flexibles para sitios web, portales, paneles, aplicaciones web y planes de mantenimiento mensual.",
@@ -1736,6 +1746,10 @@
     "Pricing": "Tarifs",
     "Select language": "Choisir la langue",
     "Request a quote": "Demander un devis",
+    "Website Development Pricing | Adedayo Ebenezer Oyetoke": "Tarifs de développement web | Adedayo Ebenezer Oyetoke",
+    "Transparent pricing for SEO-ready websites, Laravel web applications, portals, dashboards, and monthly maintenance from Adedayo Ebenezer Oyetoke.": "Tarifs transparents pour sites prêts pour le SEO, applications Laravel, portails, tableaux de bord et maintenance mensuelle par Adedayo Ebenezer Oyetoke.",
+    "Explore flexible pricing for SEO-ready websites, Laravel web applications, portals, dashboards, and monthly maintenance.": "Découvrez des tarifs flexibles pour sites prêts pour le SEO, applications Laravel, portails, tableaux de bord et maintenance mensuelle.",
+    "Transparent starting prices for SEO-ready websites, portals, dashboards, Laravel applications, and maintenance.": "Prix de départ transparents pour sites prêts pour le SEO, portails, tableaux de bord, applications Laravel et maintenance.",
     "Pricing | Adedayo Ebenezer Oyetoke - Full-Stack Web Developer": "Tarifs | Adedayo Ebenezer Oyetoke - Développeur Full-Stack",
     "Transparent website, web application, portal, dashboard, and maintenance pricing for clients who want professional digital solutions from Adedayo Ebenezer Oyetoke.": "Tarifs transparents pour sites web, applications, portails, tableaux de bord et maintenance pour les clients qui veulent des solutions digitales professionnelles.",
     "Explore flexible pricing for websites, portals, dashboards, web applications, and monthly maintenance plans.": "Découvrez des tarifs flexibles pour sites web, portails, tableaux de bord, applications web et plans de maintenance mensuelle.",
@@ -1828,6 +1842,10 @@
     "Pricing": "الأسعار",
     "Select language": "اختر اللغة",
     "Request a quote": "اطلب عرض سعر",
+    "Website Development Pricing | Adedayo Ebenezer Oyetoke": "أسعار تطوير المواقع | Adedayo Ebenezer Oyetoke",
+    "Transparent pricing for SEO-ready websites, Laravel web applications, portals, dashboards, and monthly maintenance from Adedayo Ebenezer Oyetoke.": "أسعار واضحة لمواقع جاهزة للسيو وتطبيقات Laravel وبوابات ولوحات تحكم وصيانة شهرية من Adedayo Ebenezer Oyetoke.",
+    "Explore flexible pricing for SEO-ready websites, Laravel web applications, portals, dashboards, and monthly maintenance.": "استكشف أسعاراً مرنة لمواقع جاهزة للسيو وتطبيقات Laravel وبوابات ولوحات تحكم وصيانة شهرية.",
+    "Transparent starting prices for SEO-ready websites, portals, dashboards, Laravel applications, and maintenance.": "أسعار بداية واضحة لمواقع جاهزة للسيو وبوابات ولوحات تحكم وتطبيقات Laravel وصيانة.",
     "Pricing | Adedayo Ebenezer Oyetoke - Full-Stack Web Developer": "الأسعار | Adedayo Ebenezer Oyetoke - مطور ويب Full-Stack",
     "Transparent website, web application, portal, dashboard, and maintenance pricing for clients who want professional digital solutions from Adedayo Ebenezer Oyetoke.": "أسعار واضحة للمواقع والتطبيقات والبوابات ولوحات التحكم والصيانة للعملاء الذين يحتاجون إلى حلول رقمية احترافية.",
     "Explore flexible pricing for websites, portals, dashboards, web applications, and monthly maintenance plans.": "استكشف أسعاراً مرنة للمواقع والبوابات ولوحات التحكم وتطبيقات الويب وخطط الصيانة الشهرية.",
@@ -1920,6 +1938,10 @@
     "Pricing": "Bei",
     "Select language": "Chagua lugha",
     "Request a quote": "Omba bei",
+    "Website Development Pricing | Adedayo Ebenezer Oyetoke": "Bei za utengenezaji wa tovuti | Adedayo Ebenezer Oyetoke",
+    "Transparent pricing for SEO-ready websites, Laravel web applications, portals, dashboards, and monthly maintenance from Adedayo Ebenezer Oyetoke.": "Bei wazi kwa tovuti za SEO, Laravel apps, portali, dashibodi na matengenezo ya mwezi kutoka Adedayo Ebenezer Oyetoke.",
+    "Explore flexible pricing for SEO-ready websites, Laravel web applications, portals, dashboards, and monthly maintenance.": "Angalia bei zinazobadilika kwa tovuti za SEO, Laravel apps, portali, dashibodi na matengenezo ya mwezi.",
+    "Transparent starting prices for SEO-ready websites, portals, dashboards, Laravel applications, and maintenance.": "Bei za kuanzia zilizo wazi kwa tovuti za SEO, portali, dashibodi, Laravel apps na matengenezo.",
     "Pricing | Adedayo Ebenezer Oyetoke - Full-Stack Web Developer": "Bei | Adedayo Ebenezer Oyetoke - Msanidi wa Wavuti Full-Stack",
     "Transparent website, web application, portal, dashboard, and maintenance pricing for clients who want professional digital solutions from Adedayo Ebenezer Oyetoke.": "Bei wazi za tovuti, programu za wavuti, portali, dashibodi na matengenezo kwa wateja wanaohitaji suluhisho za kidijitali za kitaalamu.",
     "Explore flexible pricing for websites, portals, dashboards, web applications, and monthly maintenance plans.": "Angalia bei zinazobadilika kwa tovuti, portali, dashibodi, programu za wavuti na mipango ya matengenezo ya kila mwezi.",
@@ -2012,6 +2034,10 @@
     "Pricing": "मूल्य",
     "Select language": "भाषा चुनें",
     "Request a quote": "कोटेशन माँगें",
+    "Website Development Pricing | Adedayo Ebenezer Oyetoke": "Website Development Pricing | Adedayo Ebenezer Oyetoke",
+    "Transparent pricing for SEO-ready websites, Laravel web applications, portals, dashboards, and monthly maintenance from Adedayo Ebenezer Oyetoke.": "Adedayo Ebenezer Oyetoke से SEO-ready websites, Laravel web applications, portals, dashboards और monthly maintenance के लिए transparent pricing.",
+    "Explore flexible pricing for SEO-ready websites, Laravel web applications, portals, dashboards, and monthly maintenance.": "SEO-ready websites, Laravel web applications, portals, dashboards और monthly maintenance के लिए flexible pricing देखें।",
+    "Transparent starting prices for SEO-ready websites, portals, dashboards, Laravel applications, and maintenance.": "SEO-ready websites, portals, dashboards, Laravel applications और maintenance के लिए transparent starting prices.",
     "Pricing | Adedayo Ebenezer Oyetoke - Full-Stack Web Developer": "मूल्य | Adedayo Ebenezer Oyetoke - फुल-स्टैक वेब डेवलपर",
     "Transparent website, web application, portal, dashboard, and maintenance pricing for clients who want professional digital solutions from Adedayo Ebenezer Oyetoke.": "प्रोफेशनल डिजिटल समाधान चाहने वाले ग्राहकों के लिए वेबसाइट, वेब ऐप, पोर्टल, डैशबोर्ड और मेंटेनेंस के स्पष्ट मूल्य।",
     "Explore flexible pricing for websites, portals, dashboards, web applications, and monthly maintenance plans.": "वेबसाइट, पोर्टल, डैशबोर्ड, वेब ऐप और मासिक मेंटेनेंस योजनाओं के लिए लचीले मूल्य देखें।",
@@ -2104,6 +2130,10 @@
     "Pricing": "Preços",
     "Select language": "Selecionar idioma",
     "Request a quote": "Solicitar orçamento",
+    "Website Development Pricing | Adedayo Ebenezer Oyetoke": "Preços de desenvolvimento web | Adedayo Ebenezer Oyetoke",
+    "Transparent pricing for SEO-ready websites, Laravel web applications, portals, dashboards, and monthly maintenance from Adedayo Ebenezer Oyetoke.": "Preços transparentes para sites prontos para SEO, aplicações Laravel, portais, dashboards e manutenção mensal de Adedayo Ebenezer Oyetoke.",
+    "Explore flexible pricing for SEO-ready websites, Laravel web applications, portals, dashboards, and monthly maintenance.": "Explore preços flexíveis para sites prontos para SEO, aplicações Laravel, portais, dashboards e manutenção mensal.",
+    "Transparent starting prices for SEO-ready websites, portals, dashboards, Laravel applications, and maintenance.": "Preços iniciais transparentes para sites prontos para SEO, portais, dashboards, aplicações Laravel e manutenção.",
     "Pricing | Adedayo Ebenezer Oyetoke - Full-Stack Web Developer": "Preços | Adedayo Ebenezer Oyetoke - Desenvolvedor Full-Stack",
     "Transparent website, web application, portal, dashboard, and maintenance pricing for clients who want professional digital solutions from Adedayo Ebenezer Oyetoke.": "Preços transparentes para sites, aplicações web, portais, dashboards e manutenção para clientes que querem soluções digitais profissionais.",
     "Explore flexible pricing for websites, portals, dashboards, web applications, and monthly maintenance plans.": "Explore preços flexíveis para sites, portais, dashboards, aplicações web e planos de manutenção mensal.",
@@ -2372,11 +2402,11 @@
     const isPricingPage = document.documentElement.dataset.page === 'pricing';
     const meta = isPricingPage
       ? {
-          title: translate('Pricing | Adedayo Ebenezer Oyetoke - Full-Stack Web Developer', language),
-          description: translate('Transparent website, web application, portal, dashboard, and maintenance pricing for clients who want professional digital solutions from Adedayo Ebenezer Oyetoke.', language),
-          ogDescription: translate('Explore flexible pricing for websites, portals, dashboards, web applications, and monthly maintenance plans.', language),
-          twitterDescription: translate('Transparent starting prices for professional websites, portals, dashboards, and web applications.', language),
-          imageAlt: translate('Adedayo Ebenezer Oyetoke, Full-Stack Laravel Developer', language)
+          title: translate('Website Development Pricing | Adedayo Ebenezer Oyetoke', language),
+          description: translate('Transparent pricing for SEO-ready websites, Laravel web applications, portals, dashboards, and monthly maintenance from Adedayo Ebenezer Oyetoke.', language),
+          ogDescription: translate('Explore flexible pricing for SEO-ready websites, Laravel web applications, portals, dashboards, and monthly maintenance.', language),
+          twitterDescription: translate('Transparent starting prices for SEO-ready websites, portals, dashboards, Laravel applications, and maintenance.', language),
+          imageAlt: (META[language] || META.en).imageAlt
         }
       : (META[language] || META.en);
     document.documentElement.lang = language;
