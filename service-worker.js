@@ -1,9 +1,15 @@
-const APP_CACHE = 'wireless-terminal-app-v10';
-const STATIC_CACHE = 'wireless-terminal-static-v10';
-const THIRD_PARTY_CACHE = 'wireless-terminal-third-party-v10';
+const APP_CACHE = 'wireless-terminal-app-v11';
+const STATIC_CACHE = 'wireless-terminal-static-v11';
+const THIRD_PARTY_CACHE = 'wireless-terminal-third-party-v11';
 const KNOWN_CACHES = [APP_CACHE, STATIC_CACHE, THIRD_PARTY_CACHE];
 
 const PORTFOLIO_ENHANCEMENT_SCRIPT = './assets/portfolio-enhancements.js';
+const NETWORK_ONLY_HOSTS = new Set([
+  'open.er-api.com',
+  'ipwho.is',
+  'api.country.is',
+  'restcountries.com'
+]);
 
 const APP_SHELL = [
   './',
@@ -19,6 +25,7 @@ const APP_SHELL = [
   './robots.txt',
   './sitemap.xml',
   './assets/i18n.js',
+  './assets/currency.js',
   PORTFOLIO_ENHANCEMENT_SCRIPT,
   './social-preview.jpg',
   './icons/icon-192.png',
@@ -90,6 +97,11 @@ self.addEventListener('fetch', (event) => {
   }
 
   const requestUrl = new URL(request.url);
+
+  if (NETWORK_ONLY_HOSTS.has(requestUrl.hostname)) {
+    event.respondWith(fetch(request, { cache: 'no-store' }).catch(() => Response.error()));
+    return;
+  }
 
   if (requestUrl.origin === self.location.origin) {
     event.respondWith(cacheFirst(request, STATIC_CACHE));
