@@ -29,6 +29,8 @@
   <link rel="alternate" hreflang="pt" href="https://dayoebe.github.io/?lang=pt" />
   <link rel="alternate" hreflang="x-default" href="https://dayoebe.github.io/" />
   <link rel="sitemap" type="application/xml" href="https://dayoebe.github.io/sitemap.xml" />
+  <link rel="alternate" type="text/plain" title="LLMs.txt" href="https://dayoebe.github.io/llms.txt" />
+  <link rel="alternate" type="text/plain" title="Full AI-readable site brief" href="https://dayoebe.github.io/llms-full.txt" />
 
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Wireless Terminal" />
@@ -36,6 +38,12 @@
   <meta property="og:description" content="Hire a full-stack Laravel developer for SEO-ready websites, portals, dashboards, media platforms, school systems, and custom web applications." />
   <meta property="og:url" content="https://dayoebe.github.io/" />
   <meta property="og:locale" content="en_NG" />
+  <meta property="og:locale:alternate" content="es_ES" />
+  <meta property="og:locale:alternate" content="fr_FR" />
+  <meta property="og:locale:alternate" content="ar_AR" />
+  <meta property="og:locale:alternate" content="sw_KE" />
+  <meta property="og:locale:alternate" content="hi_IN" />
+  <meta property="og:locale:alternate" content="pt_PT" />
   <meta property="og:image" content="https://dayoebe.github.io/social-preview.jpg" />
   <meta property="og:image:secure_url" content="https://dayoebe.github.io/social-preview.jpg" />
   <meta property="og:image:type" content="image/jpeg" />
@@ -52,6 +60,9 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+  <link rel="preconnect" href="https://unpkg.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
@@ -937,6 +948,141 @@
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://dayoebe.github.io/#organization",
+          "name": "Wireless Computer Services",
+          "url": "https://dayoebe.github.io/",
+          "founder": {
+            "@id": "https://dayoebe.github.io/#person"
+          },
+          "contactPoint": [
+            {
+              "@type": "ContactPoint",
+              "contactType": "client and employer inquiries",
+              "email": "oyetoke.ebenezer@gmail.com",
+              "telephone": "+2349030036438",
+              "areaServed": "Worldwide",
+              "availableLanguage": ["English", "Yoruba", "Pidgin English"]
+            }
+          ]
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://dayoebe.github.io/#webpage",
+          "url": "https://dayoebe.github.io/",
+          "name": "Adedayo Ebenezer Oyetoke | Laravel Web Developer for Websites & Web Apps",
+          "description": "Hire Adedayo Ebenezer Oyetoke, a full-stack Laravel developer building SEO-ready websites, portals, dashboards, and web applications for clients worldwide.",
+          "dateModified": "2026-05-22",
+          "inLanguage": "en",
+          "isPartOf": {
+            "@id": "https://dayoebe.github.io/#website"
+          },
+          "about": {
+            "@id": "https://dayoebe.github.io/#person"
+          },
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://dayoebe.github.io/social-preview.jpg",
+            "width": 1200,
+            "height": 630
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://dayoebe.github.io/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://dayoebe.github.io/"
+            }
+          ]
+        },
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://dayoebe.github.io/#professional-service",
+          "name": "Wireless Computer Services",
+          "url": "https://dayoebe.github.io/",
+          "image": "https://dayoebe.github.io/social-preview.jpg",
+          "description": "Website development, Laravel web application development, dashboards, portals, media platforms, and maintenance for clients worldwide.",
+          "founder": {
+            "@id": "https://dayoebe.github.io/#person"
+          },
+          "provider": {
+            "@id": "https://dayoebe.github.io/#person"
+          },
+          "areaServed": ["Worldwide", "Nigeria", "United States", "United Kingdom", "Canada", "Europe", "Africa", "Middle East", "Asia", "Australia"],
+          "priceRange": "Project pricing starts from NGN 180,000",
+          "serviceType": [
+            "Website development",
+            "Laravel web application development",
+            "School portal development",
+            "Media platform development",
+            "Admin dashboard development",
+            "Website maintenance"
+          ],
+          "hasOfferCatalog": {
+            "@id": "https://dayoebe.github.io/#offer-catalog"
+          }
+        },
+        {
+          "@type": "OfferCatalog",
+          "@id": "https://dayoebe.github.io/#offer-catalog",
+          "name": "Website, web application, and maintenance pricing",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "name": "Starter Presence",
+              "price": "180000",
+              "priceCurrency": "NGN",
+              "description": "Starting estimate for simple business websites."
+            },
+            {
+              "@type": "Offer",
+              "name": "Professional Platform",
+              "price": "350000",
+              "priceCurrency": "NGN",
+              "description": "Starting estimate for websites with content management."
+            },
+            {
+              "@type": "Offer",
+              "name": "Custom Web System",
+              "price": "700000",
+              "priceCurrency": "NGN",
+              "description": "Starting estimate for custom Laravel applications."
+            },
+            {
+              "@type": "Offer",
+              "name": "Basic Care",
+              "price": "30000",
+              "priceCurrency": "NGN",
+              "description": "Monthly care starting estimate for small updates, uptime checks, and basic support."
+            },
+            {
+              "@type": "Offer",
+              "name": "Growth Care",
+              "price": "60000",
+              "priceCurrency": "NGN",
+              "description": "Monthly care starting estimate for content updates, performance checks, backups, and improvements."
+            },
+            {
+              "@type": "Offer",
+              "name": "Priority Care",
+              "price": "120000",
+              "priceCurrency": "NGN",
+              "description": "Monthly care starting estimate for priority fixes, feature support, monitoring, and strategy guidance."
+            }
+          ]
+        }
+      ]
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
       "@type": "FAQPage",
       "mainEntity": [
         {
@@ -1129,6 +1275,8 @@
                     <img
                       src="./passport.png"
                       alt="Portrait of Adedayo Ebenezer Oyetoke"
+                      width="720"
+                      height="703"
                       class="h-full w-full object-contain object-center"
                       loading="eager"
                       decoding="async"
@@ -1322,7 +1470,7 @@
           <article class="project-card rounded-2xl border border-red-200 bg-white p-6 shadow-sm" data-reveal="left" style="--project-rgb: 220 38 38; --reveal-delay: 40ms;">
             <a href="https://www.glowfmradio.com" target="_blank" rel="noopener noreferrer" aria-label="Open Glow 99.1 FM website" class="project-preview block">
               <div class="project-preview-art">
-                <img src="./files/glow.png" alt="Preview of Glow 99.1 FM website" class="project-preview-image" loading="lazy" decoding="async">
+                <img src="./files/glow.png" alt="Preview of Glow 99.1 FM website" width="1667" height="935" class="project-preview-image" loading="lazy" decoding="async">
               </div>
             </a>
             <div class="flex items-start justify-between gap-4">
@@ -1362,7 +1510,7 @@
           <article class="project-card rounded-2xl border border-emerald-200 bg-white p-6 shadow-sm" data-reveal="right" style="--project-rgb: 5 150 105; --reveal-delay: 100ms;">
             <a href="https://www.elitesinternationalcollege.com" target="_blank" rel="noopener noreferrer" aria-label="Open Elites International College website" class="project-preview block">
               <div class="project-preview-art">
-                <img src="./files/elite.png" alt="Preview of Elites International College website" class="project-preview-image" loading="lazy" decoding="async">
+                <img src="./files/elite.png" alt="Preview of Elites International College website" width="1636" height="699" class="project-preview-image" loading="lazy" decoding="async">
               </div>
             </a>
             <div class="flex items-start justify-between gap-4">
@@ -1402,7 +1550,7 @@
           <article class="project-card rounded-2xl border border-blue-200 bg-white p-6 shadow-sm" data-reveal="left" style="--project-rgb: 37 99 235; --reveal-delay: 160ms;">
             <a href="https://www.ikeremfb.com" target="_blank" rel="noopener noreferrer" aria-label="Open Ikere Microfinance Bank website" class="project-preview block">
               <div class="project-preview-art">
-                <img src="./files/ikere.png" alt="Preview of Ikere Microfinance Bank website" class="project-preview-image" loading="lazy" decoding="async">
+                <img src="./files/ikere.png" alt="Preview of Ikere Microfinance Bank website" width="1647" height="884" class="project-preview-image" loading="lazy" decoding="async">
               </div>
             </a>
             <div class="flex items-start justify-between gap-4">
@@ -1440,7 +1588,7 @@
           </article>
 
           <article class="project-card rounded-2xl border border-violet-200 bg-white p-6 shadow-sm" data-reveal="right" style="--project-rgb: 109 40 217; --reveal-delay: 220ms;">
-            <img src="./files/bootkode.png" alt="BootKode screenshot" class="mt-4 block max-w-full rounded-2xl border border-violet-200 shadow-sm" />
+            <img src="./files/bootkode.png" alt="BootKode project-based learning platform screenshot" width="1884" height="916" class="mt-4 block max-w-full rounded-2xl border border-violet-200 shadow-sm" loading="lazy" decoding="async" />
             <div class="flex items-start justify-between gap-4">
               <div>
                 <p class="text-xs font-bold uppercase tracking-wide text-violet-700">EdTech Product</p>
@@ -1469,6 +1617,43 @@
               <div>
                 <dt class="font-semibold text-zinc-900">Outcome</dt>
                 <dd class="mt-1">An EdTech product focused on structured learning, skills development, and learner progression.</dd>
+              </div>
+            </dl>
+          </article>
+
+          <article class="project-card rounded-2xl border border-green-200 bg-white p-6 shadow-sm" data-project="mannarise" data-reveal="left" style="--project-rgb: 22 101 52; --reveal-delay: 280ms;">
+            <div class="project-preview block">
+              <div class="project-preview-art">
+                <img src="./files/mannarise-preview.svg" alt="MannaRise devotional platform preview" class="project-preview-image" loading="lazy" decoding="async">
+              </div>
+            </div>
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <p class="text-xs font-bold uppercase tracking-wide text-green-700">Faith-Based Platform</p>
+                <h3 class="mt-2 font-display text-xl font-bold text-zinc-900">MannaRise</h3>
+              </div>
+            </div>
+            <dl class="mt-5 space-y-4 text-sm text-zinc-700">
+              <div>
+                <dt class="font-semibold text-zinc-900">Challenge</dt>
+                <dd class="mt-1">Faith communities need a clean and accessible way to publish daily devotionals, audio messages, and spiritual content online.</dd>
+              </div>
+              <div>
+                <dt class="font-semibold text-zinc-900">What I Built</dt>
+                <dd class="mt-1">I built a Laravel-powered devotional platform for daily devotionals, audio content, responsive reading, and SEO-ready public pages.</dd>
+              </div>
+              <div>
+                <dt class="font-semibold text-zinc-900">Stack</dt>
+                <dd class="mt-2 project-stack" data-no-i18n>
+                  <span class="project-stack-tag" style="--tag-delay: 40ms;">Laravel</span>
+                  <span class="project-stack-tag" style="--tag-delay: 100ms;">MySQL</span>
+                  <span class="project-stack-tag" style="--tag-delay: 160ms;">Audio Content</span>
+                  <span class="project-stack-tag" style="--tag-delay: 220ms;">SEO</span>
+                </dd>
+              </div>
+              <div>
+                <dt class="font-semibold text-zinc-900">Outcome</dt>
+                <dd class="mt-1">A focused content platform for devotional publishing, audio content, and accessible spiritual reading.</dd>
               </div>
             </dl>
           </article>

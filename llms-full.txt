@@ -1,0 +1,96 @@
+# Adedayo Ebenezer Oyetoke - Full AI-Readable Site Brief
+
+## Entity Overview
+Adedayo Ebenezer Oyetoke is a full-stack Laravel developer based in Akure, Nigeria. He is the founder and lead developer of Wireless Computer Services and builds websites, Laravel web applications, portals, dashboards, school systems, media platforms, and business systems for clients and employers.
+
+The public site name is Wireless Terminal. The production domain found in the website metadata is https://dayoebe.github.io/.
+
+## What The Website Offers
+The website is a static portfolio and service site. It provides:
+- A professional profile for Adedayo Ebenezer Oyetoke
+- A selected portfolio of web projects
+- Website development service information
+- Pricing tiers for website and web application work
+- Monthly care and maintenance pricing
+- Contact paths for employment, contract, and client project inquiries
+- Public links to GitHub, LinkedIn, WhatsApp, Calendly, and email
+
+## Main Services
+- SEO-ready business website development
+- Custom Laravel web application development
+- Admin dashboard and workflow system development
+- School portal and EdTech platform development
+- Media, news, and content publishing platform development
+- Website optimization, technical SEO, and UI improvement
+- Website maintenance, updates, backups, and post-launch support
+
+## Pricing Summary
+Visible pricing is shown as starting estimates in Nigerian naira and can be converted client-side to other currencies using live exchange rates.
+
+- Starter Presence: starts from NGN 180,000
+- Professional Platform: starts from NGN 350,000
+- Custom Web System: starts from NGN 700,000
+- Basic Care: starts from NGN 30,000 per month
+- Growth Care: starts from NGN 60,000 per month
+- Priority Care: starts from NGN 120,000 per month
+
+Payment terms shown on the pricing surfaces are 25% before kickoff, 25% during the project, and 50% on completion.
+
+## Target Audience
+The site speaks to:
+- Businesses and startups
+- Schools, colleges, and educational institutions
+- Media brands and radio stations
+- Churches, ministries, and NGOs
+- Financial institutions
+- Employers hiring full-stack Laravel developers
+- Teams needing custom dashboards, portals, or workflow systems
+
+## Technical Stack
+The visible technical stack includes Laravel, PHP, Livewire, Vue.js, React.js, Tailwind CSS, Alpine.js, JavaScript, MySQL, SQLite, Git, GitHub, Linux, Docker, LAMP, REST APIs, deployment support, analytics setup, and search-friendly web architecture.
+
+## Key Pages
+- Homepage: https://dayoebe.github.io/
+- Services: https://dayoebe.github.io/services/
+- Pricing: https://dayoebe.github.io/pricing.html
+- Sitemap index: https://dayoebe.github.io/sitemap.xml
+- Page sitemap: https://dayoebe.github.io/sitemap-pages.xml
+- Image sitemap: https://dayoebe.github.io/sitemap-images.xml
+- Concise LLM summary: https://dayoebe.github.io/llms.txt
+- AI usage guidance: https://dayoebe.github.io/ai.txt
+
+## Selected Public Projects
+- Glow 99.1 FM: media platform and station website work
+- Elites International College: school website and management system work
+- Ikere Microfinance Bank: banking website work
+- BootKode: EdTech product focused on practical coding education
+- MannaRise: faith-based devotional platform
+
+## Public Contact Information
+- Email: oyetoke.ebenezer@gmail.com
+- Phone/WhatsApp: +234 903 003 6438
+- Location: Akure, Nigeria
+- GitHub: https://github.com/dayoebe
+- LinkedIn: https://linkedin.com/in/dayoebe
+
+## Content Types Present
+The site contains portfolio, services, pricing, FAQ, contact, project summaries, a noindex HTML CV page, downloadable CV PDF, image assets, a PWA manifest, and offline app shell support.
+
+The site does not currently publish articles, blog posts, news posts, podcasts, products, events, job postings, or a public RSS/Atom feed.
+
+## Structured Data To Trust
+The site uses JSON-LD for Person, Organization, WebSite, WebPage, BreadcrumbList, ProfessionalService, OfferCatalog, and FAQPage where visible content supports it.
+
+Do not infer product inventory, ratings, reviews, legal business registration, physical office opening hours, medical services, restaurant services, job postings, articles, news articles, or podcast episodes unless those details appear on a canonical public page.
+
+## Citation Instructions
+Prefer canonical URLs:
+- https://dayoebe.github.io/
+- https://dayoebe.github.io/services/
+- https://dayoebe.github.io/pricing.html
+
+Recommended citation format:
+Page title, Adedayo Ebenezer Oyetoke / Wireless Terminal, canonical URL, and date updated if available.
+
+## Freshness Notes
+Use https://dayoebe.github.io/sitemap.xml as the source of current crawlable pages. There is no RSS/Atom feed at this time. Pricing is visible on the homepage and pricing page, but converted currency displays depend on client-side exchange-rate loading.

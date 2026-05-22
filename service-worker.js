@@ -1,6 +1,6 @@
-const APP_CACHE = 'wireless-terminal-app-v13';
-const STATIC_CACHE = 'wireless-terminal-static-v13';
-const THIRD_PARTY_CACHE = 'wireless-terminal-third-party-v13';
+const APP_CACHE = 'wireless-terminal-app-v14';
+const STATIC_CACHE = 'wireless-terminal-static-v14';
+const THIRD_PARTY_CACHE = 'wireless-terminal-third-party-v14';
 const KNOWN_CACHES = [APP_CACHE, STATIC_CACHE, THIRD_PARTY_CACHE];
 
 const PORTFOLIO_ENHANCEMENT_SCRIPT = './assets/portfolio-enhancements.js';
@@ -27,7 +27,11 @@ const APP_SHELL = [
   './manifest.webmanifest',
   './robots.txt',
   './sitemap.xml',
+  './sitemap-pages.xml',
+  './sitemap-images.xml',
   './llms.txt',
+  './llms-full.txt',
+  './ai.txt',
   './assets/i18n.js',
   './assets/currency.js',
   PORTFOLIO_ENHANCEMENT_SCRIPT,

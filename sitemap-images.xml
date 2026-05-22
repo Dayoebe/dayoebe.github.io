@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://dayoebe.github.io/</loc>
+    <image:image>
+      <image:loc>https://dayoebe.github.io/social-preview.jpg</image:loc>
+      <image:title>Adedayo Ebenezer Oyetoke, Laravel web developer for websites and web applications</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dayoebe.github.io/passport.png</image:loc>
+      <image:title>Portrait of Adedayo Ebenezer Oyetoke</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dayoebe.github.io/files/glow.png</image:loc>
+      <image:title>Preview of Glow 99.1 FM website</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dayoebe.github.io/files/elite.png</image:loc>
+      <image:title>Preview of Elites International College website</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dayoebe.github.io/files/ikere.png</image:loc>
+      <image:title>Preview of Ikere Microfinance Bank website</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dayoebe.github.io/files/bootkode.png</image:loc>
+      <image:title>BootKode project-based learning platform screenshot</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dayoebe.github.io/files/mannarise-preview.svg</image:loc>
+      <image:title>MannaRise project preview</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://dayoebe.github.io/services/</loc>
+    <image:image>
+      <image:loc>https://dayoebe.github.io/social-preview.jpg</image:loc>
+      <image:title>Adedayo Ebenezer Oyetoke website development services</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://dayoebe.github.io/pricing.html</loc>
+    <image:image>
+      <image:loc>https://dayoebe.github.io/social-preview.jpg</image:loc>
+      <image:title>Website development pricing by Adedayo Ebenezer Oyetoke</image:title>
+    </image:image>
+  </url>
+</urlset>

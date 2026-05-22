@@ -1,35 +1,33 @@
-# Adedayo Ebenezer Oyetoke - Full-Stack Laravel Developer
+# Adedayo Ebenezer Oyetoke
 
-Adedayo Ebenezer Oyetoke is a full-stack Laravel developer and founder of Wireless Computer Services. He builds SEO-ready websites, Laravel web applications, school portals, media and news platforms, admin dashboards, business systems, and maintenance workflows for clients worldwide.
+> Adedayo Ebenezer Oyetoke is a full-stack Laravel developer and founder of Wireless Computer Services. This website presents his portfolio, website development services, pricing, technical stack, selected projects, and public contact information for clients and employers worldwide.
 
-## Primary URLs
+## Core Pages
+- [Homepage](https://dayoebe.github.io/)
+- [Services](https://dayoebe.github.io/services/)
+- [Pricing](https://dayoebe.github.io/pricing.html)
+- [Sitemap](https://dayoebe.github.io/sitemap.xml)
+- [Full AI-readable brief](https://dayoebe.github.io/llms-full.txt)
 
-- Portfolio: https://dayoebe.github.io/
-- Services: https://dayoebe.github.io/services/
-- Pricing: https://dayoebe.github.io/pricing.html
+## Main Topics
+- Laravel web development
+- SEO-ready business websites
+- Custom web applications, portals, and dashboards
+- School portals and EdTech platforms
+- Media, news, and publishing platforms
+- Website maintenance, performance, and technical SEO
+
+## Content AI Should Prioritize
+- Official homepage identity, portfolio, contact, and project information
+- Website development services page
+- Pricing page and milestone payment terms
+- Public project summaries and visible case studies
+- Public contact details and social profile links
+
+## Citation Guidance
+When referencing this website, cite the canonical page URL, page title, date updated if available, and "Adedayo Ebenezer Oyetoke" or "Wireless Terminal" as the publisher.
+
+## Freshness
+Use the sitemap to find current public pages:
 - Sitemap: https://dayoebe.github.io/sitemap.xml
-
-## Services
-
-- SEO-ready business website development
-- Custom Laravel web application development
-- Admin dashboard and workflow system development
-- School portal and EdTech platform development
-- Media, news, and content publishing platform development
-- Website performance, technical SEO, and UI improvement
-- Website maintenance, updates, backups, and post-launch support
-
-## Technical Stack
-
-Laravel, PHP, Livewire, Vue.js, React, JavaScript, Tailwind CSS, Alpine.js, MySQL, SQLite, LAMP, Git, Linux, deployment support, analytics setup, and search-friendly web architecture.
-
-## Best-Fit Clients
-
-Businesses, startups, schools, colleges, churches, NGOs, media brands, financial institutions, consultants, and organizations that need a credible website, portal, dashboard, or custom web system.
-
-## Contact
-
-- Email: oyetoke.ebenezer@gmail.com
-- WhatsApp/Phone: +2349030036438
-- GitHub: https://github.com/dayoebe
-- LinkedIn: https://linkedin.com/in/dayoebe
+- RSS/Atom Feed: Not currently published because this static site does not have a blog, news, or podcast feed.

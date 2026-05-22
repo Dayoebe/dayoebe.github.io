@@ -8,6 +8,7 @@
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
   <meta name="author" content="Adedayo Ebenezer Oyetoke" />
   <meta name="theme-color" content="#dc2626" />
+  <link rel="manifest" href="./manifest.webmanifest" />
   <link rel="canonical" href="https://dayoebe.github.io/pricing.html" />
   <link rel="alternate" hreflang="en" href="https://dayoebe.github.io/pricing.html?lang=en" />
   <link rel="alternate" hreflang="es" href="https://dayoebe.github.io/pricing.html?lang=es" />
@@ -17,6 +18,9 @@
   <link rel="alternate" hreflang="hi" href="https://dayoebe.github.io/pricing.html?lang=hi" />
   <link rel="alternate" hreflang="pt" href="https://dayoebe.github.io/pricing.html?lang=pt" />
   <link rel="alternate" hreflang="x-default" href="https://dayoebe.github.io/pricing.html" />
+  <link rel="sitemap" type="application/xml" href="https://dayoebe.github.io/sitemap.xml" />
+  <link rel="alternate" type="text/plain" title="LLMs.txt" href="https://dayoebe.github.io/llms.txt" />
+  <link rel="alternate" type="text/plain" title="Full AI-readable site brief" href="https://dayoebe.github.io/llms-full.txt" />
   <link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32.png" />
   <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
 
@@ -25,15 +29,25 @@
   <meta property="og:title" content="Website Development Pricing | Adedayo Ebenezer Oyetoke" />
   <meta property="og:description" content="Explore flexible pricing for SEO-ready websites, Laravel web applications, portals, dashboards, and monthly maintenance." />
   <meta property="og:url" content="https://dayoebe.github.io/pricing.html" />
+  <meta property="og:locale" content="en_NG" />
   <meta property="og:image" content="https://dayoebe.github.io/social-preview.jpg" />
+  <meta property="og:image:secure_url" content="https://dayoebe.github.io/social-preview.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Website development pricing by Adedayo Ebenezer Oyetoke" />
 
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@dayoebe" />
   <meta name="twitter:title" content="Website Development Pricing | Adedayo Ebenezer Oyetoke" />
   <meta name="twitter:description" content="Transparent starting prices for SEO-ready websites, portals, dashboards, Laravel applications, and maintenance." />
   <meta name="twitter:image" content="https://dayoebe.github.io/social-preview.jpg" />
+  <meta name="twitter:image:alt" content="Website development pricing by Adedayo Ebenezer Oyetoke" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+  <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
@@ -54,17 +68,59 @@
       "@context": "https://schema.org",
       "@graph": [
         {
+          "@type": "Person",
+          "@id": "https://dayoebe.github.io/#person",
+          "name": "Adedayo Ebenezer Oyetoke",
+          "jobTitle": "Full-Stack Laravel Developer",
+          "url": "https://dayoebe.github.io/",
+          "image": "https://dayoebe.github.io/passport.png",
+          "email": "mailto:oyetoke.ebenezer@gmail.com",
+          "telephone": "+2349030036438",
+          "sameAs": [
+            "https://github.com/dayoebe",
+            "https://linkedin.com/in/dayoebe",
+            "https://www.facebook.com/dayoebe",
+            "https://www.instagram.com/oyetoke.ebenezer",
+            "https://www.tiktok.com/@dayoebe"
+          ]
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://dayoebe.github.io/#organization",
+          "name": "Wireless Computer Services",
+          "url": "https://dayoebe.github.io/",
+          "founder": {
+            "@id": "https://dayoebe.github.io/#person"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://dayoebe.github.io/#website",
+          "name": "Wireless Terminal",
+          "url": "https://dayoebe.github.io/",
+          "publisher": {
+            "@id": "https://dayoebe.github.io/#person"
+          }
+        },
+        {
           "@type": "WebPage",
           "@id": "https://dayoebe.github.io/pricing.html#webpage",
           "url": "https://dayoebe.github.io/pricing.html",
           "name": "Website Development Pricing | Adedayo Ebenezer Oyetoke",
           "description": "Transparent pricing for SEO-ready websites, Laravel web applications, portals, dashboards, and maintenance.",
+          "dateModified": "2026-05-22",
           "inLanguage": "en",
           "isPartOf": {
             "@id": "https://dayoebe.github.io/#website"
           },
           "about": {
             "@id": "https://dayoebe.github.io/#person"
+          },
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://dayoebe.github.io/social-preview.jpg",
+            "width": 1200,
+            "height": 630
           }
         },
         {
@@ -110,6 +166,27 @@
               "price": "700000",
               "priceCurrency": "NGN",
               "description": "Starting estimate for custom Laravel applications, dashboards, portals, and workflows."
+            },
+            {
+              "@type": "Offer",
+              "name": "Basic Care",
+              "price": "30000",
+              "priceCurrency": "NGN",
+              "description": "Monthly care starting estimate for small updates, uptime checks, and basic support."
+            },
+            {
+              "@type": "Offer",
+              "name": "Growth Care",
+              "price": "60000",
+              "priceCurrency": "NGN",
+              "description": "Monthly care starting estimate for content updates, performance checks, backups, and improvements."
+            },
+            {
+              "@type": "Offer",
+              "name": "Priority Care",
+              "price": "120000",
+              "priceCurrency": "NGN",
+              "description": "Monthly care starting estimate for priority fixes, feature support, monitoring, and strategy guidance."
             }
           ]
         }
@@ -163,6 +240,13 @@
       <div class="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,rgba(220,38,38,0.12),transparent_32%),radial-gradient(circle_at_80%_20%,rgba(14,165,233,0.09),transparent_28%)]"></div>
       <div class="mx-auto grid max-w-7xl gap-12 px-5 py-20 lg:grid-cols-[1.05fr_0.95fr] lg:px-8 lg:py-28">
         <div>
+          <nav class="mb-5 text-sm font-bold text-stone-500" aria-label="Breadcrumb">
+            <ol class="flex flex-wrap items-center gap-2">
+              <li><a href="./" class="hover:text-red-700">Home</a></li>
+              <li aria-hidden="true">/</li>
+              <li class="text-stone-950" aria-current="page">Pricing</li>
+            </ol>
+          </nav>
           <p class="mb-5 inline-flex items-center gap-2 rounded-full border border-red-200 bg-red-50 px-4 py-2 text-sm font-extrabold text-red-700">
             <i class="fa-solid fa-naira-sign"></i>
             <span data-i18n="heroBadge">Flexible pricing for serious digital projects</span>
