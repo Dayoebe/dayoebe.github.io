@@ -6,6 +6,7 @@ $root = dirname(__DIR__);
 $publicHtmlFiles = [
     'index.html',
     'services/index.html',
+    'web-developer-nigeria/index.html',
     'pricing.html',
 ];
 
@@ -111,7 +112,7 @@ foreach ($publicHtmlFiles as $relativePath) {
         'loc' => $canonical,
         'lastmod' => date('Y-m-d', filemtime($path) ?: time()),
         'changefreq' => $relativePath === 'pricing.html' ? 'monthly' : 'weekly',
-        'priority' => $relativePath === 'index.html' ? '1.0' : ($relativePath === 'services/index.html' ? '0.9' : '0.8'),
+        'priority' => $relativePath === 'index.html' ? '1.0' : (in_array($relativePath, ['services/index.html', 'web-developer-nigeria/index.html'], true) ? '0.9' : '0.8'),
         'alternates' => $alternates,
     ];
 

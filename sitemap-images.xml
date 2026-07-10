@@ -41,6 +41,17 @@
     </image:image>
   </url>
   <url>
+    <loc>https://dayoebe.github.io/web-developer-nigeria/</loc>
+    <image:image>
+      <image:loc>https://dayoebe.github.io/social-preview.jpg</image:loc>
+      <image:title>Adedayo Ebenezer Oyetoke, Laravel web developer in Nigeria</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dayoebe.github.io/passport.png</image:loc>
+      <image:title>Adedayo Oyetoke, web developer based in Akure, Nigeria</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://dayoebe.github.io/pricing.html</loc>
     <image:image>
       <image:loc>https://dayoebe.github.io/social-preview.jpg</image:loc>

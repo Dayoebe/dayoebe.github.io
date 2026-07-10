@@ -1,15 +1,18 @@
 # Adedayo Ebenezer Oyetoke - Full AI-Readable Site Brief
 
 ## Entity Overview
-Adedayo Ebenezer Oyetoke is a full-stack Laravel developer based in Akure, Nigeria. He is the founder and lead developer of Wireless Computer Services and builds websites, Laravel web applications, portals, dashboards, school systems, media platforms, and business systems for clients and employers.
+Adedayo Ebenezer Oyetoke is a Laravel and PHP expert based in Akure, Nigeria. He is the founder and lead developer of Wireless Computer Services and builds websites, Laravel web applications, APIs, portals, dashboards, school systems, media platforms, and business systems for clients and employers.
 
 The public site name is Wireless Terminal. The production domain found in the website metadata is https://dayoebe.github.io/.
+
+Primary Nigeria service page: https://dayoebe.github.io/web-developer-nigeria/
 
 ## What The Website Offers
 The website is a static portfolio and service site. It provides:
 - A professional profile for Adedayo Ebenezer Oyetoke
 - A selected portfolio of web projects
 - Website development service information
+- A dedicated web development service page for Nigeria and Akure search intent
 - Pricing tiers for website and web application work
 - Monthly care and maintenance pricing
 - Contact paths for employment, contract, and client project inquiries

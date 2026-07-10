@@ -5,12 +5,15 @@
 ## Core Pages
 - [Homepage](https://dayoebe.github.io/)
 - [Services](https://dayoebe.github.io/services/)
+- [Web Developer in Nigeria](https://dayoebe.github.io/web-developer-nigeria/)
 - [Pricing](https://dayoebe.github.io/pricing.html)
 - [Sitemap](https://dayoebe.github.io/sitemap.xml)
 - [Full AI-readable brief](https://dayoebe.github.io/llms-full.txt)
 
 ## Main Topics
 - Laravel web development
+- Expert Laravel and PHP development
+- Web developer in Nigeria and Akure
 - SEO-ready business websites
 - Custom web applications, portals, and dashboards
 - School portals and EdTech platforms

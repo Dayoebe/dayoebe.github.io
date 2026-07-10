@@ -12,8 +12,8 @@
 
   const META = {
     en: {
-      title: 'Adedayo Ebenezer Oyetoke | Laravel Web Developer for Websites & Web Apps',
-      description: 'Hire Adedayo Ebenezer Oyetoke, a full-stack Laravel developer building SEO-ready websites, portals, dashboards, and web applications for clients worldwide.',
+      title: 'Laravel & PHP Expert in Nigeria | Adedayo Oyetoke',
+      description: 'Hire Adedayo Ebenezer Oyetoke, a Laravel and PHP expert in Nigeria building SEO-ready websites, portals, dashboards, APIs, and custom web applications.',
       ogDescription: 'Hire a full-stack Laravel developer for SEO-ready websites, portals, dashboards, media platforms, school systems, and custom web applications.',
       twitterDescription: 'SEO-ready website development, Laravel web applications, portals, dashboards, and maintenance for clients worldwide.',
       imageAlt: 'Adedayo Ebenezer Oyetoke, Laravel web developer for websites and web applications'
