@@ -64,6 +64,7 @@ The visible technical stack includes Laravel, PHP, Livewire, Vue.js, React.js, T
 
 ## Selected Public Projects
 - Glow 99.1 FM: media platform and station website work
+- Glow Health Outreach Initiative: community healthcare outreach platform with public information, role-aware dashboards, secure approvals, and task coordination
 - Elites International College: school website and management system work
 - Ikere Microfinance Bank: banking website work
 - BootKode: EdTech product focused on practical coding education

@@ -16,6 +16,18 @@
       accent: '220, 38, 38',
     },
     {
+      title: 'Glow Health Outreach Initiative',
+      type: 'Community Health Platform',
+      problem: 'Community outreach needs a public information hub and a secure way to coordinate residents, volunteers, clinicians, partners, representatives, staff, and administrators.',
+      solution: 'Built a responsive healthcare outreach platform with public service information, role-aware dashboards, approval workflows, administrative controls, task delegation, and email notifications.',
+      features: ['Public outreach information', 'Role-aware dashboards', 'Secure approval workflows', 'Task delegation and notifications'],
+      impact: 'Created a unified digital foundation for accessible community care, participant coordination, and accountable outreach operations.',
+      stack: ['Laravel', 'Livewire', 'Tailwind CSS', 'MySQL', 'PWA'],
+      link: 'https://glowfmhealth.com/',
+      accent: '194, 65, 12',
+      image: './files/glowhealth.png',
+    },
+    {
       title: 'BootKode',
       type: 'EdTech Platform',
       problem: 'Aspiring developers need guided, practical learning paths with structured course materials, roadmaps, and certification flow.',
@@ -144,7 +156,7 @@
         <div class="mb-8 max-w-3xl" data-reveal="up">
           <p class="mb-3 text-sm font-bold uppercase tracking-[0.2em] text-red-700">Selected Case Studies</p>
           <h2 class="font-display text-3xl font-bold text-zinc-950 md:text-4xl">Projects that show product thinking, not just page design.</h2>
-          <p class="mt-4 text-base leading-7 text-zinc-600">A stronger look at the problem, solution, features, and value behind my most important platforms across media, education, EdTech, and faith-based content.</p>
+          <p class="mt-4 text-base leading-7 text-zinc-600">A stronger look at the problem, solution, features, and value behind my most important platforms across media, community health, education, EdTech, and faith-based content.</p>
         </div>
         <div class="grid gap-5 lg:grid-cols-2">
           ${caseStudies.map((project, index) => `

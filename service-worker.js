@@ -1,6 +1,6 @@
-const APP_CACHE = 'wireless-terminal-app-v15';
-const STATIC_CACHE = 'wireless-terminal-static-v15';
-const THIRD_PARTY_CACHE = 'wireless-terminal-third-party-v15';
+const APP_CACHE = 'wireless-terminal-app-v16';
+const STATIC_CACHE = 'wireless-terminal-static-v16';
+const THIRD_PARTY_CACHE = 'wireless-terminal-third-party-v16';
 const KNOWN_CACHES = [APP_CACHE, STATIC_CACHE, THIRD_PARTY_CACHE];
 
 const PORTFOLIO_ENHANCEMENT_SCRIPT = './assets/portfolio-enhancements.js';
@@ -22,6 +22,7 @@ const APP_SHELL = [
   './offline.html',
   './files/Oyetoke_Adedayo_CV.pdf',
   './files/glow.png',
+  './files/glowhealth.png',
   './files/elite.png',
   './files/ikere.png',
   './files/bootkode.png',
