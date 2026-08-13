@@ -52,6 +52,30 @@
     </image:image>
   </url>
   <url>
+    <loc>https://dayoebe.github.io/case-studies/</loc>
+    <image:image>
+      <image:loc>https://dayoebe.github.io/files/glow.png</image:loc>
+      <image:title>Glow 99.1 FM public media website</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dayoebe.github.io/files/elite.png</image:loc>
+      <image:title>Elites International College website and school system</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dayoebe.github.io/files/glowhealth.png</image:loc>
+      <image:title>Glow Health community-health outreach platform</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://dayoebe.github.io/solutions/</loc>
+  </url>
+  <url>
+    <loc>https://dayoebe.github.io/start-a-project/</loc>
+  </url>
+  <url>
+    <loc>https://dayoebe.github.io/hire-me/</loc>
+  </url>
+  <url>
     <loc>https://dayoebe.github.io/web-developer-nigeria/</loc>
     <image:image>
       <image:loc>https://dayoebe.github.io/social-preview.jpg</image:loc>

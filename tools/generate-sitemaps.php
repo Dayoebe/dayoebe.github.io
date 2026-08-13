@@ -7,6 +7,10 @@ $publicHtmlFiles = [
     'index.html',
     'services/index.html',
     'projects/index.html',
+    'case-studies/index.html',
+    'solutions/index.html',
+    'start-a-project/index.html',
+    'hire-me/index.html',
     'web-developer-nigeria/index.html',
     'pricing.html',
 ];

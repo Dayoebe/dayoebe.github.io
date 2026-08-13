@@ -5,6 +5,11 @@
 ## Core Pages
 - [Homepage](https://dayoebe.github.io/)
 - [Services](https://dayoebe.github.io/services/)
+- [Solutions for schools, media teams, and NGOs](https://dayoebe.github.io/solutions/)
+- [Detailed case studies](https://dayoebe.github.io/case-studies/)
+- [Start a project](https://dayoebe.github.io/start-a-project/)
+- [Hiring profile](https://dayoebe.github.io/hire-me/)
+- [All projects and public source code](https://dayoebe.github.io/projects/)
 - [Web Developer in Nigeria](https://dayoebe.github.io/web-developer-nigeria/)
 - [Pricing](https://dayoebe.github.io/pricing.html)
 - [Sitemap](https://dayoebe.github.io/sitemap.xml)

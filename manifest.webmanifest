@@ -16,6 +16,20 @@
     "productivity"
   ],
   "prefer_related_applications": false,
+  "shortcuts": [
+    {
+      "name": "Start a project",
+      "short_name": "Start project",
+      "url": "./start-a-project/",
+      "icons": [{"src": "./icons/icon-192.png", "sizes": "192x192", "type": "image/png"}]
+    },
+    {
+      "name": "View case studies",
+      "short_name": "Case studies",
+      "url": "./case-studies/",
+      "icons": [{"src": "./icons/icon-192.png", "sizes": "192x192", "type": "image/png"}]
+    }
+  ],
   "icons": [
     {
       "src": "./icons/icon-192.png",

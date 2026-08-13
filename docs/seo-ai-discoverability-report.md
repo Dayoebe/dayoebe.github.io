@@ -124,3 +124,50 @@ No fake reviews, ratings, products, inventory, opening hours, job postings, medi
 - Keep project, pricing, and contact information updated.
 - Build external authority through mentions, backlinks, citations, directories, and social profiles.
 - Maintain factual consistency across the website, GitHub, LinkedIn, social profiles, and directories.
+
+## 13. Client Conversion and Accessibility Pass — 2026-08-13
+
+The portfolio was restructured around two separate visitor journeys:
+
+- prospective clients are directed to focused solutions, detailed case studies, a discovery call, or a qualified project brief;
+- employers are directed to a dedicated hiring profile, CV, GitHub profile, and interview contact action.
+
+New public pages:
+
+- `/solutions/` — focused positioning for schools, media teams, NGOs, Laravel audits, repair sprints, and maintenance;
+- `/case-studies/` — evidence-based Glow FM, Elites International College, and Glow Health delivery stories;
+- `/start-a-project/` — accessible, labelled project-qualification form covering organisation, project type, budget, timing, current site, problem, and essential constraints;
+- `/hire-me/` — separate employer journey with technical strengths, relevant experience, CV, GitHub, and interview actions.
+
+Conversion improvements:
+
+- replaced competing hero messages with a client-first value proposition;
+- introduced one primary project-estimate action and a separate employer route;
+- replaced the unsupported `20+ Projects Delivered` claim with six visible featured product builds;
+- presented low-risk starting engagements without inventing fixed prices or guarantees;
+- added direct case-study and solution navigation;
+- kept testimonials and quantified business outcomes out until client-approved evidence is available.
+
+Accessibility and discovery improvements:
+
+- added skip links, visible focus treatments, semantic headings, labelled form controls, reduced-motion handling, responsive layouts, descriptive image alternatives, canonical URLs, and unique titles/descriptions on new pages;
+- added all new pages to the generated sitemap, PWA app shell, `llms.txt`, `llms-full.txt`, and manifest shortcuts;
+- bumped service-worker caches to expose the new experience to returning PWA users.
+
+Validation completed:
+
+- JavaScript syntax checks for the enhancement script and service worker;
+- PHP syntax check and successful sitemap regeneration;
+- XML parsing for all sitemap files;
+- JSON parsing for `manifest.webmanifest`;
+- DOM parsing, unique H1, title, and canonical checks across key public pages;
+- local link and asset resolution across the complete HTML surface;
+- `git diff --check`.
+
+Manual evidence still needed from the site owner:
+
+- request three short, client-approved testimonials;
+- add verified before/after measurements where clients can substantiate them;
+- confirm the preferred minimum project budget shown in the enquiry form;
+- activate and test the FormSubmit destination if it has not already been confirmed;
+- maintain a weekly targeted outreach and follow-up routine, because technical portfolio changes cannot guarantee inbound work or search rankings.
