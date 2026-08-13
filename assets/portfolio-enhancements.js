@@ -13,6 +13,7 @@
       impact: 'Strengthened the station\'s digital presence and created a stronger foundation for online engagement, monetization, and brand visibility.',
       stack: ['Laravel', 'Livewire', 'Alpine.js', 'Tailwind CSS', 'SEO'],
       link: 'https://glowfmradio.com/',
+      source: 'https://github.com/Dayoebe/Glow',
       accent: '220, 38, 38',
     },
     {
@@ -24,6 +25,7 @@
       impact: 'Created a unified digital foundation for accessible community care, participant coordination, and accountable outreach operations.',
       stack: ['Laravel', 'Livewire', 'Tailwind CSS', 'MySQL', 'PWA'],
       link: 'https://glowfmhealth.com/',
+      source: 'https://github.com/Dayoebe/GlowHealth',
       accent: '194, 65, 12',
       image: './files/glowhealth.png',
     },
@@ -36,6 +38,7 @@
       impact: 'Positions the brand as a practical coding bootcamp platform for project-based learning and future developer mentorship.',
       stack: ['Laravel', 'Livewire', 'Tailwind CSS', 'MySQL', 'EdTech'],
       link: 'https://bootkode.laravel.cloud/',
+      source: 'https://github.com/Dayoebe/bootkode',
       accent: '37, 99, 235',
     },
     {
@@ -47,6 +50,7 @@
       impact: 'Improved school administration by centralizing key workflows into a single web-based system.',
       stack: ['Laravel', 'MySQL', 'Dashboards', 'SchoolTech'],
       link: '#projects',
+      source: 'https://github.com/Dayoebe/school',
       accent: '124, 58, 237',
     },
     {
@@ -58,6 +62,7 @@
       impact: 'Shows ability to build focused content platforms for churches, ministries, NGOs, and faith-based communities.',
       stack: ['Laravel', 'MySQL', 'Audio Content', 'SEO'],
       link: 'https://mannarise.ct.ws/',
+      source: 'https://github.com/Dayoebe/MannaRise',
       accent: '22, 101, 52',
       image: './files/mannarise-preview.svg',
     },
@@ -126,6 +131,7 @@
         <a href="${project.link}" ${project.link.startsWith('http') ? 'target="_blank" rel="noopener noreferrer"' : ''} class="project-link mt-6 text-sm font-bold" style="color: rgb(${project.accent})">
           ${project.link.startsWith('http') ? 'Visit Website' : 'View Project'} <span class="project-link-arrow">&rarr;</span>
         </a>
+        <a href="${project.source}" target="_blank" rel="noopener noreferrer" class="mt-3 text-sm font-bold text-zinc-700">View source code <span aria-hidden="true">&rarr;</span></a>
       </div>
     `;
 
@@ -189,6 +195,7 @@
               <a href="${project.link}" ${project.link.startsWith('http') ? 'target="_blank" rel="noopener noreferrer"' : ''} class="motion-button mt-6 inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-bold" style="border-color: rgba(${project.accent}, 0.28); color: rgb(${project.accent})">
                 ${project.link.startsWith('http') ? 'Open Live Project' : 'View in Portfolio'} <span aria-hidden="true">&rarr;</span>
               </a>
+              <a href="${project.source}" target="_blank" rel="noopener noreferrer" class="ml-3 mt-6 inline-flex items-center gap-2 text-sm font-bold text-zinc-700">Source code <span aria-hidden="true">&rarr;</span></a>
             </article>
           `).join('')}
         </div>

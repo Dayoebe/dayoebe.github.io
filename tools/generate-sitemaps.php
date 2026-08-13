@@ -6,6 +6,7 @@ $root = dirname(__DIR__);
 $publicHtmlFiles = [
     'index.html',
     'services/index.html',
+    'projects/index.html',
     'web-developer-nigeria/index.html',
     'pricing.html',
 ];

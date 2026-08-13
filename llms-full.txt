@@ -55,6 +55,7 @@ The visible technical stack includes Laravel, PHP, Livewire, Vue.js, React.js, T
 ## Key Pages
 - Homepage: https://dayoebe.github.io/
 - Services: https://dayoebe.github.io/services/
+- All projects and source repositories: https://dayoebe.github.io/projects/
 - Pricing: https://dayoebe.github.io/pricing.html
 - Sitemap index: https://dayoebe.github.io/sitemap.xml
 - Page sitemap: https://dayoebe.github.io/sitemap-pages.xml

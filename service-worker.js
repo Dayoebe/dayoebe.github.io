@@ -1,6 +1,6 @@
-const APP_CACHE = 'wireless-terminal-app-v16';
-const STATIC_CACHE = 'wireless-terminal-static-v16';
-const THIRD_PARTY_CACHE = 'wireless-terminal-third-party-v16';
+const APP_CACHE = 'wireless-terminal-app-v17';
+const STATIC_CACHE = 'wireless-terminal-static-v17';
+const THIRD_PARTY_CACHE = 'wireless-terminal-third-party-v17';
 const KNOWN_CACHES = [APP_CACHE, STATIC_CACHE, THIRD_PARTY_CACHE];
 
 const PORTFOLIO_ENHANCEMENT_SCRIPT = './assets/portfolio-enhancements.js';
@@ -16,6 +16,8 @@ const APP_SHELL = [
   './index.html',
   './services/',
   './services/index.html',
+  './projects/',
+  './projects/index.html',
   './web-developer-nigeria/',
   './web-developer-nigeria/index.html',
   './pricing.html',

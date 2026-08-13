@@ -45,6 +45,13 @@
     </image:image>
   </url>
   <url>
+    <loc>https://dayoebe.github.io/projects/</loc>
+    <image:image>
+      <image:loc>https://dayoebe.github.io/social-preview.jpg</image:loc>
+      <image:title>Adedayo Oyetoke software projects and source code</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://dayoebe.github.io/web-developer-nigeria/</loc>
     <image:image>
       <image:loc>https://dayoebe.github.io/social-preview.jpg</image:loc>
