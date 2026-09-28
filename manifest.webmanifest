@@ -1,15 +1,15 @@
 {
   "id": "./",
-  "name": "Wireless Terminal",
-  "short_name": "Wireless Terminal",
-  "description": "Wireless Terminal is Adedayo Ebenezer Oyetoke's installable portfolio with offline access, project highlights, and contact details.",
+  "name": "Adedayo Ebenezer Oyetoke — Developer Portfolio",
+  "short_name": "Adedayo",
+  "description": "Laravel and PHP developer portfolio, selected work and contact details for Adedayo Ebenezer Oyetoke.",
   "lang": "en-NG",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
   "orientation": "any",
-  "background_color": "#fafaf9",
-  "theme_color": "#dc2626",
+  "background_color": "#f5f1e8",
+  "theme_color": "#174f3d",
   "categories": [
     "portfolio",
     "business",
@@ -20,13 +20,13 @@
     {
       "name": "Start a project",
       "short_name": "Start project",
-      "url": "./start-a-project/",
+      "url": "./contact/",
       "icons": [{"src": "./icons/icon-192.png", "sizes": "192x192", "type": "image/png"}]
     },
     {
       "name": "View case studies",
       "short_name": "Case studies",
-      "url": "./case-studies/",
+      "url": "./work/",
       "icons": [{"src": "./icons/icon-192.png", "sizes": "192x192", "type": "image/png"}]
     }
   ],
