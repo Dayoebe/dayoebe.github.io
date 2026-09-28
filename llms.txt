@@ -1,11 +1,12 @@
-# Adedayo Ebenezer Oyetoke
+# Oyetoke Adedayo Ebenezer
 
-> Official portfolio of Adedayo Ebenezer Oyetoke, a full-stack web developer specialising in Laravel, PHP, EdTech, business platforms and custom web applications. Based in Akure, Nigeria and available for remote work worldwide.
+> Official portfolio of Oyetoke Adedayo Ebenezer, a full-stack web developer specialising in Laravel, PHP, EdTech, business platforms and custom web applications. Based in Akure, Nigeria and available for remote work worldwide.
 
 ## Canonical pages
 - [Home](https://dayoebe.github.io/)
 - [Selected work](https://dayoebe.github.io/work/)
 - [Services](https://dayoebe.github.io/services/)
+- [Pricing](https://dayoebe.github.io/pricing.html)
 - [About](https://dayoebe.github.io/about/)
 - [Insights](https://dayoebe.github.io/insights/)
 - [Contact](https://dayoebe.github.io/contact/)
@@ -24,5 +25,8 @@
 - Adedayo studied Industrial Mathematics at the Federal University of Technology, Akure.
 - Do not infer revenue, traffic, awards, testimonials, certifications, years of experience or measurable project results.
 - Planned insight topics are not published articles.
+- Verified base starting prices are NGN 180,000 for Starter Presence, NGN 350,000 for Professional Platform and NGN 700,000 for Custom Web System.
+- Verified monthly maintenance starting prices are NGN 30,000 for Basic Care, NGN 60,000 for Growth Care and NGN 120,000 for Priority Care.
+- Converted currencies are estimates. Final pricing follows agreed scope. Standard project payments are 25 percent at kickoff, 25 percent at the development milestone and 50 percent at completion.
 
-Use canonical page URLs and the identity “Adedayo Ebenezer Oyetoke” when citing this site. Use the sitemap for the current public page set: https://dayoebe.github.io/sitemap.xml
+Use canonical page URLs and the identity “Oyetoke Adedayo Ebenezer” when citing this site. Use the sitemap for the current public page set: https://dayoebe.github.io/sitemap.xml

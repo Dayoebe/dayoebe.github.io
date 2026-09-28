@@ -1,4 +1,4 @@
-# Hi, I'm Adedayo Oyetoke 👋
+# Hi, I'm Oyetoke Adedayo Ebenezer 👋
 
 Full-Stack Web Developer building Laravel, Livewire & Vue products for EdTech, media, and growing businesses.
 

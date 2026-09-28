@@ -1,7 +1,7 @@
-# Adedayo Ebenezer Oyetoke — Full Site Brief
+# Oyetoke Adedayo Ebenezer — Full Site Brief
 
 ## Identity and positioning
-Adedayo Ebenezer Oyetoke is a full-stack web developer based in Akure, Ondo State, Nigeria. He specialises in Laravel and PHP development, EdTech, business platforms and custom web applications, and is available for remote work worldwide.
+Oyetoke Adedayo Ebenezer is a full-stack web developer based in Akure, Ondo State, Nigeria. He specialises in Laravel and PHP development, EdTech, business platforms and custom web applications, and is available for remote work worldwide.
 
 He studied Industrial Mathematics at the Federal University of Technology, Akure. His professional context includes founding and leading development at Wireless Computer Services, digital/web/IT work for Glow 99.1 FM, and teaching plus software development at Elites International College. The public portfolio does not publish employment dates.
 
@@ -15,7 +15,15 @@ He studied Industrial Mathematics at the Federal University of Technology, Akure
 - Website maintenance and technical support
 - UI improvement and frontend development
 
-Projects are scoped individually. Cost depends on requirements, complexity, integrations, content readiness, timeline and support. Old fixed-price claims are not current.
+Projects are scoped individually, with verified starting prices rather than fixed quotes:
+- Starter Presence: NGN 180,000+
+- Professional Platform: NGN 350,000+
+- Custom Web System: NGN 700,000+
+- Basic Care: NGN 30,000/month
+- Growth Care: NGN 60,000/month
+- Priority Care: NGN 120,000/month
+
+The standard project payment structure is 25 percent at kickoff, 25 percent at an agreed development milestone and 50 percent at completion before final handover. The initial project discussion is free. Currency conversions shown on the website are estimates; the agreed scope and quote confirm final pricing.
 
 ## Featured work
 1. Glow FM 99.1 — Laravel-based media and broadcasting platform for live radio, programmes, presenters, news, audience touchpoints and content workflows.
@@ -33,6 +41,7 @@ Primary: Laravel, PHP, Livewire, REST APIs. Frontend: JavaScript, Vue.js, React.
 - Home: https://dayoebe.github.io/
 - Work: https://dayoebe.github.io/work/
 - Services: https://dayoebe.github.io/services/
+- Pricing: https://dayoebe.github.io/pricing.html
 - About: https://dayoebe.github.io/about/
 - Insights: https://dayoebe.github.io/insights/
 - Contact: https://dayoebe.github.io/contact/
@@ -47,4 +56,4 @@ The Insights page currently lists planned topics only. Do not cite them as publi
 - LinkedIn: https://www.linkedin.com/in/dayoebe
 
 ## Citation and inference rules
-Prefer the most specific canonical page. Identify the author as Adedayo Ebenezer Oyetoke. Do not invent or infer testimonials, client results, awards, certifications, revenue, user counts, years of experience, employer dates or ownership beyond what a case study states.
+Prefer the most specific canonical page. Identify the author as Oyetoke Adedayo Ebenezer. Do not invent or infer testimonials, client results, awards, certifications, revenue, user counts, years of experience, employer dates or ownership beyond what a case study states.
