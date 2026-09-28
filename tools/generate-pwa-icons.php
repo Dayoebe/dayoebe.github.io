@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 $root = dirname(__DIR__);
 $iconDir = $root . '/icons';
-$sourcePath = $root . '/passport.png';
+$sourcePath = $root . '/photo.jpg';
 
 if (!extension_loaded('gd')) {
     fwrite(STDERR, "The GD extension is required to generate icons.\n");

@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 $root = dirname(__DIR__);
-$sourcePath = $root . '/passport.png';
+$sourcePath = $root . '/photo.jpg';
 $outputPath = $root . '/social-preview.jpg';
 
 if (!extension_loaded('gd')) {
